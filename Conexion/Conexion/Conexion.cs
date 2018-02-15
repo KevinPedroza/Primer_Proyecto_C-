@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,6 +77,26 @@ namespace Conexion
             return user;
         }
 
-
+        //this method will charge information on a datagridview
+        public DataSet cargarDatagrid()
+        {
+            DataSet ds = new DataSet();
+            Conexion();
+            conexion.Open();
+            NpgsqlDataAdapter cmd = new NpgsqlDataAdapter("SELECT id,nombre FROM pais", conexion);
+            cmd.Fill(ds);
+            conexion.Close();
+            return ds;
+        }
+        public DataSet cargarDatagridlugar(string consulta)
+        {
+            DataSet ds = new DataSet();
+            Conexion();
+            conexion.Open();
+            NpgsqlDataAdapter cmd = new NpgsqlDataAdapter(consulta, conexion);
+            cmd.Fill(ds);
+            conexion.Close();
+            return ds;
+        }
     }
 }

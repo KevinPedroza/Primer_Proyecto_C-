@@ -1,43 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
-
 namespace Procedimientos
 {
     public class Procedimientos
     {
         ConexionBD bd = new ConexionBD();
-        //this method will let me check if i can sing up to the program
+        
 
-        public void login(string user, string contra)
-        {
-            string consulta = "SELECT nombre FROM user_admin WHERE nombre = '" + user + "' AND  contra = MD5('" + contra + "')";
-            string consulta3 = "SELECT admi FROM user_admin WHERE contra = MD5('" + contra + "') AND nombre = '" + user + "'";
-            string bduser = bd.MostrarDatos(consulta);
-            string bdtipo = bd.MostrarDatos(consulta3);
-
-            if (user.Equals(bduser) &  bdtipo.Equals("T"))
-            {
-                MessageBox.Show("Bienvenido Administrador!","Welcome",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-            else if (bduser.Equals(user) & bdtipo.Equals("F"))
-            {
-                MessageBox.Show("Bienvenido Usuario!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Contraseña o Usuario Incorrectos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
         //this method will chek if i have already an administrator on the database
         public string obtenerTipo()
         {
             string tipo = null;
-            string consulta = "";
             tipo = bd.MostrarDatos("SELECT admi FROM user_admin WHERE admi = 'T'");
             return tipo;
         }
@@ -80,6 +59,98 @@ namespace Procedimientos
             catch (Exception error)
             {
                 MessageBox.Show("Ha Ocurrido un Error! "+error.Message );
+            }
+        }
+
+        //this method will let me insert data to my database
+        public void insertarPais(int id, string nombre, string dire)
+        {
+            try
+            {
+                string consulta = "INSERT INTO pais VALUES('" + id + "','" + nombre + "', '" + dire + "')";
+                bd.InsertarDatos(consulta);
+                MessageBox.Show("Se ha registrado Exitosamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+        //this method will modify the tables that the custimer wants
+        public void modificarPais(int id, string nombre, string dire)
+        {
+            try
+            {
+                string consulta = "UPDATE pais SET nombre ='" + nombre + "', bandera ='" + dire + "' WHERE id = '" + id + "'";
+                bd.ModificarDatos(consulta);
+                MessageBox.Show("Se ha modificado Exitosamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+        //this method will charge the datagrid and clear everything there.
+        public void cargaGridI(DataGridView data)
+        {
+            try
+            {
+                data.DataSource = bd.cargarDatagrid().Tables[0];
+                data.Columns[0].HeaderCell.Value = "Identificador";
+                data.Columns[1].HeaderCell.Value = "Nombre País";
+                data.Refresh();
+                data.ClearSelection();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+        //this method will charge the datagrid and clear everything of a place.
+        public void cargaGridIlugar(DataGridView data,string consulta)
+        {
+            
+            try
+            {
+                data.DataSource = bd.cargarDatagridlugar(consulta).Tables[0];
+                data.Columns[0].HeaderCell.Value = "Identificador";
+                data.Columns[1].HeaderCell.Value = "Nombre Lugar";
+                data.Refresh();
+                data.ClearSelection();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        //this method will insert a place to the database
+        public void insertarLugar(int id, string nombre)
+        {
+            try
+            {
+                string consulta = "INSERT INTO lugar VALUES('" + id + "','" + nombre + "')";
+                bd.InsertarDatos(consulta);
+                MessageBox.Show("Se ha registrado Exitosamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        //this method will modify the tables that the custimer wants on determinated table
+        public void modificarLugar(int id, string nombre)
+        {
+            try
+            {
+                string consulta = "UPDATE lugar SET nombre ='" + nombre + "' WHERE id = '" + id + "'";
+                bd.ModificarDatos(consulta);
+                MessageBox.Show("Se ha modificado Exitosamente!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
             }
         }
     }

@@ -1,0 +1,107 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Procedimientos;
+using Conexion;
+
+namespace Interfaces
+{
+    public partial class CRUD_lugares : UserControl
+    {
+        string consulta = "SELECT id,nombre FROM lugar";
+        Procedimientos.Procedimientos p = new Procedimientos.Procedimientos();
+        ConexionBD bd = new ConexionBD();
+        public CRUD_lugares()
+        {
+            InitializeComponent();
+            p.cargaGridIlugar(dataGridView1, consulta);
+            p.cargaGridIlugar(dataGridView2, consulta);
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            p.insertarLugar(Convert.ToInt32(id_lugar.Text), nombre_lugar.Text);
+            id_lugar.Text = "";
+            nombre_lugar.Text = "";
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            p.cargaGridIlugar(dataGridView1, consulta);
+            p.cargaGridIlugar(dataGridView2, consulta);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (MessageBox.Show("Desea Modificar la Información de " + dataGridView1.CurrentRow.Cells[0].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    newid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    newnombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception error)
+            {
+                string erro = error.Message;
+
+            }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            p.modificarLugar(Convert.ToInt32(newid.Text), newnombre.Text);
+            p.cargaGridIlugar(dataGridView1, consulta);
+            newid.Text = "";
+            newnombre.Text = "";
+
+        }
+
+        private void newnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese solo letras!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                return;
+            }
+            
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (MessageBox.Show("Desea Eliminar la Información de " + dataGridView2.CurrentRow.Cells[1].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    bd.EliminarDatos("DELETE FROM lugar WHERE id = '" + dataGridView2.CurrentRow.Cells[0].Value.ToString() + "'");
+                    MessageBox.Show("Se ha eliminado Correctamente!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception error)
+            {
+                string erro = error.Message;
+
+            }
+        }
+    }
+}

@@ -51,6 +51,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrados_Cruds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrados_Cruds.Designer.cs">
+      <DependentUpon>Administrados_Cruds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_lugares.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_lugares.Designer.cs">
+      <DependentUpon>CRUD_lugares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_paise.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_paise.Designer.cs">
+      <DependentUpon>CRUD_paise.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +83,15 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administrados_Cruds.resx">
+      <DependentUpon>Administrados_Cruds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_lugares.resx">
+      <DependentUpon>CRUD_lugares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_paise.resx">
+      <DependentUpon>CRUD_paise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +142,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Edit_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airplane Mode On_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airport_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airplane Take Off_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\American Airlines_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Place Marker_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Request Money_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Streets_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vertical Flag_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left_52px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
