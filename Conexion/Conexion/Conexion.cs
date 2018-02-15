@@ -83,7 +83,7 @@ namespace Conexion
             DataSet ds = new DataSet();
             Conexion();
             conexion.Open();
-            NpgsqlDataAdapter cmd = new NpgsqlDataAdapter("SELECT id,nombre FROM pais", conexion);
+            NpgsqlDataAdapter cmd = new NpgsqlDataAdapter("SELECT id,nombre FROM pais ORDER BY nombre ASC", conexion);
             cmd.Fill(ds);
             conexion.Close();
             return ds;

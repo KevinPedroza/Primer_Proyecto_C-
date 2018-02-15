@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Procedimientos;
 using Conexion;
 namespace Interfaces
 {
@@ -16,7 +15,7 @@ namespace Interfaces
         string dir;
         string dir2;
         string dir3;
-        Procedimientos.Procedimientos p = new Procedimientos.Procedimientos();
+        Procedimientos.Procedimientos_Pais_Lugar p = new Procedimientos.Procedimientos_Pais_Lugar();
         ConexionBD bd = new ConexionBD();
 
         public CRUD_paise()

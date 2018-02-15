@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using Conexion;
 namespace Procedimientos
 {
-    public class Procedimientos
+    public class Procedimientos_Pais_Lugar
     {
         ConexionBD bd = new ConexionBD();
         

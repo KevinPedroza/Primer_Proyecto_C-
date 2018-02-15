@@ -7,21 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Procedimientos;
 using Conexion;
 
 namespace Interfaces
 {
     public partial class CRUD_lugares : UserControl
     {
-        string consulta = "SELECT id,nombre FROM lugar";
-        Procedimientos.Procedimientos p = new Procedimientos.Procedimientos();
+        string consulta = "SELECT id,nombre FROM lugar ORDER BY nombre ASC;";
+        Procedimientos.Procedimientos_Pais_Lugar p = new Procedimientos.Procedimientos_Pais_Lugar();
         ConexionBD bd = new ConexionBD();
         public CRUD_lugares()
         {
             InitializeComponent();
             p.cargaGridIlugar(dataGridView1, consulta);
             p.cargaGridIlugar(dataGridView2, consulta);
+            p.cargaGridIlugar(dataGridView3, consulta);
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -35,6 +35,7 @@ namespace Interfaces
         {
             p.cargaGridIlugar(dataGridView1, consulta);
             p.cargaGridIlugar(dataGridView2, consulta);
+            p.cargaGridIlugar(dataGridView3, consulta);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -73,13 +74,13 @@ namespace Interfaces
             if (char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Ingrese solo letras!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese solo letras!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 return;
             }
-            
+
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -90,7 +91,8 @@ namespace Interfaces
                 if (MessageBox.Show("Desea Eliminar la Información de " + dataGridView2.CurrentRow.Cells[1].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     bd.EliminarDatos("DELETE FROM lugar WHERE id = '" + dataGridView2.CurrentRow.Cells[0].Value.ToString() + "'");
-                    MessageBox.Show("Se ha eliminado Correctamente!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha eliminado Correctamente!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    p.cargaGridIlugar(dataGridView2, consulta);
                 }
                 else
                 {
@@ -101,6 +103,33 @@ namespace Interfaces
             {
                 string erro = error.Message;
 
+            }
+
+        }
+
+        private void id_lugar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese solo Números!","Aviso!", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void nombre_lugar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese solo letras!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                return;
             }
         }
     }

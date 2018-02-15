@@ -15,8 +15,9 @@ namespace Interfaces
         public Administrados_Cruds()
         {
             InitializeComponent();
-            cruD_paise1.Hide();
-            cruD_lugares1.Hide();
+            cruD_paise2.Hide();
+            cruD_lugares2.Hide();
+            cruD_Aeropuertos1.Hide();
         }
 
         private void Administrados_Cruds_Load(object sender, EventArgs e)
@@ -29,9 +30,9 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button1.Height;
             slide_panel.Top = button1.Top;
-
-            cruD_paise1.Show();
-            cruD_lugares1.Hide();
+            cruD_paise2.Show();
+            cruD_lugares2.Hide();
+            cruD_Aeropuertos1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,8 +40,9 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button2.Height;
             slide_panel.Top = button2.Top;
-            cruD_lugares1.Show();
-            cruD_paise1.Hide();
+            cruD_lugares2.Show();
+            cruD_paise2.Hide();
+            cruD_Aeropuertos1.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -48,6 +50,9 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button3.Height;
             slide_panel.Top = button3.Top;
+            cruD_Aeropuertos1.Show();
+            cruD_paise2.Hide();
+            cruD_lugares2.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -55,6 +60,10 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button4.Height;
             slide_panel.Top = button4.Top;
+            MessageBox.Show("No esta disponible está herramienta. Estamos trabajando en ella! Gracias","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            cruD_paise2.Hide();
+            cruD_lugares2.Hide();
+            cruD_Aeropuertos1.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -116,6 +125,11 @@ namespace Interfaces
             {
                 return;
             }
+        }
+
+        private void cruD_lugares2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

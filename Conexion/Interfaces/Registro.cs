@@ -12,7 +12,7 @@ namespace Interfaces
 {
     public partial class Registro : Form
     {
-        Procedimientos.Procedimientos p = new Procedimientos.Procedimientos();
+        Procedimientos.Procedimientos_Pais_Lugar p = new Procedimientos.Procedimientos_Pais_Lugar();
         int contador = 0;
         int contador2 = 0;
         public Registro()

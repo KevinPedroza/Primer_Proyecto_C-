@@ -14,10 +14,10 @@ namespace Interfaces
     {
         ConexionBD bd = new ConexionBD();
         int contador = 0;
-        Procedimientos.Procedimientos p = new Procedimientos.Procedimientos(); 
+        Procedimientos.Procedimientos_Pais_Lugar p = new Procedimientos.Procedimientos_Pais_Lugar();
         public Login()
         {
-            contador = contador+1;
+            contador = contador + 1;
             InitializeComponent();
         }
 
@@ -80,12 +80,13 @@ namespace Interfaces
             try
             {
                 login(Usuario.Text, password.Text);
-                
+
             }
             catch (Exception error)
             {
+                contador = 1;
                 string erro = error.Message;
-               MessageBox.Show("Contraseña o Usuario Incorrectos! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Contraseña o Usuario Incorrectos! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);              
             }
             Usuario.Text = "";
         }
