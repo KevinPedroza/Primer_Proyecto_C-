@@ -66,7 +66,37 @@ namespace Interfaces
             {
                 tipoadmi = "F";
             }
-            p.insertarUser(cedula.Text,usuario.Text,contra.Text,concontra.Text,tipoadmi);
+            try
+            {
+                if (contra.Text != concontra.Text)
+                {
+                    MessageBox.Show("Las contraseñas no coinciden", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    contador = 1;
+                    contador2 = 1;
+                }
+                else if (usuario.Text == "")
+                {
+                    MessageBox.Show("Ingrese un nombre de Usuario!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    contador = 1;
+                    contador2 = 1;
+                }
+                else if (cedula.Text == "")
+                {
+                    MessageBox.Show("Ingrese un número de cédula!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    contador = 1;
+                    contador2 = 1;
+                }
+                else
+                {
+                    p.insertarUser(cedula.Text, usuario.Text, contra.Text, concontra.Text, tipoadmi);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error en el registro! "+error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                contador = 1;
+                contador2 = 1;
+            }
             cedula.Text = "";
             usuario.Text = "";
         }

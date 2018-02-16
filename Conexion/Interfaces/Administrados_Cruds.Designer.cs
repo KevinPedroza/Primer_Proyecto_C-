@@ -45,9 +45,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.cruD_paise2 = new Interfaces.CRUD_paise();
-            this.cruD_lugares2 = new Interfaces.CRUD_lugares();
             this.cruD_Aeropuertos1 = new Interfaces.CRUD_Aeropuertos();
+            this.cruD_paise1 = new Interfaces.CRUD_paise();
+            this.cruD_lugares1 = new Interfaces.CRUD_lugares();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -310,28 +310,26 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // cruD_paise2
-            // 
-            this.cruD_paise2.Location = new System.Drawing.Point(200, 86);
-            this.cruD_paise2.Name = "cruD_paise2";
-            this.cruD_paise2.Size = new System.Drawing.Size(785, 497);
-            this.cruD_paise2.TabIndex = 7;
-            // 
-            // cruD_lugares2
-            // 
-            this.cruD_lugares2.Location = new System.Drawing.Point(200, 86);
-            this.cruD_lugares2.Margin = new System.Windows.Forms.Padding(0);
-            this.cruD_lugares2.Name = "cruD_lugares2";
-            this.cruD_lugares2.Size = new System.Drawing.Size(788, 483);
-            this.cruD_lugares2.TabIndex = 6;
-            this.cruD_lugares2.Load += new System.EventHandler(this.cruD_lugares2_Load);
-            // 
             // cruD_Aeropuertos1
             // 
-            this.cruD_Aeropuertos1.Location = new System.Drawing.Point(200, 86);
+            this.cruD_Aeropuertos1.Location = new System.Drawing.Point(204, 87);
             this.cruD_Aeropuertos1.Name = "cruD_Aeropuertos1";
             this.cruD_Aeropuertos1.Size = new System.Drawing.Size(782, 480);
-            this.cruD_Aeropuertos1.TabIndex = 8;
+            this.cruD_Aeropuertos1.TabIndex = 7;
+            // 
+            // cruD_paise1
+            // 
+            this.cruD_paise1.Location = new System.Drawing.Point(204, 87);
+            this.cruD_paise1.Name = "cruD_paise1";
+            this.cruD_paise1.Size = new System.Drawing.Size(785, 497);
+            this.cruD_paise1.TabIndex = 8;
+            // 
+            // cruD_lugares1
+            // 
+            this.cruD_lugares1.Location = new System.Drawing.Point(204, 87);
+            this.cruD_lugares1.Name = "cruD_lugares1";
+            this.cruD_lugares1.Size = new System.Drawing.Size(785, 483);
+            this.cruD_lugares1.TabIndex = 9;
             // 
             // Administrados_Cruds
             // 
@@ -339,9 +337,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(985, 569);
+            this.Controls.Add(this.cruD_lugares1);
+            this.Controls.Add(this.cruD_paise1);
             this.Controls.Add(this.cruD_Aeropuertos1);
-            this.Controls.Add(this.cruD_paise2);
-            this.Controls.Add(this.cruD_lugares2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -381,8 +379,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private CRUD_lugares cruD_lugares2;
-        private CRUD_paise cruD_paise2;
         private CRUD_Aeropuertos cruD_Aeropuertos1;
+        private CRUD_paise cruD_paise1;
+        private CRUD_lugares cruD_lugares1;
     }
 }

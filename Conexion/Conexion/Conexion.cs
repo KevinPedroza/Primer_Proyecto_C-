@@ -5,13 +5,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Conexion
 {
     public class ConexionBD
     {
-        static NpgsqlConnection conexion;
-        static NpgsqlCommand cmd;
+        public static NpgsqlConnection conexion;
+        public static NpgsqlCommand cmd;
 
         string servidor = "localhost";
         int puerto = 5432;
@@ -27,21 +28,35 @@ namespace Conexion
         //this method will insert datas
         public void InsertarDatos(string insertar)
         {
-            Conexion();
-            conexion.Open();
-            cmd = new NpgsqlCommand(insertar, conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            try
+            {
+                Conexion();
+                conexion.Open();
+                cmd = new NpgsqlCommand(insertar, conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error en la inserción de los datos! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //this method will modify datas
 
         public void ModificarDatos(string modificar)
         {
-            Conexion();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand(modificar, conexion);
-            cmd.ExecuteNonQuery();
-            conexion.Close();
+            try
+            {
+                Conexion();
+                conexion.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand(modificar, conexion);
+                cmd.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error en la modificación de los datos! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //this method will delete data
         public void EliminarDatos(string eliminar)

@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="Aeropuerto.cs" />
     <Compile Include="Herencia_Aeropuerto.cs" />
-    <Compile Include="Procedimientos_Aeropuerto.cs" />
     <Compile Include="Procedimientos_Pais_Lugar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
