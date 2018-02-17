@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Herencia_THoteles.cs" />
     <Compile Include="Procedimientos_Aeropertos.cs" />
+    <Compile Include="Procedimientos_THoteles.cs" />
+    <Compile Include="Tarifa_Hoteles.cs" />
     <Compile Include="Rutas.cs" />
     <Compile Include="Herencia_Rutas.cs" />
     <Compile Include="Procedimientos_Pais_Lugar.cs" />

@@ -81,6 +81,12 @@
     <Compile Include="CRUD_Rutas.Designer.cs">
       <DependentUpon>CRUD_Rutas.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_THoteles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_THoteles.Designer.cs">
+      <DependentUpon>CRUD_THoteles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Rutas.resx">
       <DependentUpon>CRUD_Rutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_THoteles.resx">
+      <DependentUpon>CRUD_THoteles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
