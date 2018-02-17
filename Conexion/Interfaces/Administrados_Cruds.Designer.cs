@@ -48,6 +48,7 @@
             this.cruD_Aeropuertos1 = new Interfaces.CRUD_Aeropuertos();
             this.cruD_paise1 = new Interfaces.CRUD_paise();
             this.cruD_lugares1 = new Interfaces.CRUD_lugares();
+            this.cruD_Rutas1 = new Interfaces.CRUD_Rutas();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -331,12 +332,21 @@
             this.cruD_lugares1.Size = new System.Drawing.Size(785, 483);
             this.cruD_lugares1.TabIndex = 9;
             // 
+            // cruD_Rutas1
+            // 
+            this.cruD_Rutas1.BackColor = System.Drawing.Color.DarkGray;
+            this.cruD_Rutas1.Location = new System.Drawing.Point(204, 87);
+            this.cruD_Rutas1.Name = "cruD_Rutas1";
+            this.cruD_Rutas1.Size = new System.Drawing.Size(782, 480);
+            this.cruD_Rutas1.TabIndex = 10;
+            // 
             // Administrados_Cruds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(985, 569);
+            this.Controls.Add(this.cruD_Rutas1);
             this.Controls.Add(this.cruD_lugares1);
             this.Controls.Add(this.cruD_paise1);
             this.Controls.Add(this.cruD_Aeropuertos1);
@@ -382,5 +392,6 @@
         private CRUD_Aeropuertos cruD_Aeropuertos1;
         private CRUD_paise cruD_paise1;
         private CRUD_lugares cruD_lugares1;
+        private CRUD_Rutas cruD_Rutas1;
     }
 }

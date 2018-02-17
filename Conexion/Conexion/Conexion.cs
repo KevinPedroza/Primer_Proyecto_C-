@@ -103,6 +103,7 @@ namespace Conexion
             conexion.Close();
             return ds;
         }
+        //this method will charge the information on any datagrid view
         public DataSet cargarDatagridlugar(string consulta)
         {
             DataSet ds = new DataSet();

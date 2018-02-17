@@ -18,6 +18,7 @@ namespace Interfaces
             cruD_paise1.Hide();
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
+            cruD_Rutas1.Hide();
         }
 
         private void Administrados_Cruds_Load(object sender, EventArgs e)
@@ -33,6 +34,7 @@ namespace Interfaces
             cruD_paise1.Show();
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
+            cruD_Rutas1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace Interfaces
             cruD_lugares1.Show();
             cruD_paise1.Hide();
             cruD_Aeropuertos1.Hide();
+            cruD_Rutas1.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,6 +56,7 @@ namespace Interfaces
             cruD_Aeropuertos1.Show();
             cruD_paise1.Hide();
             cruD_lugares1.Hide();
+            cruD_Rutas1.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -64,6 +68,7 @@ namespace Interfaces
             cruD_paise1.Hide();
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
+            cruD_Rutas1.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -71,6 +76,10 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button5.Height;
             slide_panel.Top = button5.Top;
+            cruD_Rutas1.Show();
+            cruD_paise1.Hide();
+            cruD_lugares1.Hide();
+            cruD_Aeropuertos1.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)

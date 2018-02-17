@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aeropuerto.cs" />
-    <Compile Include="Herencia_Aeropuerto.cs" />
+    <Compile Include="Procedimientos_Aeropertos.cs" />
+    <Compile Include="Rutas.cs" />
+    <Compile Include="Herencia_Rutas.cs" />
     <Compile Include="Procedimientos_Pais_Lugar.cs" />
+    <Compile Include="Procedimientos_rutas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
