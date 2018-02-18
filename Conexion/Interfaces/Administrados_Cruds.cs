@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Procedimientos;
 namespace Interfaces
 {
     public partial class Administrados_Cruds : Form
     {
+        Procedimientos_TVuelos tv = new Procedimientos_TVuelos();
+        Procedimientos_Aeropertos pr = new Procedimientos_Aeropertos();
         public Administrados_Cruds()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace Interfaces
             cruD_Aeropuertos1.Hide();
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void Administrados_Cruds_Load(object sender, EventArgs e)
@@ -37,6 +40,7 @@ namespace Interfaces
             cruD_Aeropuertos1.Hide();
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,6 +53,7 @@ namespace Interfaces
             cruD_Aeropuertos1.Hide();
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -61,6 +66,7 @@ namespace Interfaces
             cruD_lugares1.Hide();
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -74,6 +80,7 @@ namespace Interfaces
             cruD_Aeropuertos1.Hide();
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -86,6 +93,7 @@ namespace Interfaces
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
             cruD_THoteles1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -105,6 +113,7 @@ namespace Interfaces
             cruD_paise1.Hide();
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -112,6 +121,13 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button8.Height;
             slide_panel.Top = button8.Top;
+            cruD_TVuelos1.Show();
+            tv.llenarRutas(cruD_TVuelos1.rutas);
+            cruD_THoteles1.Hide();
+            cruD_Rutas1.Hide();
+            cruD_paise1.Hide();
+            cruD_lugares1.Hide();
+            cruD_Aeropuertos1.Hide();
         }
 
         private void button9_Click(object sender, EventArgs e)

@@ -45,11 +45,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.cruD_THoteles1 = new Interfaces.CRUD_THoteles();
             this.cruD_Rutas1 = new Interfaces.CRUD_Rutas();
             this.cruD_lugares1 = new Interfaces.CRUD_lugares();
             this.cruD_paise1 = new Interfaces.CRUD_paise();
             this.cruD_Aeropuertos1 = new Interfaces.CRUD_Aeropuertos();
-            this.cruD_THoteles1 = new Interfaces.CRUD_THoteles();
+            this.cruD_TVuelos1 = new Interfaces.CRUD_TVuelos();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -312,6 +313,13 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cruD_THoteles1
+            // 
+            this.cruD_THoteles1.Location = new System.Drawing.Point(204, 87);
+            this.cruD_THoteles1.Name = "cruD_THoteles1";
+            this.cruD_THoteles1.Size = new System.Drawing.Size(782, 480);
+            this.cruD_THoteles1.TabIndex = 11;
+            // 
             // cruD_Rutas1
             // 
             this.cruD_Rutas1.BackColor = System.Drawing.Color.DarkGray;
@@ -341,12 +349,12 @@
             this.cruD_Aeropuertos1.Size = new System.Drawing.Size(782, 480);
             this.cruD_Aeropuertos1.TabIndex = 7;
             // 
-            // cruD_THoteles1
+            // cruD_TVuelos1
             // 
-            this.cruD_THoteles1.Location = new System.Drawing.Point(204, 87);
-            this.cruD_THoteles1.Name = "cruD_THoteles1";
-            this.cruD_THoteles1.Size = new System.Drawing.Size(782, 480);
-            this.cruD_THoteles1.TabIndex = 11;
+            this.cruD_TVuelos1.Location = new System.Drawing.Point(204, 87);
+            this.cruD_TVuelos1.Name = "cruD_TVuelos1";
+            this.cruD_TVuelos1.Size = new System.Drawing.Size(782, 477);
+            this.cruD_TVuelos1.TabIndex = 12;
             // 
             // Administrados_Cruds
             // 
@@ -354,6 +362,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(985, 569);
+            this.Controls.Add(this.cruD_TVuelos1);
             this.Controls.Add(this.cruD_THoteles1);
             this.Controls.Add(this.cruD_Rutas1);
             this.Controls.Add(this.cruD_lugares1);
@@ -403,5 +412,6 @@
         private CRUD_lugares cruD_lugares1;
         private CRUD_Rutas cruD_Rutas1;
         private CRUD_THoteles cruD_THoteles1;
+        private CRUD_TVuelos cruD_TVuelos1;
     }
 }

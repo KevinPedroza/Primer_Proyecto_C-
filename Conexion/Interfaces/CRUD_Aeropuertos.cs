@@ -80,6 +80,8 @@ namespace Interfaces
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            localidad_aero.Items.Clear();
+            pr.MostrarDatosCombo(localidad_aero);
             try
             {
 
