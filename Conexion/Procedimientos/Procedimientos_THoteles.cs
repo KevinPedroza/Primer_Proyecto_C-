@@ -54,5 +54,19 @@ namespace Procedimientos
                 MessageBox.Show("Ha ocurrido un error! "+error.Message,"Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
+
+        //this method will modify the information from the database
+        public void modificarTrifa(int id, int precio)
+        {
+            try
+            {
+                bd.ModificarDatos("UPDATE tarifa_hotel SET precio = '" + precio + "' WHERE id = '" + id + "'");
+                MessageBox.Show("Se ha modificado Correctamente!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error en la modificación! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -101,6 +101,10 @@ namespace Interfaces
             slide_panel.Height = button7.Height;
             slide_panel.Top = button7.Top;
             cruD_THoteles1.Show();
+            cruD_Rutas1.Hide();
+            cruD_paise1.Hide();
+            cruD_lugares1.Hide();
+            cruD_Aeropuertos1.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace Interfaces
             if (char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Ingrese solo Números!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese solo Números!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -48,14 +48,14 @@ namespace Interfaces
         {
             if (id.Text == "" || precio.Text == "")
             {
-                MessageBox.Show("Llene todos los campos requeridos!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Llene todos los campos requeridos!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 Herencia_THoletes ht = new Herencia_THoletes();
                 ht.id = Convert.ToInt32(id.Text);
                 ht.Precio = Convert.ToInt32(precio.Text);
-                pr.insertarTarifa(ht.id,ht.Precio);
+                pr.insertarTarifa(ht.id, ht.Precio);
             }
             id.Text = "";
             precio.Text = "";
@@ -67,11 +67,58 @@ namespace Interfaces
             mostrarinfo.ClearSelection();
             pr.mostarInfo(eliminartarifa);
             eliminartarifa.ClearSelection();
+            pr.mostarInfo(mostrarinfodata);
+            mostrarinfodata.ClearSelection();
         }
 
         private void eliminartarifa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             pr.eliminarInfo(eliminartarifa);
+        }
+
+        private void mostrarinfodata_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (MessageBox.Show("Desea Modificar la tarifa código " + mostrarinfodata.CurrentRow.Cells[0].Value.ToString() , "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    newid.Text = mostrarinfodata.CurrentRow.Cells[0].Value.ToString();
+                    newprecio.Text = mostrarinfodata.CurrentRow.Cells[1].Value.ToString();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception error)
+            {
+                string erro = error.Message;
+
+            }
+        }
+
+        private void newprecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese solo Números!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            Herencia_THoletes ht = new Herencia_THoletes();
+            ht.id = Convert.ToInt32(newid.Text);
+            ht.Precio = Convert.ToInt32(newprecio.Text);
+            pr.modificarTrifa(ht.id,ht.Precio);
+            pr.mostarInfo(mostrarinfodata);
+            mostrarinfodata.ClearSelection();
         }
     }
 }

@@ -44,12 +44,22 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.eliminartarifa = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.mostrarinfodata = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.newid = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.newprecio = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mostrarinfo)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eliminartarifa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mostrarinfodata)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -173,6 +183,14 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.Controls.Add(this.bunifuFlatButton2);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.newprecio);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.newid);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.mostrarinfodata);
+            this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -254,6 +272,118 @@
             this.eliminartarifa.TabIndex = 1;
             this.eliminartarifa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.eliminartarifa_CellClick);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(223, 3);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(295, 33);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Modifique la Información";
+            // 
+            // mostrarinfodata
+            // 
+            this.mostrarinfodata.AllowUserToAddRows = false;
+            this.mostrarinfodata.AllowUserToDeleteRows = false;
+            this.mostrarinfodata.AllowUserToResizeColumns = false;
+            this.mostrarinfodata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.mostrarinfodata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mostrarinfodata.Location = new System.Drawing.Point(376, 106);
+            this.mostrarinfodata.Name = "mostrarinfodata";
+            this.mostrarinfodata.ReadOnly = true;
+            this.mostrarinfodata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.mostrarinfodata.Size = new System.Drawing.Size(373, 175);
+            this.mostrarinfodata.TabIndex = 1;
+            this.mostrarinfodata.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mostrarinfodata_CellClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(63, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 28);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Identificador";
+            // 
+            // newid
+            // 
+            this.newid.BorderColor = System.Drawing.Color.SeaGreen;
+            this.newid.Enabled = false;
+            this.newid.Location = new System.Drawing.Point(40, 106);
+            this.newid.Multiline = true;
+            this.newid.Name = "newid";
+            this.newid.Size = new System.Drawing.Size(182, 28);
+            this.newid.TabIndex = 3;
+            this.newid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(87, 193);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 28);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Precio";
+            // 
+            // newprecio
+            // 
+            this.newprecio.BorderColor = System.Drawing.Color.SeaGreen;
+            this.newprecio.Location = new System.Drawing.Point(40, 246);
+            this.newprecio.Multiline = true;
+            this.newprecio.Name = "newprecio";
+            this.newprecio.Size = new System.Drawing.Size(182, 28);
+            this.newprecio.TabIndex = 5;
+            this.newprecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.newprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newprecio_KeyPress);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(456, 75);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(226, 28);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Seleccione una Tarifa ";
+            // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 0;
+            this.bunifuFlatButton2.ButtonText = "Modificar Tarifa";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(262, 341);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.SystemColors.ActiveCaption;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(241, 48);
+            this.bunifuFlatButton2.TabIndex = 7;
+            this.bunifuFlatButton2.Text = "Modificar Tarifa";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
+            // 
             // CRUD_THoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,12 +394,15 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mostrarinfo)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eliminartarifa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mostrarinfodata)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,5 +424,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView eliminartarifa;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private System.Windows.Forms.Label label9;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox newprecio;
+        private System.Windows.Forms.Label label8;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox newid;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView mostrarinfodata;
+        private System.Windows.Forms.Label label6;
     }
 }
