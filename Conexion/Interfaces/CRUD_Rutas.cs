@@ -16,12 +16,6 @@ namespace Interfaces
         public CRUD_Rutas()
         {
             InitializeComponent();
-            pais_origenin.Items.Clear();
-            pr.cargarCombo(pais_origenin);
-            pais_destinoin.Items.Clear();
-            pr.cargarCombo(pais_destinoin);
-            pais_destinoin.SelectedIndex = 0;
-            pais_origenin.SelectedIndex = 0;
         }
 
         private void id_inruta_KeyPress(object sender, KeyPressEventArgs e)

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Herencia_Vehiculos.cs" />
     <Compile Include="Herencia_Hoteles.cs" />
     <Compile Include="Herencia_TVuelos.cs" />
     <Compile Include="Herencia_THoteles.cs" />
@@ -53,6 +54,8 @@
     <Compile Include="Procedimientos_THoteles.cs" />
     <Compile Include="Procedimientos_TVuelos.cs" />
     <Compile Include="Hoteles.cs" />
+    <Compile Include="Procedimientos_Vehiculos.cs" />
+    <Compile Include="Vehiculos.cs" />
     <Compile Include="Tarifa_Vuelos.cs" />
     <Compile Include="Tarifa_Hoteles.cs" />
     <Compile Include="Rutas.cs" />

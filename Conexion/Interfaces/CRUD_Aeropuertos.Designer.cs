@@ -169,6 +169,7 @@
             this.dataGridViewComboBoxColumn2,
             this.dataGridViewTextBoxColumn6});
             this.dataGridView3.Location = new System.Drawing.Point(20, 65);
+            this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

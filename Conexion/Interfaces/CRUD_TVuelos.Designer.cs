@@ -137,6 +137,7 @@
             this.rutas.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.rutas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rutas.Location = new System.Drawing.Point(245, 130);
+            this.rutas.MultiSelect = false;
             this.rutas.Name = "rutas";
             this.rutas.ReadOnly = true;
             this.rutas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -412,6 +413,7 @@
             this.eliminarinfo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.eliminarinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.eliminarinfo.Location = new System.Drawing.Point(48, 59);
+            this.eliminarinfo.MultiSelect = false;
             this.eliminarinfo.Name = "eliminarinfo";
             this.eliminarinfo.ReadOnly = true;
             this.eliminarinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

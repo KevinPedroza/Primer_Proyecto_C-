@@ -21,10 +21,6 @@ namespace Interfaces
         public CRUD_hoteles()
         {
             InitializeComponent();
-            pais.Items.Clear();
-            lugar.Items.Clear();
-            ph.llenarCombo(pais, "SELECT nombre FROM pais");
-            ph.llenarCombo(lugar, "SELECT nombre FROM lugar");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
