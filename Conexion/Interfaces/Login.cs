@@ -82,7 +82,7 @@ namespace Interfaces
             {
                 contador = 1;
                 string erro = error.Message;
-                MessageBox.Show("Contraseña o Usuario Incorrectos! "+erro, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);              
+                MessageBox.Show("Contraseña o Usuario Incorrectos! ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);              
             }
             Usuario.Text = "";
         }

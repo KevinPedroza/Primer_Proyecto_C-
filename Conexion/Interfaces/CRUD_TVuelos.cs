@@ -50,6 +50,10 @@ namespace Interfaces
         private void tabControl1_Click(object sender, EventArgs e)
         {
             pv.llenarRutas(rutas);
+            pv.mostrarInfo(mostrarinfo);
+            pv.mostrarInfo(eliminarinfo);
+            pv.mostrarInfo(modificarinfo);
+            pv.llenarRutas(newruta);
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
@@ -66,16 +70,97 @@ namespace Interfaces
                     tv.Id = Convert.ToInt32(id.Text);
                     tv.Idruta = Convert.ToInt32(rutas.CurrentRow.Cells[0].Value.ToString());
                     tv.Precio = Convert.ToInt32(precio.Text);
-                    pv.insertarTarifa(tv.Id,tv.Precio,tv.Idruta);
+                    pv.insertarTarifa(tv.Id, tv.Precio, tv.Idruta);
                 }
             }
             catch (Exception error)
             {
-                MessageBox.Show("Seleccione una ruta! ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione una ruta! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             id.Text = "";
             precio.Text = "";
             rutas.ClearSelection();
+        }
+
+        private void eliminarinfo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            pv.eliminarTarifa(eliminarinfo);
+        }
+
+        private void newprecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese solo números! ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void modificarinfo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                if (MessageBox.Show("Desea Modificar la tarifa código " + modificarinfo.CurrentRow.Cells[0].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    newid.Text = modificarinfo.CurrentRow.Cells[0].Value.ToString();
+                    newprecio.Text = modificarinfo.CurrentRow.Cells[1].Value.ToString();
+                    int index = 0;
+                    foreach (DataGridViewRow fila in newruta.Rows)
+                    {
+                        if (modificarinfo.CurrentRow.Cells[2].Value.ToString() == fila.Cells[1].Value.ToString() & modificarinfo.CurrentRow.Cells[3].Value.ToString() == fila.Cells[2].Value.ToString())
+                        {
+                            index = fila.Index;
+                        }
+                        newruta.ClearSelection();
+                        newruta.Rows[index].Selected = true;
+                        newruta.CurrentCell = newruta.Rows[index].Cells[0];
+                    }
+
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception error)
+            {
+                string erro = error.Message;
+
+            }
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (newprecio.Text == "")
+                {
+                    errorProvider1.SetError(newprecio, "Ingrese un Precio!");
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    Herencia_TVuelos tv = new Herencia_TVuelos();
+                    tv.Id = Convert.ToInt32(newid.Text);
+                    tv.Idruta = Convert.ToInt32(newruta.CurrentRow.Cells[0].Value.ToString());
+                    tv.Precio = Convert.ToInt32(newprecio.Text);
+                    pv.modificarTarifa(Convert.ToInt32(tv.Id),Convert.ToInt32(tv.Precio),Convert.ToInt32(tv.Idruta));
+                    pv.mostrarInfo(modificarinfo);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error! "+error.Message,"Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            newid.Text = "";
+            newprecio.Text = "";
+            newruta.ClearSelection();
+
         }
     }
 }

@@ -63,6 +63,12 @@
     <Compile Include="CRUD_Aeropuertos.Designer.cs">
       <DependentUpon>CRUD_Aeropuertos.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_hoteles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_hoteles.Designer.cs">
+      <DependentUpon>CRUD_hoteles.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_lugares.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Aeropuertos.resx">
       <DependentUpon>CRUD_Aeropuertos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_hoteles.resx">
+      <DependentUpon>CRUD_hoteles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_lugares.resx">
       <DependentUpon>CRUD_lugares.cs</DependentUpon>

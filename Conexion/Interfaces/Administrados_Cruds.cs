@@ -13,7 +13,9 @@ namespace Interfaces
     public partial class Administrados_Cruds : Form
     {
         Procedimientos_TVuelos tv = new Procedimientos_TVuelos();
-        Procedimientos_Aeropertos pr = new Procedimientos_Aeropertos();
+        Procedimientos_Aeropertos pr2 = new Procedimientos_Aeropertos();
+        Procedimientos_Hoteles ph = new Procedimientos_Hoteles();
+        Procedimientos_rutas pr = new Procedimientos_rutas();
         public Administrados_Cruds()
         {
             InitializeComponent();
@@ -23,6 +25,7 @@ namespace Interfaces
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
             cruD_TVuelos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void Administrados_Cruds_Load(object sender, EventArgs e)
@@ -41,6 +44,7 @@ namespace Interfaces
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
             cruD_TVuelos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -54,6 +58,7 @@ namespace Interfaces
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
             cruD_TVuelos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -67,6 +72,7 @@ namespace Interfaces
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
             cruD_TVuelos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -81,6 +87,7 @@ namespace Interfaces
             cruD_Rutas1.Hide();
             cruD_THoteles1.Hide();
             cruD_TVuelos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -89,11 +96,14 @@ namespace Interfaces
             slide_panel.Height = button5.Height;
             slide_panel.Top = button5.Top;
             cruD_Rutas1.Show();
+            pr.cargarCombo(cruD_Rutas1.pais_origenin);
+            pr.cargarCombo(cruD_Rutas1.pais_destinoin);
             cruD_paise1.Hide();
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
             cruD_THoteles1.Hide();
             cruD_TVuelos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -101,6 +111,17 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button6.Height;
             slide_panel.Top = button6.Top;
+            cruD_hoteles1.Show();
+            cruD_hoteles1.pais.SelectedIndex = 0;
+            cruD_hoteles1.lugar.SelectedIndex = 0;
+            ph.llenarCombo(cruD_hoteles1.pais, "SELECT nombre FROM pais");
+            ph.llenarCombo(cruD_hoteles1.lugar, "SELECT nombre FROM lugar");
+            cruD_Rutas1.Hide();
+            cruD_paise1.Hide();
+            cruD_lugares1.Hide();
+            cruD_Aeropuertos1.Hide();
+            cruD_THoteles1.Hide();
+            cruD_TVuelos1.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -114,6 +135,7 @@ namespace Interfaces
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
             cruD_TVuelos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -128,6 +150,7 @@ namespace Interfaces
             cruD_paise1.Hide();
             cruD_lugares1.Hide();
             cruD_Aeropuertos1.Hide();
+            cruD_hoteles1.Hide();
         }
 
         private void button9_Click(object sender, EventArgs e)

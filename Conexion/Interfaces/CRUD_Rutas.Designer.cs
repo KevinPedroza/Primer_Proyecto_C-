@@ -587,9 +587,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox pais_destinoin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox pais_origenin;
         private System.Windows.Forms.Label label3;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox id_inruta;
         private System.Windows.Forms.Label label2;
@@ -613,5 +611,7 @@
         private System.Windows.Forms.DataGridView modify_info;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.ComboBox pais_destinoin;
+        public System.Windows.Forms.ComboBox pais_origenin;
     }
 }

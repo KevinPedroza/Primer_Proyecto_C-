@@ -45,6 +45,7 @@ namespace Interfaces
         public CRUD_Aeropuertos()
         {
             InitializeComponent();
+            localidad_aero.Items.Clear();
             pr.MostrarDatosCombo(localidad_aero);
         }
 
