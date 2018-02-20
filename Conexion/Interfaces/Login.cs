@@ -40,7 +40,9 @@ namespace Interfaces
             }
             else if (bduser.Equals(user) & bdtipo.Equals("F"))
             {
-                MessageBox.Show("Bienvenido Usuario!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Usuario us = new Usuario();
+                us.Show();
             }
         }
         //this method will close the frame

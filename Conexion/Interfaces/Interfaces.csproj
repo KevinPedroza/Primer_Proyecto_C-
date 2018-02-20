@@ -119,6 +119,18 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seccion_Vuelos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seccion_Vuelos.Designer.cs">
+      <DependentUpon>Seccion_Vuelos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrados_Cruds.resx">
       <DependentUpon>Administrados_Cruds.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +173,12 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seccion_Vuelos.resx">
+      <DependentUpon>Seccion_Vuelos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
