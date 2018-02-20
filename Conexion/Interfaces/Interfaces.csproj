@@ -57,6 +57,12 @@
     <Compile Include="Administrados_Cruds.Designer.cs">
       <DependentUpon>Administrados_Cruds.cs</DependentUpon>
     </Compile>
+    <Compile Include="A_Carro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Carro.Designer.cs">
+      <DependentUpon>A_Carro.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_Aeropuertos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,12 +125,6 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Seccion_Vuelos.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Seccion_Vuelos.Designer.cs">
-      <DependentUpon>Seccion_Vuelos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,9 +173,6 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seccion_Vuelos.resx">
-      <DependentUpon>Seccion_Vuelos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
@@ -253,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sort Down_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reserve_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

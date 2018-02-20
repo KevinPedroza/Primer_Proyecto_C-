@@ -54,6 +54,7 @@
     <Compile Include="Procedimientos_THoteles.cs" />
     <Compile Include="Procedimientos_TVuelos.cs" />
     <Compile Include="Hoteles.cs" />
+    <Compile Include="Procedimientos_Usuario.cs" />
     <Compile Include="Procedimientos_Vehiculos.cs" />
     <Compile Include="Vehiculos.cs" />
     <Compile Include="Tarifa_Vuelos.cs" />

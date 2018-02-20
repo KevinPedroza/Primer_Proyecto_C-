@@ -14,6 +14,7 @@ namespace Interfaces
     {
         ConexionBD bd = new ConexionBD();
         int contador = 0;
+        public static string contra;
         Procedimientos.Procedimientos_Pais_Lugar p = new Procedimientos.Procedimientos_Pais_Lugar();
         public Login()
         {
@@ -75,6 +76,7 @@ namespace Interfaces
         //this method will let you get to the program
         private void button3_Click(object sender, EventArgs e)
         {
+            contra = password.Text;
             try
             {
                 login(Usuario.Text, password.Text);

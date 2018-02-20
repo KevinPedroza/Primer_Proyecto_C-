@@ -216,8 +216,8 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private System.Windows.Forms.Button button2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox password;
         private System.Windows.Forms.Button button3;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox password;
     }
 }
 

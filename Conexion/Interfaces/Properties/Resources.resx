@@ -130,6 +130,9 @@
   <data name="Streets_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Streets_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sort Down_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sort Down_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Airport_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Airport_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,6 +141,9 @@
   </data>
   <data name="Delete_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hotel_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hotel_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Back_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,10 +169,7 @@
   <data name="Airplane Mode On_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Airplane Mode On_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hotel_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hotel_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sort Down_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sort Down_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reserve_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reserve_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -67,6 +67,15 @@ namespace Conexion
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
+        //this method will delete data
+        public void traerDatosLabel(string consulta)
+        {
+            Conexion();
+            conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand(consulta, conexion);
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
         //this method will show datas 
         public string MostrarDatos(string consulta)
         {
