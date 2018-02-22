@@ -17,6 +17,7 @@ namespace Interfaces
         Procedimientos_Hoteles ph = new Procedimientos_Hoteles();
         Procedimientos_rutas pr = new Procedimientos_rutas();
         Procedimientos_Vehiculos pv = new Procedimientos_Vehiculos();
+        Procedimientos_THoteles pth = new Procedimientos_THoteles();
         public Administrados_Cruds()
         {
             InitializeComponent();
@@ -143,6 +144,8 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button7.Height;
             slide_panel.Top = button7.Top;
+            cruD_THoteles1.id.Items.Clear();
+            pth.llenarCombo(cruD_THoteles1.id,"SELECT id FROM hotel");
             cruD_THoteles1.Show();
             cruD_Rutas1.Hide();
             cruD_paise1.Hide();
@@ -159,6 +162,8 @@ namespace Interfaces
             slide_panel.Height = button8.Height;
             slide_panel.Top = button8.Top;
             cruD_TVuelos1.Show();
+            cruD_TVuelos1.id.Items.Clear();
+            tv.llenarCombo(cruD_TVuelos1.id,"SELECT id FROM ruta");
             tv.llenarRutas(cruD_TVuelos1.rutas);
             cruD_THoteles1.Hide();
             cruD_Rutas1.Hide();

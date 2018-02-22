@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.button1 = new System.Windows.Forms.Button();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,7 +140,7 @@
             this.Usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(370, 49);
-            this.Usuario.TabIndex = 8;
+            this.Usuario.TabIndex = 1;
             this.Usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -170,7 +172,7 @@
             this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(370, 44);
-            this.password.TabIndex = 6;
+            this.password.TabIndex = 2;
             this.password.Text = "password";
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.password.Enter += new System.EventHandler(this.password_Enter);
@@ -190,8 +192,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Login
             // 
+            this.AcceptButton = this.button3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 404);
@@ -218,6 +226,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         public Bunifu.Framework.UI.BunifuMaterialTextbox password;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 

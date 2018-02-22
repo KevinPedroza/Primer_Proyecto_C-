@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_THoteles));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.id = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.precio = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.id = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,9 +78,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.id);
             this.tabPage1.Controls.Add(this.bunifuFlatButton1);
             this.tabPage1.Controls.Add(this.precio);
-            this.tabPage1.Controls.Add(this.id);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -90,6 +90,14 @@
             this.tabPage1.Size = new System.Drawing.Size(774, 451);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Insertar Tarifa de Hoteles";
+            // 
+            // id
+            // 
+            this.id.FormattingEnabled = true;
+            this.id.Location = new System.Drawing.Point(65, 180);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(171, 21);
+            this.id.TabIndex = 7;
             // 
             // bunifuFlatButton1
             // 
@@ -137,18 +145,6 @@
             this.precio.TabIndex = 4;
             this.precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precio_KeyPress);
-            // 
-            // id
-            // 
-            this.id.BorderColor = System.Drawing.Color.SeaGreen;
-            this.id.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.Location = new System.Drawing.Point(55, 180);
-            this.id.Multiline = true;
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(184, 28);
-            this.id.TabIndex = 3;
-            this.id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_KeyPress);
             // 
             // label3
             // 
@@ -417,7 +413,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox precio;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox id;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -436,5 +431,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView mostrarinfodata;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.ComboBox id;
     }
 }

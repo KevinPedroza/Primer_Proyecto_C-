@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +63,12 @@
     </Compile>
     <Compile Include="A_Carro.Designer.cs">
       <DependentUpon>A_Carro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Hotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_Hotel.Designer.cs">
+      <DependentUpon>A_Hotel.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD_Aeropuertos.cs">
       <SubType>UserControl</SubType>
@@ -133,6 +140,12 @@
     </Compile>
     <EmbeddedResource Include="Administrados_Cruds.resx">
       <DependentUpon>Administrados_Cruds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Carro.resx">
+      <DependentUpon>A_Carro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Hotel.resx">
+      <DependentUpon>A_Hotel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Aeropuertos.resx">
       <DependentUpon>CRUD_Aeropuertos.cs</DependentUpon>
@@ -253,6 +266,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Reserve_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

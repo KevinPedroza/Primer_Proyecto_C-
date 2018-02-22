@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
+using Npgsql;
+
 namespace Procedimientos
 {
     public class Procedimientos_THoteles
@@ -68,5 +70,30 @@ namespace Procedimientos
                 MessageBox.Show("Ha ocurrido un error en la modificación! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+        //this method will charge the ids combobox 
+        public void llenarCombo(ComboBox combo, string consulta)
+        {
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand(consulta, ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    combo.Items.Add(reader.GetString(0));
+                }
+
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+        }
+
     }
 }

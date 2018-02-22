@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Vehiculos));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.modelo = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.canti = new System.Windows.Forms.NumericUpDown();
             this.tipo = new System.Windows.Forms.ComboBox();
-            this.modelo = new System.Windows.Forms.ComboBox();
             this.marca = new System.Windows.Forms.ComboBox();
             this.precio = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.id = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -47,10 +47,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.newmodelo = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.newcanti = new System.Windows.Forms.NumericUpDown();
             this.newtipo = new System.Windows.Forms.ComboBox();
-            this.newmodelo = new System.Windows.Forms.ComboBox();
             this.newmarca = new System.Windows.Forms.ComboBox();
             this.modificarinfo = new System.Windows.Forms.DataGridView();
             this.newprecio = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -70,7 +70,6 @@
             this.eliminarinfo = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label18 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.canti)).BeginInit();
@@ -100,11 +99,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
-            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.modelo);
             this.tabPage1.Controls.Add(this.bunifuThinButton21);
             this.tabPage1.Controls.Add(this.canti);
             this.tabPage1.Controls.Add(this.tipo);
-            this.tabPage1.Controls.Add(this.modelo);
             this.tabPage1.Controls.Add(this.marca);
             this.tabPage1.Controls.Add(this.precio);
             this.tabPage1.Controls.Add(this.id);
@@ -121,6 +119,16 @@
             this.tabPage1.Size = new System.Drawing.Size(774, 448);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingresar Vehiculo";
+            // 
+            // modelo
+            // 
+            this.modelo.BorderColor = System.Drawing.Color.SeaGreen;
+            this.modelo.Location = new System.Drawing.Point(97, 312);
+            this.modelo.Multiline = true;
+            this.modelo.Name = "modelo";
+            this.modelo.Size = new System.Drawing.Size(161, 27);
+            this.modelo.TabIndex = 3;
+            this.modelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modelo_KeyPress);
             // 
             // bunifuThinButton21
             // 
@@ -153,7 +161,7 @@
             this.canti.Location = new System.Drawing.Point(491, 319);
             this.canti.Name = "canti";
             this.canti.Size = new System.Drawing.Size(161, 20);
-            this.canti.TabIndex = 12;
+            this.canti.TabIndex = 7;
             // 
             // tipo
             // 
@@ -161,15 +169,7 @@
             this.tipo.Location = new System.Drawing.Point(491, 117);
             this.tipo.Name = "tipo";
             this.tipo.Size = new System.Drawing.Size(161, 21);
-            this.tipo.TabIndex = 11;
-            // 
-            // modelo
-            // 
-            this.modelo.FormattingEnabled = true;
-            this.modelo.Location = new System.Drawing.Point(97, 319);
-            this.modelo.Name = "modelo";
-            this.modelo.Size = new System.Drawing.Size(161, 21);
-            this.modelo.TabIndex = 10;
+            this.tipo.TabIndex = 5;
             // 
             // marca
             // 
@@ -177,7 +177,7 @@
             this.marca.Location = new System.Drawing.Point(97, 221);
             this.marca.Name = "marca";
             this.marca.Size = new System.Drawing.Size(161, 21);
-            this.marca.TabIndex = 9;
+            this.marca.TabIndex = 2;
             this.marca.SelectionChangeCommitted += new System.EventHandler(this.marca_SelectionChangeCommitted);
             // 
             // precio
@@ -187,7 +187,7 @@
             this.precio.Multiline = true;
             this.precio.Name = "precio";
             this.precio.Size = new System.Drawing.Size(161, 27);
-            this.precio.TabIndex = 8;
+            this.precio.TabIndex = 6;
             this.precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.precio_KeyPress);
             // 
             // id
@@ -273,10 +273,10 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Silver;
+            this.tabPage2.Controls.Add(this.newmodelo);
             this.tabPage2.Controls.Add(this.bunifuThinButton22);
             this.tabPage2.Controls.Add(this.newcanti);
             this.tabPage2.Controls.Add(this.newtipo);
-            this.tabPage2.Controls.Add(this.newmodelo);
             this.tabPage2.Controls.Add(this.newmarca);
             this.tabPage2.Controls.Add(this.modificarinfo);
             this.tabPage2.Controls.Add(this.newprecio);
@@ -295,6 +295,16 @@
             this.tabPage2.Size = new System.Drawing.Size(774, 448);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Vehiculos";
+            // 
+            // newmodelo
+            // 
+            this.newmodelo.BorderColor = System.Drawing.Color.SeaGreen;
+            this.newmodelo.Location = new System.Drawing.Point(27, 266);
+            this.newmodelo.Multiline = true;
+            this.newmodelo.Name = "newmodelo";
+            this.newmodelo.Size = new System.Drawing.Size(150, 26);
+            this.newmodelo.TabIndex = 16;
+            this.newmodelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newmodelo_KeyPress);
             // 
             // bunifuThinButton22
             // 
@@ -336,14 +346,6 @@
             this.newtipo.Name = "newtipo";
             this.newtipo.Size = new System.Drawing.Size(150, 21);
             this.newtipo.TabIndex = 13;
-            // 
-            // newmodelo
-            // 
-            this.newmodelo.FormattingEnabled = true;
-            this.newmodelo.Location = new System.Drawing.Point(27, 279);
-            this.newmodelo.Name = "newmodelo";
-            this.newmodelo.Size = new System.Drawing.Size(150, 21);
-            this.newmodelo.TabIndex = 12;
             // 
             // newmarca
             // 
@@ -549,16 +551,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(264, 324);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(168, 15);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "(Seleccione una Marca primero)";
-            // 
             // CRUD_Vehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -604,7 +596,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox tipo;
-        public System.Windows.Forms.ComboBox modelo;
         public System.Windows.Forms.ComboBox marca;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label8;
@@ -612,7 +603,6 @@
         private System.Windows.Forms.DataGridView eliminarinfo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox newtipo;
-        private System.Windows.Forms.ComboBox newmodelo;
         private System.Windows.Forms.ComboBox newmarca;
         private System.Windows.Forms.DataGridView modificarinfo;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox newprecio;
@@ -627,6 +617,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown newcanti;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
-        private System.Windows.Forms.Label label18;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox modelo;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox newmodelo;
     }
 }

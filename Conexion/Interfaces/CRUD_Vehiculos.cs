@@ -14,6 +14,7 @@ namespace Interfaces
     public partial class CRUD_Vehiculos : UserControl
     {
         Procedimientos_Vehiculos pv = new Procedimientos_Vehiculos();
+        int contador = 0;
         public CRUD_Vehiculos()
         {
             InitializeComponent();
@@ -21,21 +22,25 @@ namespace Interfaces
 
         private void marca_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            pv.llenarModeloCombo(modelo, marca);
-            modelo.SelectedIndex = 0;
         }
 
         private void id_KeyPress(object sender, KeyPressEventArgs e)
         {
+            contador++;
             if (char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
                 MessageBox.Show("Ingrese solo Números!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            else if (contador >= 6)
+            {
+                id.Enabled = false;
+            }
             else
             {
                 return;
             }
+
         }
 
         private void precio_KeyPress(object sender, KeyPressEventArgs e)
@@ -67,7 +72,7 @@ namespace Interfaces
                 hv.Id = Convert.ToInt32(id.Text);
                 hv.Precio = Convert.ToInt32(precio.Text);
                 hv.Marca = marca.SelectedItem.ToString();
-                hv.Modelo = modelo.SelectedItem.ToString();
+                hv.Modelo = modelo.Text;
                 hv.Tipo = tipo.SelectedItem.ToString();
                 hv.Canidad = Convert.ToInt32(canti.Value);
                 errorProvider1.Clear();
@@ -76,7 +81,6 @@ namespace Interfaces
             id.Text = "";
             precio.Text = "";
             marca.SelectedIndex = 0;
-            modelo.SelectedIndex = -1;
             tipo.SelectedIndex = 0;
             canti.Value = 0;
         }
@@ -127,17 +131,21 @@ namespace Interfaces
             {
                 errorProvider1.SetError(newprecio, "Llene el campo Precio!");
             }
+            else if (newmodelo.Text == "")
+            {
+                errorProvider1.SetError(newmodelo, "Llene el campo Modelo!");
+            }
             else
             {
                 Herencia_Vehiculos hv = new Herencia_Vehiculos();
                 hv.Id = Convert.ToInt32(newid.Text);
                 hv.Precio = Convert.ToInt32(newprecio.Text);
                 hv.Marca = newmarca.SelectedItem.ToString();
-                hv.Modelo = newmodelo.SelectedItem.ToString();
+                hv.Modelo = newmodelo.Text;
                 hv.Tipo = newtipo.SelectedItem.ToString();
                 hv.Canidad = Convert.ToInt32(newcanti.Value);
                 errorProvider1.Clear();
-                
+
                 pv.modificarInfo(hv.Id, hv.Marca, hv.Modelo, hv.Tipo, hv.Precio, hv.Canidad);
                 pv.mostrarInfo(modificarinfo);
             }
@@ -145,14 +153,38 @@ namespace Interfaces
             newprecio.Text = "";
             newcanti.Value = 0;
             newmarca.SelectedIndex = -1;
-            newmodelo.SelectedIndex = -1;
             newtipo.SelectedIndex = -1;
         }
 
         private void newmarca_TextChanged(object sender, EventArgs e)
         {
-            newmodelo.Items.Clear();
-            pv.llenarModeloCombo(newmodelo, marca);
+        }
+
+        private void newmodelo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese solo LetraS!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                return;
+            }
+
+        }
+
+        private void modelo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Ingrese solo LetraS!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

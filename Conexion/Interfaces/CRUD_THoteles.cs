@@ -20,15 +20,6 @@ namespace Interfaces
 
         private void id_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Ingrese solo Números!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                return;
-            }
         }
 
         private void precio_KeyPress(object sender, KeyPressEventArgs e)
@@ -53,7 +44,7 @@ namespace Interfaces
             else
             {
                 Herencia_THoletes ht = new Herencia_THoletes();
-                ht.id = Convert.ToInt32(id.Text);
+                ht.id = Convert.ToInt32(id.SelectedItem.ToString());
                 ht.Precio = Convert.ToInt32(precio.Text);
                 pr.insertarTarifa(ht.id, ht.Precio);
             }

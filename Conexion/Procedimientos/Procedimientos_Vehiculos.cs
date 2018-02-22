@@ -21,60 +21,6 @@ namespace Procedimientos
             combo.Items.Add("Mazda");
         }
 
-        //this method will charge the models to the combobox
-        public void llenarModeloCombo(ComboBox combo, ComboBox marca)
-        {
-            try
-            {
-                if (marca.SelectedItem.ToString() == "Hyundai")
-                {
-                    combo.Items.Clear();
-                    combo.Items.Add("Accent");
-                    combo.Items.Add("H1");
-                    combo.Items.Add("Tucson");
-                }
-                else if (marca.SelectedItem.ToString() == "Toyota")
-                {
-                    combo.Items.Clear();
-                    combo.Items.Add("4Runner");
-                    combo.Items.Add("Hilux");
-                    combo.Items.Add("Rav4");
-                }
-                else if (marca.SelectedItem.ToString() == "Nissan")
-                {
-                    combo.Items.Clear();
-                    combo.Items.Add("X-Trail");
-                    combo.Items.Add("Frontier");
-                    combo.Items.Add("Urvan");
-                }
-                else if (marca.SelectedItem.ToString() == "Suzuki")
-                {
-                    combo.Items.Clear();
-                    combo.Items.Add("Ertiga");
-                    combo.Items.Add("Switch");
-                    combo.Items.Add("Gran Vitara");
-                }
-                else if (marca.SelectedItem.ToString() == "Mitsubichi")
-                {
-                    combo.Items.Clear();
-                    combo.Items.Add("Montero Sport");
-                    combo.Items.Add("L200");
-                    combo.Items.Add("Outlander");
-                }
-                else if (marca.SelectedItem.ToString() == "Mazda")
-                {
-                    combo.Items.Clear();
-                    combo.Items.Add("Mazda 3");
-                    combo.Items.Add("RX-8");
-                    combo.Items.Add("BT-50");
-                }
-            }
-            catch (Exception error)
-            {
-
-            }
-        }
-
         //this method will charge the types on the combobox
         public void llenarTiposCombo(ComboBox combo)
         {

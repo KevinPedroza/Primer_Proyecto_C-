@@ -35,7 +35,6 @@
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.rutas = new System.Windows.Forms.DataGridView();
             this.precio = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.id = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.eliminarinfo = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.id = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rutas)).BeginInit();
@@ -87,10 +87,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.id);
             this.tabPage1.Controls.Add(this.bunifuThinButton21);
             this.tabPage1.Controls.Add(this.rutas);
             this.tabPage1.Controls.Add(this.precio);
-            this.tabPage1.Controls.Add(this.id);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -154,17 +154,6 @@
             this.precio.TabIndex = 5;
             this.precio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuCustomTextbox2_KeyPress);
-            // 
-            // id
-            // 
-            this.id.BorderColor = System.Drawing.Color.SeaGreen;
-            this.id.Location = new System.Drawing.Point(25, 130);
-            this.id.Multiline = true;
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(167, 29);
-            this.id.TabIndex = 4;
-            this.id.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bunifuCustomTextbox1_KeyPress);
             // 
             // label4
             // 
@@ -435,6 +424,14 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // id
+            // 
+            this.id.FormattingEnabled = true;
+            this.id.Location = new System.Drawing.Point(25, 138);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(168, 21);
+            this.id.TabIndex = 8;
+            // 
             // CRUD_TVuelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,7 +470,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox precio;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox id;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         public System.Windows.Forms.DataGridView rutas;
         private System.Windows.Forms.DataGridView mostrarinfo;
@@ -491,5 +487,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        public System.Windows.Forms.ComboBox id;
     }
 }

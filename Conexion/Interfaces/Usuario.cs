@@ -14,7 +14,7 @@ namespace Interfaces
     public partial class Usuario : Form
     {
         Procedimientos_Usuario pu = new Procedimientos_Usuario();
-        
+
         public Usuario()
         {
             InitializeComponent();
@@ -50,7 +50,7 @@ namespace Interfaces
         private void Usuario_Load(object sender, EventArgs e)
         {
             origen.Items.Clear();
-            pu.llenarCombo(origen,"SELECT pais_origen FROM ruta;");
+            pu.llenarCombo(origen, "SELECT pais_origen FROM ruta;");
             destino.Items.Clear();
             pu.llenarCombo(destino, "SELECT pais_destino FROM ruta;");
         }
@@ -62,7 +62,40 @@ namespace Interfaces
             string direcoesca = pu.escala_Directo(paiso, paisd);
             string escalasalida = pu.escala_salida(paiso, paisd);
             vuelos.Rows.Clear();
-            pu.mostrarInfo(vuelos,paiso,paisd,direcoesca,paisd,paiso,escalasalida);
+            pu.mostrarInfo(vuelos, paiso, paisd, direcoesca, paisd, paiso, escalasalida);
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(adultos.Value) == 0 & Convert.ToInt32(niños.Value) == 0)
+            {
+                MessageBox.Show("Ingrese Pasajeros para optimizar la busqueda de Vehiculos!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                A_Carro c = new A_Carro();
+                c.ShowDialog();
+            }
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+            A_Hotel ah = new A_Hotel();
+            ah.ShowDialog();
+        }
+
+        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        {
+            if (vuelos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Primero Seleccione un Vuelo!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                vuelos.Focus();
+            }
+            else
+            {
+
+            }
         }
     }
 }

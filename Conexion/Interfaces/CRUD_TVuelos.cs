@@ -67,10 +67,11 @@ namespace Interfaces
                 else
                 {
                     Herencia_TVuelos tv = new Herencia_TVuelos();
-                    tv.Id = Convert.ToInt32(id.Text);
+                    tv.Id = Convert.ToInt32(id.SelectedItem.ToString());
                     tv.Idruta = Convert.ToInt32(rutas.CurrentRow.Cells[0].Value.ToString());
                     tv.Precio = Convert.ToInt32(precio.Text);
                     pv.insertarTarifa(tv.Id, tv.Precio, tv.Idruta);
+
                 }
             }
             catch (Exception error)

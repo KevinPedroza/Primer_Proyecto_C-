@@ -153,6 +153,16 @@ namespace Interfaces.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hotel_50px {
+            get {
+                object obj = ResourceManager.GetObject("Hotel_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hotel_64px {
             get {
                 object obj = ResourceManager.GetObject("Hotel_64px", resourceCulture);
@@ -166,6 +176,16 @@ namespace Interfaces.Properties {
         internal static System.Drawing.Bitmap Left_52px {
             get {
                 object obj = ResourceManager.GetObject("Left_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ok_48px {
+            get {
+                object obj = ResourceManager.GetObject("Ok_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
