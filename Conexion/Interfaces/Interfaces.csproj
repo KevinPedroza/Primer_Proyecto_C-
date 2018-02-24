@@ -138,6 +138,12 @@
     <Compile Include="Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista_Reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista_Reservas.Designer.cs">
+      <DependentUpon>Vista_Reservas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrados_Cruds.resx">
       <DependentUpon>Administrados_Cruds.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista_Reservas.resx">
+      <DependentUpon>Vista_Reservas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -272,6 +281,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ok_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

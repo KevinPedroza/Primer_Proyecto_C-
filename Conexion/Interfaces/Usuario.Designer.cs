@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.niños = new System.Windows.Forms.NumericUpDown();
+            this.adultos = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.destino = new System.Windows.Forms.ComboBox();
+            this.origen = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.vuelos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.orige = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,26 +56,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.nombreuser = new System.Windows.Forms.Label();
-            this.origen = new System.Windows.Forms.ComboBox();
-            this.destino = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.adultos = new System.Windows.Forms.NumericUpDown();
-            this.niños = new System.Windows.Forms.NumericUpDown();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vuelos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adultos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.niños)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adultos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vuelos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +116,66 @@
             this.panel1.Size = new System.Drawing.Size(754, 528);
             this.panel1.TabIndex = 3;
             // 
+            // niños
+            // 
+            this.niños.Location = new System.Drawing.Point(573, 185);
+            this.niños.Name = "niños";
+            this.niños.Size = new System.Drawing.Size(120, 20);
+            this.niños.TabIndex = 37;
+            // 
+            // adultos
+            // 
+            this.adultos.Location = new System.Drawing.Point(573, 158);
+            this.adultos.Name = "adultos";
+            this.adultos.Size = new System.Drawing.Size(120, 20);
+            this.adultos.TabIndex = 36;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(529, 185);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 15);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Niños";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(519, 164);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 15);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Adultos";
+            // 
+            // destino
+            // 
+            this.destino.DropDownHeight = 200;
+            this.destino.DropDownWidth = 200;
+            this.destino.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.destino.FormattingEnabled = true;
+            this.destino.IntegralHeight = false;
+            this.destino.Location = new System.Drawing.Point(522, 97);
+            this.destino.Name = "destino";
+            this.destino.Size = new System.Drawing.Size(182, 21);
+            this.destino.TabIndex = 33;
+            // 
+            // origen
+            // 
+            this.origen.DropDownHeight = 200;
+            this.origen.DropDownWidth = 200;
+            this.origen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.origen.FormattingEnabled = true;
+            this.origen.IntegralHeight = false;
+            this.origen.Location = new System.Drawing.Point(57, 97);
+            this.origen.Name = "origen";
+            this.origen.Size = new System.Drawing.Size(182, 21);
+            this.origen.TabIndex = 32;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -158,6 +220,7 @@
             this.vuelos.Location = new System.Drawing.Point(0, 252);
             this.vuelos.MultiSelect = false;
             this.vuelos.Name = "vuelos";
+            this.vuelos.ReadOnly = true;
             this.vuelos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.vuelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.vuelos.Size = new System.Drawing.Size(748, 213);
@@ -167,31 +230,37 @@
             // 
             this.orige.HeaderText = "País Origen";
             this.orige.Name = "orige";
+            this.orige.ReadOnly = true;
             // 
             // dest
             // 
             this.dest.HeaderText = "País Destino";
             this.dest.Name = "dest";
+            this.dest.ReadOnly = true;
             // 
             // Escalas
             // 
             this.Escalas.HeaderText = "Escala o Directo";
             this.Escalas.Name = "Escalas";
+            this.Escalas.ReadOnly = true;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "País Salida";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "País Destino";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Escala o Directo";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // ffinal
             // 
@@ -285,65 +354,10 @@
             this.nombreuser.Size = new System.Drawing.Size(0, 22);
             this.nombreuser.TabIndex = 28;
             // 
-            // origen
+            // bunifuElipse1
             // 
-            this.origen.DropDownHeight = 200;
-            this.origen.DropDownWidth = 200;
-            this.origen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.origen.FormattingEnabled = true;
-            this.origen.IntegralHeight = false;
-            this.origen.Location = new System.Drawing.Point(57, 97);
-            this.origen.Name = "origen";
-            this.origen.Size = new System.Drawing.Size(182, 21);
-            this.origen.TabIndex = 32;
-            // 
-            // destino
-            // 
-            this.destino.DropDownHeight = 200;
-            this.destino.DropDownWidth = 200;
-            this.destino.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.destino.FormattingEnabled = true;
-            this.destino.IntegralHeight = false;
-            this.destino.Location = new System.Drawing.Point(522, 97);
-            this.destino.Name = "destino";
-            this.destino.Size = new System.Drawing.Size(182, 21);
-            this.destino.TabIndex = 33;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(519, 164);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 15);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Adultos";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(529, 185);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 15);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Niños";
-            // 
-            // adultos
-            // 
-            this.adultos.Location = new System.Drawing.Point(573, 158);
-            this.adultos.Name = "adultos";
-            this.adultos.Size = new System.Drawing.Size(120, 20);
-            this.adultos.TabIndex = 36;
-            // 
-            // niños
-            // 
-            this.niños.Location = new System.Drawing.Point(573, 185);
-            this.niños.Name = "niños";
-            this.niños.Size = new System.Drawing.Size(120, 20);
-            this.niños.TabIndex = 37;
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // pictureBox1
             // 
@@ -396,6 +410,32 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(111, 528);
             this.bunifuGradientPanel1.TabIndex = 4;
+            // 
+            // bunifuThinButton24
+            // 
+            this.bunifuThinButton24.ActiveBorderThickness = 1;
+            this.bunifuThinButton24.ActiveCornerRadius = 20;
+            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SandyBrown;
+            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.DarkRed;
+            this.bunifuThinButton24.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
+            this.bunifuThinButton24.ButtonText = "Continuar";
+            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.IdleBorderThickness = 1;
+            this.bunifuThinButton24.IdleCornerRadius = 20;
+            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.PaleGreen;
+            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.DarkOrange;
+            this.bunifuThinButton24.Location = new System.Drawing.Point(471, 473);
+            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton24.Name = "bunifuThinButton24";
+            this.bunifuThinButton24.Size = new System.Drawing.Size(259, 41);
+            this.bunifuThinButton24.TabIndex = 38;
+            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
             // bunifuThinButton23
             // 
@@ -502,32 +542,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // bunifuThinButton24
-            // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SandyBrown;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.DarkRed;
-            this.bunifuThinButton24.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Continuar";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleBorderThickness = 1;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.PaleGreen;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.DarkOrange;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(471, 473);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(259, 41);
-            this.bunifuThinButton24.TabIndex = 38;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
-            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,9 +564,9 @@
             this.Load += new System.EventHandler(this.Usuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vuelos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adultos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.niños)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adultos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vuelos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -595,5 +609,6 @@
         public System.Windows.Forms.NumericUpDown niños;
         public System.Windows.Forms.NumericUpDown adultos;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

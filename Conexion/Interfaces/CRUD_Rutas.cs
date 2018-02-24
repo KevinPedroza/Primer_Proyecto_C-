@@ -54,6 +54,10 @@ namespace Interfaces
             {
                 MessageBox.Show("Ha ocurrido un error! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            id_inruta.Text = "";
+            pais_origenin.SelectedIndex = -1;
+            pais_destinoin.SelectedIndex = -1;
+            duracionin.SelectedIndex = 0;
         }
 
         private void tabControl1_Click(object sender, EventArgs e)

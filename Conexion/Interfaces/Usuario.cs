@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,19 +51,32 @@ namespace Interfaces
         private void Usuario_Load(object sender, EventArgs e)
         {
             origen.Items.Clear();
-            pu.llenarCombo(origen, "SELECT pais_origen FROM ruta;");
+            pu.llenarCombo(origen, "SELECT pais_origen FROM ruta GROUP by pais_origen;");
             destino.Items.Clear();
-            pu.llenarCombo(destino, "SELECT pais_destino FROM ruta;");
+            pu.llenarCombo(destino, "SELECT pais_destino FROM ruta GROUP by pais_destino;");
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            string paiso = origen.SelectedItem.ToString();
-            string paisd = destino.SelectedItem.ToString();
-            string direcoesca = pu.escala_Directo(paiso, paisd);
-            string escalasalida = pu.escala_salida(paiso, paisd);
-            vuelos.Rows.Clear();
-            pu.mostrarInfo(vuelos, paiso, paisd, direcoesca, paisd, paiso, escalasalida);
+            if (origen.SelectedItem.ToString() == destino.SelectedItem.ToString())
+            {
+                MessageBox.Show("Seleccione Diferentes Paises!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+                string paiso = pu.paiso(origen.SelectedItem.ToString());
+                string paisd = pu.paisd(destino.SelectedItem.ToString());
+                string direcoesca = pu.escala_Directo(paiso, paisd);
+                ArrayList pais = new ArrayList();
+                pais = pu.paisesEscala(paiso, paisd);
+                ArrayList escalas = new ArrayList();
+                escalas = pu.escala(paisd);
+                ArrayList precios = new ArrayList();
+                precios = pu.precioEscala(paisd);
+                vuelos.Rows.Clear();
+                pu.mostrarInfo(vuelos, paiso, paisd, direcoesca, pais, escalas, precios);
+            }
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -89,12 +103,18 @@ namespace Interfaces
         {
             if (vuelos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Primero Seleccione un Vuelo!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Primero Seleccione un Vuelo!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 vuelos.Focus();
+            }
+            else if (adultos.Value == 0 & niños.Value == 0)
+            {
+                MessageBox.Show("Ingrese Pasajeros! ","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
             else
             {
-
+                this.Hide();
+                Vista_Reservas vr = new Vista_Reservas();
+                vr.Show();
             }
         }
     }

@@ -113,6 +113,16 @@ namespace Interfaces.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Car_48px {
+            get {
+                object obj = ResourceManager.GetObject("Car_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Car_64px {
             get {
                 object obj = ResourceManager.GetObject("Car_64px", resourceCulture);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,18 +52,156 @@ namespace Procedimientos
         }
 
         //this method will charge the informacion on the datagridview
-        public void mostrarInfo(DataGridView data, string origen, string destino, string escala, string salida, string destin, string escalaregreso)
+        public void mostrarInfo(DataGridView data, string origen, string destino, string directo, ArrayList paises, ArrayList escalas, ArrayList preciosescalas)
         {
-            try
+            if (directo == "Vuelo Directo")
             {
-                data.Rows.Add(origen, destino, escala, salida, destin, escalaregreso);
+                bd.Conexion();
+                ConexionBD.conexion.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT ru.pais_origen, ru.pais_destino, tv.precio FROM ruta as ru JOIN tarifa_vuelo as tv on tv.ruta = ru.id " +
+                    "WHERE ru.pais_origen = '" + origen + "' and pais_destino = '" + destino + "'", ConexionBD.conexion);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                try
+                {
+                    while (reader.Read())
+                    {
+                        data.Rows.Add(reader.GetString(0), reader.GetString(1), directo, reader.GetString(1), reader.GetString(0), directo, reader.GetInt32(2));
+                    }
+
+                }
+                finally
+                {
+                    reader.Close();
+                    cmd.Dispose();
+                    ConexionBD.conexion.Close();
+                }
             }
-            finally
+            else
             {
+                for (int i = 0; i < paises.Count; i++)
+                {
+                    data.Rows.Add(origen, destino, escalas[i], destino, origen, escalas[i], preciosescalas[i]);
+                }
             }
             data.Refresh();
             data.ClearSelection();
         }
+
+
+        //this method will get the price of the route 
+        public ArrayList precioEscala(string destino)
+        {
+            ArrayList precios = new ArrayList();
+            ArrayList preciofinal = new ArrayList();
+
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT tv.precio FROM tarifa_vuelo as tv join ruta as ru on ru.id = tv.ruta WHERE ru.pais_destino = '" + destino + "'", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    precios.Add(reader.GetInt32(0));
+                }
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+            for (int i = 0; i < precios.Count; i++)
+            {
+                preciofinal.Add((Convert.ToInt32(precios[i]) / 2) + Convert.ToInt32(precios[i]));
+            }
+
+            return preciofinal;
+        }
+
+        //this method will get the origen 
+        public string paiso(string paiso)
+        {
+            string pais = null;
+
+
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT pais_origen FROM ruta WHERE pais_origen = '" + paiso + "'", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    pais = (reader.GetString(0));
+                }
+
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+            return pais;
+        }
+        //this method will get the origen 
+        public string paisd(string paisd)
+        {
+            string pais = null;
+
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT pais_destino FROM ruta WHERE pais_destino = '" + paisd + "'", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    pais = (reader.GetString(0));
+                }
+
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+            return pais;
+        }
+
+        //this method will get the price of the route 
+        public int precioRuta(string origen, string destino, string scala)
+        {
+            int precioesca = 0;
+            int total = 0;
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT tv.precio FROM tarifa_vuelo as tv join ruta as ru on ru.id = tv.ruta WHERE ru.pais_destino = '" + destino + "'", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    precioesca = (reader.GetInt32(0));
+                }
+                total = precioesca;
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+
+            return total;
+        }
+
 
         //this method will verify if the trip is straight 
         public string escala_Directo(string pais_origen, string pais_destino)
@@ -99,11 +238,12 @@ namespace Procedimientos
 
             return final;
         }
+
         //this method will verify if the trip is straight 
-        public string escala_salida(string pais_origen, string pais_destino)
+        public ArrayList escala(string pais_destino)
         {
-            string final = null;
-            string paiso = null;
+            ArrayList escala = new ArrayList();
+
             bd.Conexion();
             ConexionBD.conexion.Open();
             NpgsqlCommand cmd = new NpgsqlCommand("SELECT pais_origen FROM ruta WHERE pais_destino = '" + pais_destino + "'", ConexionBD.conexion);
@@ -112,7 +252,34 @@ namespace Procedimientos
             {
                 while (reader.Read())
                 {
-                    paiso = (reader.GetString(0));
+                    escala.Add(reader.GetString(0) + "," + pais_destino);
+                }
+
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+            return escala;
+        }
+        //this method will verify if the trip is straight 
+        public ArrayList paisesEscala(string pais_origen, string pais_destino)
+        {
+            string final = null;
+            string paiso = null;
+            ArrayList paises = new ArrayList();
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT pais_origen FROM ruta WHERE pais_destino = '" + pais_destino + "'", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    paises.Add(reader.GetString(0));
                 }
 
             }
@@ -132,7 +299,7 @@ namespace Procedimientos
                 final = "Vuelo Directo";
             }
 
-            return final;
+            return paises;
         }
 
         //this method will charge the information about the cars on the datagridview
@@ -173,7 +340,7 @@ namespace Procedimientos
             {
                 while (reader.Read())
                 {
-                    data.Rows.Add(reader.GetInt32(0),reader.GetString(1),reader.GetString(2),reader.GetInt32(3),reader.GetString(4),reader.GetString(5),reader.GetInt32(6),reader.GetInt32(7));
+                    data.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetInt32(6), reader.GetInt32(7));
                 }
 
             }

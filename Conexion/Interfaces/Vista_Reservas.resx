@@ -117,68 +117,68 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Request Money_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Request Money_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>50</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuThinButton23.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALEAAAAsCAYAAAAq0VlYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ1SURBVHhe7dy/axNxGMdx/yI3JzcXt9I016ahJq1ddBEH
+        6VIU+8NS4rXYKjSibRXr4paluOikg+BQOnQSBAdBEBdxcHv6/dyR05qv3UK/D7yHF3S4ZHpzPLne8z1n
+        d0cN8IyI4R4Rwz0ihntEDPeIGO6dGvHv4PXymM11xm32/oRdXmvY+RwYPrWm5m4GveW6/VyINyr/jfj9
+        Uq34olsPm9Z72rJ3u2379Hzafr2cAYZOram5/e2WzT9qFi327tWjrQ5ErOJvhzvvtY2mfXlBtEjDt71p
+        mw831Ovhzvz9n7vyiYgVcBaKf/WkFf0i4Ky92WnZ1HrDvi7U4hHrDkzASJ3GDM3LAxFrBtYIEfsQkJp8
+        a8q2V7I/EesphAZnZmB48WNvxrL1Sfu8WCsj1iMM/QKMXQykqtu9YhurWRmxnsXpUUbsQiBVB8/aluWN
+        MuKRfMKOeAYMZzRSXAhjcBHxxVCznsPFLgRSpv/uFRHrj9gFQOqIGO4RMdwjYrhHxHCPiOEeEcM9IoZ7
+        RAz3iBjuETHcqyLWSxR6mSJ2EZCyKmK9EM8mMzyqItYGqRbwYhcBqdLrw3qNuIh4Z6Ve7CzFLgRSpaXm
+        O53xMmKtP48wF8OZG5tNe7s0VkYsW6uZbXI3hhM6lWquU67tVxFr43k2zBcfdtvRDwGp0Fa+Jof++WxV
+        xKL1Z61Bs2+HVCngqw8m7WMYI/rdnohYDhVyqPxxl9ECadkPI4TuwH8HLAMRi0YL7fOreP0C5FAVnBUt
+        MGv+1emsOloidsRrNOI+Fa9HGJfy+BmywLBpE1/nY+uc7FijcmrEgAdEDPeIGO4RMdwjYjg3asf+2H/m
+        QXaaFwAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="Contacts_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Contacts_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bunifuThinButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQAAAAAsCAYAAACKa2afAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKZSURBVHhe7d2/a1NRGMZx/yI3JzcXt9I0t01DTVq76CIO
+        kqUo1sZS4rXYKjSibRXr4paldNFJB8FBHJwEwUEQxEUc3F7Pcy+JjTl2Ts77HT6Q4STb+9zzI/c9p+zm
+        tAHwiQAAHCMAAMcIAMAxAgBwjAAAHDsxAH4HR+0Za3VmbfnOnJ2/W7PTOYBxpjpVvV4Neu2q/VyN17f8
+        NwDerFWKH7p2v269xw17vd+0T08X7dfzJQBjTHWqej3cbdjKg3pRx73b1WidjwSA0uJ6eOJf2qrbl2cU
+        PDDpvh0s2kp4kF8OM4Lv/8wGhgJAxZ+FtHjxqBH9IQCT6+VewxY2a/Z1tRIPAD35KX4gXVoaaH9gJAC0
+        5te0P/YlAOnIdxZsdz37GwDa7ddGAWt+IH0/DpYs25y3z7cqZQDoqEC7hbHBANLT7V6wrY2sDACdF+rI
+        IDYQQHreP2laltfKAJjK5+wjZ/yAG1oGnAnL/iIAzoYk0FlhbCCANOlfg0UA6ENsAIB0EQCAYwQA4BgB
+        ADhGAACOEQCAYwQA4BgBADhGAACOEQCAYwQA4NggAPRSgF4OiA0CkKZBAKgZCB1/AV8GAaBuoWoYGBsE
+        ID16/V9tAIoA2FuvFn3CYgMBpEfNf290ZssAUJvgKfYBADeubNft1dpMGQCys5HZNrMAIHm66avVKVuD
+        DwJAnYGXw5rg7X4z+iUAk0+dvzXb798XOAgAUZtgtQumPyCQHhX/xXvz9i5M/fs1PxQA8kEhEBLiYZfl
+        AJCKwzDt15P/ePHLSACIlgPqGa600G4hF4YAk0eNfrXe1w3fav0fuyY8GgB9SgsdFZzL4/eQAxhf6vbd
+        CvV71B5+6h93YgAASBsBADhGAACOEQCAYwQA4Na0/QEDDaY5heBTZQAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="Vertical Flag_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vertical Flag_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQAAAAAsCAYAAACKa2afAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKZSURBVHhe7d2/a1NRGMZx/yI3JzcXt9I0t01DTVq76CIO
+        kqUo1sZS4rXYKjSibRXr4paldNFJB8FBHJwEwUEQxEUc3F7Pcy+JjTl2Ts77HT6Q4STb+9zzI/c9p+zm
+        tAHwiQAAHCMAAMcIAMAxAgBwjAAAHDsxAH4HR+0Za3VmbfnOnJ2/W7PTOYBxpjpVvV4Neu2q/VyN17f8
+        NwDerFWKH7p2v269xw17vd+0T08X7dfzJQBjTHWqej3cbdjKg3pRx73b1WidjwSA0uJ6eOJf2qrbl2cU
+        PDDpvh0s2kp4kF8OM4Lv/8wGhgJAxZ+FtHjxqBH9IQCT6+VewxY2a/Z1tRIPAD35KX4gXVoaaH9gJAC0
+        5te0P/YlAOnIdxZsdz37GwDa7ddGAWt+IH0/DpYs25y3z7cqZQDoqEC7hbHBANLT7V6wrY2sDACdF+rI
+        IDYQQHreP2laltfKAJjK5+wjZ/yAG1oGnAnL/iIAzoYk0FlhbCCANOlfg0UA6ENsAIB0EQCAYwQA4BgB
+        ADhGAACOEQCAYwQA4BgBADhGAACOEQCAYwQA4NggAPRSgF4OiA0CkKZBAKgZCB1/AV8GAaBuoWoYGBsE
+        ID16/V9tAIoA2FuvFn3CYgMBpEfNf290ZssAUJvgKfYBADeubNft1dpMGQCys5HZNrMAIHm66avVKVuD
+        DwJAnYGXw5rg7X4z+iUAk0+dvzXb798XOAgAUZtgtQumPyCQHhX/xXvz9i5M/fs1PxQA8kEhEBLiYZfl
+        AJCKwzDt15P/ePHLSACIlgPqGa600G4hF4YAk0eNfrXe1w3fav0fuyY8GgB9SgsdFZzL4/eQAxhf6vbd
+        CvV71B5+6h93YgAASBsBADhGAACOEQCAYwQA4Na0/QEDDaY5heBTZQAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="Streets_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Streets_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Reserve_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Reserve_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Airport_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Airport_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="American Airlines_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\American Airlines_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Edit_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Edit_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Delete_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hotel_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hotel_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Back_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Shutdown_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shutdown_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ok_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ok_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Airplane Take Off_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Airplane Take Off_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Car_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Car_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Place Marker_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Place Marker_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Left_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Left_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Hotel_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hotel_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Airplane Mode On_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Airplane Mode On_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sort Down_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sort Down_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Car_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Car_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 17</value>
+  </metadata>
+  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>228, 17</value>
+  </metadata>
 </root>
