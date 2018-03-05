@@ -29,7 +29,7 @@ namespace Interfaces
             }
             else
             {
-                idcarro = Convert.ToInt32(carros.CurrentRow.Cells[0].Value);
+                idcarro = Convert.ToInt32(carros.CurrentRow.Cells[0].Value.ToString());
                 DialogResult = DialogResult.OK;
                 Close();
             }

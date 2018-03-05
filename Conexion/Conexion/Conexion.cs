@@ -80,23 +80,31 @@ namespace Conexion
         public string MostrarDatos(string consulta)
         {
             string user = null;
-            Conexion();
-            conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand(consulta, conexion);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-
             try
             {
-                while (reader.Read())
+
+                Conexion();
+                conexion.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand(consulta, conexion);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                try
                 {
-                    user = reader.GetString(0);
+                    while (reader.Read())
+                    {
+                        user = reader.GetString(0);
+                    }
+                }
+                finally
+                {
+                    reader.Close();
+                    cmd.Dispose();
+                    conexion.Close();
                 }
             }
-            finally
+            catch (Exception error)
             {
-                reader.Close();
-                cmd.Dispose();
-                conexion.Close();
+
             }
             return user;
         }

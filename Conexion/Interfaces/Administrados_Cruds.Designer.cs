@@ -31,6 +31,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.slide_panel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cruD_Aeropuertos1 = new Interfaces.CRUD_Aeropuertos();
+            this.cruD_hoteles1 = new Interfaces.CRUD_hoteles();
+            this.cruD_lugares1 = new Interfaces.CRUD_lugares();
+            this.cruD_paise1 = new Interfaces.CRUD_paise();
+            this.cruD_Rutas1 = new Interfaces.CRUD_Rutas();
+            this.cruD_THoteles1 = new Interfaces.CRUD_THoteles();
+            this.cruD_TVuelos1 = new Interfaces.CRUD_TVuelos();
+            this.cruD_Vehiculos1 = new Interfaces.CRUD_Vehiculos();
+            this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -40,19 +54,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.cruD_Aeropuertos1 = new Interfaces.CRUD_Aeropuertos();
-            this.cruD_hoteles1 = new Interfaces.CRUD_hoteles();
-            this.cruD_lugares1 = new Interfaces.CRUD_lugares();
-            this.cruD_paise1 = new Interfaces.CRUD_paise();
-            this.cruD_Rutas1 = new Interfaces.CRUD_Rutas();
-            this.cruD_THoteles1 = new Interfaces.CRUD_THoteles();
-            this.cruD_TVuelos1 = new Interfaces.CRUD_TVuelos();
-            this.cruD_Vehiculos1 = new Interfaces.CRUD_Vehiculos();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -95,6 +96,138 @@
             this.slide_panel.Name = "slide_panel";
             this.slide_panel.Size = new System.Drawing.Size(18, 58);
             this.slide_panel.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label2.Location = new System.Drawing.Point(332, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(487, 65);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Seleccione un CRUD ";
+            // 
+            // cruD_Aeropuertos1
+            // 
+            this.cruD_Aeropuertos1.Location = new System.Drawing.Point(200, 90);
+            this.cruD_Aeropuertos1.Margin = new System.Windows.Forms.Padding(0);
+            this.cruD_Aeropuertos1.Name = "cruD_Aeropuertos1";
+            this.cruD_Aeropuertos1.Size = new System.Drawing.Size(782, 480);
+            this.cruD_Aeropuertos1.TabIndex = 6;
+            // 
+            // cruD_hoteles1
+            // 
+            this.cruD_hoteles1.Location = new System.Drawing.Point(200, 90);
+            this.cruD_hoteles1.Name = "cruD_hoteles1";
+            this.cruD_hoteles1.Size = new System.Drawing.Size(782, 480);
+            this.cruD_hoteles1.TabIndex = 7;
+            // 
+            // cruD_lugares1
+            // 
+            this.cruD_lugares1.Location = new System.Drawing.Point(200, 90);
+            this.cruD_lugares1.Name = "cruD_lugares1";
+            this.cruD_lugares1.Size = new System.Drawing.Size(785, 483);
+            this.cruD_lugares1.TabIndex = 8;
+            // 
+            // cruD_paise1
+            // 
+            this.cruD_paise1.Location = new System.Drawing.Point(200, 86);
+            this.cruD_paise1.Margin = new System.Windows.Forms.Padding(0);
+            this.cruD_paise1.Name = "cruD_paise1";
+            this.cruD_paise1.Size = new System.Drawing.Size(785, 484);
+            this.cruD_paise1.TabIndex = 9;
+            // 
+            // cruD_Rutas1
+            // 
+            this.cruD_Rutas1.BackColor = System.Drawing.Color.DarkGray;
+            this.cruD_Rutas1.Location = new System.Drawing.Point(200, 86);
+            this.cruD_Rutas1.Name = "cruD_Rutas1";
+            this.cruD_Rutas1.Size = new System.Drawing.Size(782, 480);
+            this.cruD_Rutas1.TabIndex = 10;
+            // 
+            // cruD_THoteles1
+            // 
+            this.cruD_THoteles1.Location = new System.Drawing.Point(200, 86);
+            this.cruD_THoteles1.Name = "cruD_THoteles1";
+            this.cruD_THoteles1.Size = new System.Drawing.Size(782, 480);
+            this.cruD_THoteles1.TabIndex = 11;
+            // 
+            // cruD_TVuelos1
+            // 
+            this.cruD_TVuelos1.Location = new System.Drawing.Point(200, 86);
+            this.cruD_TVuelos1.Name = "cruD_TVuelos1";
+            this.cruD_TVuelos1.Size = new System.Drawing.Size(782, 477);
+            this.cruD_TVuelos1.TabIndex = 12;
+            // 
+            // cruD_Vehiculos1
+            // 
+            this.cruD_Vehiculos1.Location = new System.Drawing.Point(200, 86);
+            this.cruD_Vehiculos1.Name = "cruD_Vehiculos1";
+            this.cruD_Vehiculos1.Size = new System.Drawing.Size(782, 477);
+            this.cruD_Vehiculos1.TabIndex = 13;
+            // 
+            // button12
+            // 
+            this.button12.BackgroundImage = global::Interfaces.Properties.Resources.Bar_Chart_52px;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(771, 11);
+            this.button12.Margin = new System.Windows.Forms.Padding(0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(55, 47);
+            this.button12.TabIndex = 14;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Interfaces.Properties.Resources.Left_52px;
+            this.pictureBox2.Location = new System.Drawing.Point(389, 232);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(379, 180);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Interfaces.Properties.Resources.Airport_52px;
+            this.pictureBox1.Location = new System.Drawing.Point(218, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = global::Interfaces.Properties.Resources.Delete_64px;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Location = new System.Drawing.Point(878, 12);
+            this.button11.Margin = new System.Windows.Forms.Padding(0);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(53, 44);
+            this.button11.TabIndex = 2;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = global::Interfaces.Properties.Resources.Shutdown_52px;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(826, 12);
+            this.button10.Margin = new System.Windows.Forms.Padding(0);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(52, 44);
+            this.button10.TabIndex = 1;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -258,128 +391,13 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(332, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(487, 65);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Seleccione un CRUD ";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Interfaces.Properties.Resources.Left_52px;
-            this.pictureBox2.Location = new System.Drawing.Point(389, 232);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(379, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Interfaces.Properties.Resources.Airport_52px;
-            this.pictureBox1.Location = new System.Drawing.Point(218, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = global::Interfaces.Properties.Resources.Delete_64px;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(893, 12);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(53, 44);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackgroundImage = global::Interfaces.Properties.Resources.Shutdown_52px;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(826, 12);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(52, 44);
-            this.button10.TabIndex = 1;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // cruD_Aeropuertos1
-            // 
-            this.cruD_Aeropuertos1.Location = new System.Drawing.Point(200, 90);
-            this.cruD_Aeropuertos1.Margin = new System.Windows.Forms.Padding(0);
-            this.cruD_Aeropuertos1.Name = "cruD_Aeropuertos1";
-            this.cruD_Aeropuertos1.Size = new System.Drawing.Size(782, 480);
-            this.cruD_Aeropuertos1.TabIndex = 6;
-            // 
-            // cruD_hoteles1
-            // 
-            this.cruD_hoteles1.Location = new System.Drawing.Point(200, 90);
-            this.cruD_hoteles1.Name = "cruD_hoteles1";
-            this.cruD_hoteles1.Size = new System.Drawing.Size(782, 480);
-            this.cruD_hoteles1.TabIndex = 7;
-            // 
-            // cruD_lugares1
-            // 
-            this.cruD_lugares1.Location = new System.Drawing.Point(200, 90);
-            this.cruD_lugares1.Name = "cruD_lugares1";
-            this.cruD_lugares1.Size = new System.Drawing.Size(785, 483);
-            this.cruD_lugares1.TabIndex = 8;
-            // 
-            // cruD_paise1
-            // 
-            this.cruD_paise1.Location = new System.Drawing.Point(200, 86);
-            this.cruD_paise1.Margin = new System.Windows.Forms.Padding(0);
-            this.cruD_paise1.Name = "cruD_paise1";
-            this.cruD_paise1.Size = new System.Drawing.Size(785, 484);
-            this.cruD_paise1.TabIndex = 9;
-            // 
-            // cruD_Rutas1
-            // 
-            this.cruD_Rutas1.BackColor = System.Drawing.Color.DarkGray;
-            this.cruD_Rutas1.Location = new System.Drawing.Point(200, 86);
-            this.cruD_Rutas1.Name = "cruD_Rutas1";
-            this.cruD_Rutas1.Size = new System.Drawing.Size(782, 480);
-            this.cruD_Rutas1.TabIndex = 10;
-            // 
-            // cruD_THoteles1
-            // 
-            this.cruD_THoteles1.Location = new System.Drawing.Point(200, 86);
-            this.cruD_THoteles1.Name = "cruD_THoteles1";
-            this.cruD_THoteles1.Size = new System.Drawing.Size(782, 480);
-            this.cruD_THoteles1.TabIndex = 11;
-            // 
-            // cruD_TVuelos1
-            // 
-            this.cruD_TVuelos1.Location = new System.Drawing.Point(200, 86);
-            this.cruD_TVuelos1.Name = "cruD_TVuelos1";
-            this.cruD_TVuelos1.Size = new System.Drawing.Size(782, 477);
-            this.cruD_TVuelos1.TabIndex = 12;
-            // 
-            // cruD_Vehiculos1
-            // 
-            this.cruD_Vehiculos1.Location = new System.Drawing.Point(200, 86);
-            this.cruD_Vehiculos1.Name = "cruD_Vehiculos1";
-            this.cruD_Vehiculos1.Size = new System.Drawing.Size(782, 477);
-            this.cruD_Vehiculos1.TabIndex = 13;
-            // 
             // Administrados_Cruds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(985, 569);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.cruD_Vehiculos1);
             this.Controls.Add(this.cruD_TVuelos1);
             this.Controls.Add(this.cruD_THoteles1);
@@ -435,5 +453,6 @@
         private CRUD_THoteles cruD_THoteles1;
         private CRUD_TVuelos cruD_TVuelos1;
         private CRUD_Vehiculos cruD_Vehiculos1;
+        private System.Windows.Forms.Button button12;
     }
 }

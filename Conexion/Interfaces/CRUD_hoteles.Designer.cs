@@ -47,40 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.mostrarinfo = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fot = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Habi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.País = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lugar2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label9 = new System.Windows.Forms.Label();
-            this.eliminarinfo = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.newid = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.newnombre = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.newhabitaciones = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
-            this.newpais = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.newlugar = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.newimage = new System.Windows.Forms.PictureBox();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.modificarinfo = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,19 +54,53 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.newimage = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.newlugar = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.newpais = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.newhabitaciones = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.newnombre = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.newid = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.mostrarinfo = new System.Windows.Forms.DataGridView();
+            this.identificador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fot = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Habi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.País = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lugar2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.eliminarinfo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.habitaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modificarinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newimage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newhabitaciones)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mostrarinfo)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminarinfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newhabitaciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newimage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modificarinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -233,7 +233,6 @@
             // nombre
             // 
             this.nombre.BorderColor = System.Drawing.Color.SeaGreen;
-            this.nombre.Enabled = false;
             this.nombre.Location = new System.Drawing.Point(36, 209);
             this.nombre.Multiline = true;
             this.nombre.Name = "nombre";
@@ -317,6 +316,233 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Hoteles";
             // 
+            // modificarinfo
+            // 
+            this.modificarinfo.AllowUserToAddRows = false;
+            this.modificarinfo.AllowUserToDeleteRows = false;
+            this.modificarinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.modificarinfo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.modificarinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.modificarinfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewImageColumn2,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.modificarinfo.Location = new System.Drawing.Point(236, 62);
+            this.modificarinfo.Name = "modificarinfo";
+            this.modificarinfo.ReadOnly = true;
+            this.modificarinfo.RowTemplate.Height = 120;
+            this.modificarinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.modificarinfo.Size = new System.Drawing.Size(532, 197);
+            this.modificarinfo.TabIndex = 16;
+            this.modificarinfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.modificarinfo_CellClick);
+            this.modificarinfo.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.modificarinfo_CellFormatting);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.FillWeight = 94.29031F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Identificador";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.FillWeight = 82.99335F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.FillWeight = 166.4382F;
+            this.dataGridViewImageColumn2.HeaderText = "Foto";
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.FillWeight = 81.45032F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Habitaciones";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.FillWeight = 85.27917F;
+            this.dataGridViewTextBoxColumn9.HeaderText = "País";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.FillWeight = 89.54858F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Lugar";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // bunifuThinButton22
+            // 
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.BackColor = System.Drawing.Color.Silver;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Modificar Hotel";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Peru;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(489, 311);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(251, 54);
+            this.bunifuThinButton22.TabIndex = 15;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
+            // 
+            // newimage
+            // 
+            this.newimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.newimage.Location = new System.Drawing.Point(260, 291);
+            this.newimage.Name = "newimage";
+            this.newimage.Size = new System.Drawing.Size(187, 148);
+            this.newimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.newimage.TabIndex = 14;
+            this.newimage.TabStop = false;
+            this.newimage.Click += new System.EventHandler(this.newimage_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(301, 262);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(114, 26);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Foto Nueva";
+            // 
+            // newlugar
+            // 
+            this.newlugar.FormattingEnabled = true;
+            this.newlugar.Location = new System.Drawing.Point(21, 355);
+            this.newlugar.Name = "newlugar";
+            this.newlugar.Size = new System.Drawing.Size(166, 21);
+            this.newlugar.TabIndex = 12;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(77, 326);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 26);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Lugar";
+            // 
+            // newpais
+            // 
+            this.newpais.FormattingEnabled = true;
+            this.newpais.Location = new System.Drawing.Point(21, 291);
+            this.newpais.Name = "newpais";
+            this.newpais.Size = new System.Drawing.Size(166, 21);
+            this.newpais.TabIndex = 10;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(77, 262);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 26);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "País";
+            // 
+            // newhabitaciones
+            // 
+            this.newhabitaciones.Location = new System.Drawing.Point(21, 217);
+            this.newhabitaciones.Name = "newhabitaciones";
+            this.newhabitaciones.Size = new System.Drawing.Size(166, 20);
+            this.newhabitaciones.TabIndex = 8;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(42, 188);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(129, 26);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Habitaciones";
+            // 
+            // newnombre
+            // 
+            this.newnombre.BorderColor = System.Drawing.Color.SeaGreen;
+            this.newnombre.Enabled = false;
+            this.newnombre.Location = new System.Drawing.Point(21, 143);
+            this.newnombre.Multiline = true;
+            this.newnombre.Name = "newnombre";
+            this.newnombre.Size = new System.Drawing.Size(166, 30);
+            this.newnombre.TabIndex = 6;
+            this.newnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newnombre_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(56, 114);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(86, 26);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Nombre";
+            // 
+            // newid
+            // 
+            this.newid.BorderColor = System.Drawing.Color.SeaGreen;
+            this.newid.Enabled = false;
+            this.newid.Location = new System.Drawing.Point(21, 68);
+            this.newid.Multiline = true;
+            this.newid.Name = "newid";
+            this.newid.Size = new System.Drawing.Size(166, 30);
+            this.newid.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(418, 39);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(188, 26);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Seleccione un Hotel";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(42, 39);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 26);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Identificador";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(274, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(209, 33);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Modificar Hoteles";
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Silver;
@@ -351,32 +577,6 @@
             this.mostrarinfo.Size = new System.Drawing.Size(709, 324);
             this.mostrarinfo.TabIndex = 1;
             this.mostrarinfo.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.mostrarinfo_CellFormatting);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(235, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(273, 33);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Información de Hoteles";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.Silver;
-            this.tabPage4.Controls.Add(this.eliminarinfo);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(774, 454);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Eliminar Hoteles";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // identificador
             // 
@@ -420,15 +620,27 @@
             this.Lugar2.Name = "Lugar2";
             this.Lugar2.ReadOnly = true;
             // 
-            // label9
+            // label8
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(259, 3);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(195, 33);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Eliminar Hoteles";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(235, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(273, 33);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Información de Hoteles";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.Silver;
+            this.tabPage4.Controls.Add(this.eliminarinfo);
+            this.tabPage4.Controls.Add(this.label9);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(774, 454);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Eliminar Hoteles";
             // 
             // eliminarinfo
             // 
@@ -496,232 +708,19 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // label10
+            // label9
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(274, 3);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(209, 33);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Modificar Hoteles";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(259, 3);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(195, 33);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Eliminar Hoteles";
             // 
-            // label11
+            // errorProvider1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(42, 39);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 26);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Identificador";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(418, 39);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(188, 26);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Seleccione un Hotel";
-            // 
-            // newid
-            // 
-            this.newid.BorderColor = System.Drawing.Color.SeaGreen;
-            this.newid.Enabled = false;
-            this.newid.Location = new System.Drawing.Point(21, 68);
-            this.newid.Multiline = true;
-            this.newid.Name = "newid";
-            this.newid.Size = new System.Drawing.Size(166, 30);
-            this.newid.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(56, 114);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 26);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Nombre";
-            // 
-            // newnombre
-            // 
-            this.newnombre.BorderColor = System.Drawing.Color.SeaGreen;
-            this.newnombre.Enabled = false;
-            this.newnombre.Location = new System.Drawing.Point(21, 143);
-            this.newnombre.Multiline = true;
-            this.newnombre.Name = "newnombre";
-            this.newnombre.Size = new System.Drawing.Size(166, 30);
-            this.newnombre.TabIndex = 6;
-            this.newnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newnombre_KeyPress);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(42, 188);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(129, 26);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "Habitaciones";
-            // 
-            // newhabitaciones
-            // 
-            this.newhabitaciones.Location = new System.Drawing.Point(21, 217);
-            this.newhabitaciones.Name = "newhabitaciones";
-            this.newhabitaciones.Size = new System.Drawing.Size(166, 20);
-            this.newhabitaciones.TabIndex = 8;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(77, 262);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 26);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "País";
-            // 
-            // newpais
-            // 
-            this.newpais.FormattingEnabled = true;
-            this.newpais.Location = new System.Drawing.Point(21, 291);
-            this.newpais.Name = "newpais";
-            this.newpais.Size = new System.Drawing.Size(166, 21);
-            this.newpais.TabIndex = 10;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(77, 326);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 26);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Lugar";
-            // 
-            // newlugar
-            // 
-            this.newlugar.FormattingEnabled = true;
-            this.newlugar.Location = new System.Drawing.Point(21, 355);
-            this.newlugar.Name = "newlugar";
-            this.newlugar.Size = new System.Drawing.Size(166, 21);
-            this.newlugar.TabIndex = 12;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(301, 262);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(114, 26);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Foto Nueva";
-            // 
-            // newimage
-            // 
-            this.newimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.newimage.Location = new System.Drawing.Point(260, 291);
-            this.newimage.Name = "newimage";
-            this.newimage.Size = new System.Drawing.Size(187, 148);
-            this.newimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.newimage.TabIndex = 14;
-            this.newimage.TabStop = false;
-            this.newimage.Click += new System.EventHandler(this.newimage_Click);
-            // 
-            // bunifuThinButton22
-            // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.Silver;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Modificar Hotel";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Peru;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(489, 311);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(251, 54);
-            this.bunifuThinButton22.TabIndex = 15;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
-            // 
-            // modificarinfo
-            // 
-            this.modificarinfo.AllowUserToAddRows = false;
-            this.modificarinfo.AllowUserToDeleteRows = false;
-            this.modificarinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.modificarinfo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.modificarinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.modificarinfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewImageColumn2,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.modificarinfo.Location = new System.Drawing.Point(236, 62);
-            this.modificarinfo.Name = "modificarinfo";
-            this.modificarinfo.ReadOnly = true;
-            this.modificarinfo.RowTemplate.Height = 120;
-            this.modificarinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.modificarinfo.Size = new System.Drawing.Size(532, 197);
-            this.modificarinfo.TabIndex = 16;
-            this.modificarinfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.modificarinfo_CellClick);
-            this.modificarinfo.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.modificarinfo_CellFormatting);
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.FillWeight = 94.29031F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Identificador";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.FillWeight = 82.99335F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.FillWeight = 166.4382F;
-            this.dataGridViewImageColumn2.HeaderText = "Foto";
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.FillWeight = 81.45032F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Habitaciones";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.FillWeight = 85.27917F;
-            this.dataGridViewTextBoxColumn9.HeaderText = "País";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.FillWeight = 89.54858F;
-            this.dataGridViewTextBoxColumn10.HeaderText = "Lugar";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.errorProvider1.ContainerControl = this;
             // 
             // CRUD_hoteles
             // 
@@ -737,16 +736,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modificarinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newimage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newhabitaciones)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mostrarinfo)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eliminarinfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newhabitaciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newimage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modificarinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }

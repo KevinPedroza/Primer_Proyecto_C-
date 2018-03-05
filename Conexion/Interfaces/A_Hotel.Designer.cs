@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A_Hotel));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -44,8 +44,8 @@
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.ffin = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.fini = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,7 +53,6 @@
             this.hoteles = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.habitaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +61,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.continuar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.adultos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoteles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -99,8 +101,8 @@
             this.panel1.Controls.Add(this.bunifuThinButton21);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.bunifuDatepicker2);
-            this.panel1.Controls.Add(this.bunifuDatepicker1);
+            this.panel1.Controls.Add(this.ffin);
+            this.panel1.Controls.Add(this.fini);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -221,33 +223,33 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Adultos";
             // 
-            // bunifuDatepicker2
+            // ffin
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(193, 110);
-            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(168, 37);
-            this.bunifuDatepicker2.TabIndex = 6;
-            this.bunifuDatepicker2.Value = new System.DateTime(2018, 2, 21, 15, 23, 39, 775);
+            this.ffin.BackColor = System.Drawing.Color.White;
+            this.ffin.BorderRadius = 0;
+            this.ffin.ForeColor = System.Drawing.Color.Black;
+            this.ffin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ffin.FormatCustom = null;
+            this.ffin.Location = new System.Drawing.Point(193, 110);
+            this.ffin.Margin = new System.Windows.Forms.Padding(0);
+            this.ffin.Name = "ffin";
+            this.ffin.Size = new System.Drawing.Size(168, 37);
+            this.ffin.TabIndex = 6;
+            this.ffin.Value = new System.DateTime(2018, 3, 3, 0, 0, 0, 0);
             // 
-            // bunifuDatepicker1
+            // fini
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(14, 110);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(169, 37);
-            this.bunifuDatepicker1.TabIndex = 5;
-            this.bunifuDatepicker1.Value = new System.DateTime(2018, 2, 21, 15, 23, 39, 775);
+            this.fini.BackColor = System.Drawing.Color.White;
+            this.fini.BorderRadius = 0;
+            this.fini.ForeColor = System.Drawing.Color.Black;
+            this.fini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fini.FormatCustom = null;
+            this.fini.Location = new System.Drawing.Point(14, 110);
+            this.fini.Margin = new System.Windows.Forms.Padding(0);
+            this.fini.Name = "fini";
+            this.fini.Size = new System.Drawing.Size(169, 37);
+            this.fini.TabIndex = 5;
+            this.fini.Value = new System.DateTime(2018, 2, 28, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -297,25 +299,25 @@
             // 
             this.hoteles.AllowUserToAddRows = false;
             this.hoteles.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.hoteles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.hoteles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.hoteles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.hoteles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.hoteles.BackgroundColor = System.Drawing.Color.LightGray;
             this.hoteles.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hoteles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.hoteles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hoteles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.hoteles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hoteles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nombre,
-            this.foto,
             this.habitaciones,
             this.pais,
             this.lugar,
@@ -331,7 +333,7 @@
             this.hoteles.ReadOnly = true;
             this.hoteles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.hoteles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.hoteles.Size = new System.Drawing.Size(749, 234);
+            this.hoteles.Size = new System.Drawing.Size(654, 234);
             this.hoteles.TabIndex = 2;
             this.hoteles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hoteles_CellClick);
             this.hoteles.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.hoteles_CellFormatting);
@@ -347,12 +349,6 @@
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
-            // 
-            // foto
-            // 
-            this.foto.HeaderText = "Foto";
-            this.foto.Name = "foto";
-            this.foto.ReadOnly = true;
             // 
             // habitaciones
             // 
@@ -446,12 +442,33 @@
             this.continuar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.continuar.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(673, 268);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 234);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(739, 247);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(36, 18);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Foto";
+            // 
             // A_Hotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(773, 562);
+            this.ClientSize = new System.Drawing.Size(859, 562);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.continuar);
@@ -471,6 +488,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.adultos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoteles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,8 +503,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -498,15 +514,18 @@
         private Bunifu.Framework.UI.BunifuThinButton2 continuar;
         private Bunifu.Framework.UI.BunifuCustomDataGrid hoteles;
         private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox buscardestino;
+        private System.Windows.Forms.PictureBox verificar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewImageColumn foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn habitaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn pais;
         private System.Windows.Forms.DataGridViewTextBoxColumn lugar;
         private System.Windows.Forms.DataGridViewTextBoxColumn cali;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox buscardestino;
-        private System.Windows.Forms.PictureBox verificar;
+        public Bunifu.Framework.UI.BunifuDatepicker ffin;
+        public Bunifu.Framework.UI.BunifuDatepicker fini;
     }
 }

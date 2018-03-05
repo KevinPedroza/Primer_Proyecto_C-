@@ -15,7 +15,16 @@ namespace Procedimientos
         //this method will charge the information on the datagridview
         public void llenarRutas(DataGridView data)
         {
-            data.DataSource = bd.cargarDatagridlugar("SELECT id,pais_origen,pais_destino FROM ruta").Tables[0];
+            data.DataSource = bd.cargarDatagridlugar("SELECT ru.id, ru.pais_origen, ru.pais_destino FROM ruta as ru where ru.id not in (select tv.ruta from tarifa_vuelo as tv)").Tables[0];
+            data.Columns[0].HeaderCell.Value = "Identificador";
+            data.Columns[1].HeaderCell.Value = "País Origen";
+            data.Columns[2].HeaderCell.Value = "País Destino";
+            data.ClearSelection();
+        }
+        //this method will charge the information on the datagridview
+        public void llenarRutas2(DataGridView data)
+        {
+            data.DataSource = bd.cargarDatagridlugar("SELECT id,pais_origen,pais_destino FROM ruta ").Tables[0];
             data.Columns[0].HeaderCell.Value = "Identificador";
             data.Columns[1].HeaderCell.Value = "País Origen";
             data.Columns[2].HeaderCell.Value = "País Destino";

@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.niños = new System.Windows.Forms.NumericUpDown();
             this.adultos = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,12 +49,18 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ffinal = new Bunifu.Framework.UI.BunifuDatepicker();
             this.finicial = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label6 = new System.Windows.Forms.Label();
             this.nombreuser = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -61,12 +68,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.nreservas = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.niños)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultos)).BeginInit();
@@ -115,6 +119,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(754, 528);
             this.panel1.TabIndex = 3;
+            // 
+            // bunifuThinButton24
+            // 
+            this.bunifuThinButton24.ActiveBorderThickness = 1;
+            this.bunifuThinButton24.ActiveCornerRadius = 20;
+            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SandyBrown;
+            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.DarkRed;
+            this.bunifuThinButton24.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
+            this.bunifuThinButton24.ButtonText = "Continuar";
+            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.IdleBorderThickness = 1;
+            this.bunifuThinButton24.IdleCornerRadius = 20;
+            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.PaleGreen;
+            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.DarkOrange;
+            this.bunifuThinButton24.Location = new System.Drawing.Point(471, 473);
+            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton24.Name = "bunifuThinButton24";
+            this.bunifuThinButton24.Size = new System.Drawing.Size(259, 41);
+            this.bunifuThinButton24.TabIndex = 38;
+            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
             // niños
             // 
@@ -191,20 +221,20 @@
             // 
             this.vuelos.AllowUserToAddRows = false;
             this.vuelos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.vuelos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.vuelos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.vuelos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.vuelos.BackgroundColor = System.Drawing.Color.Silver;
             this.vuelos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vuelos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.vuelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vuelos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orige,
@@ -212,7 +242,10 @@
             this.Escalas,
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.precio,
+            this.duracion,
+            this.dura});
             this.vuelos.DoubleBuffered = true;
             this.vuelos.EnableHeadersVisualStyles = false;
             this.vuelos.HeaderBgColor = System.Drawing.Color.LightGreen;
@@ -262,6 +295,50 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // duracion
+            // 
+            this.duracion.HeaderText = "Duración Escala";
+            this.duracion.Name = "duracion";
+            this.duracion.ReadOnly = true;
+            // 
+            // dura
+            // 
+            this.dura.HeaderText = "Duración Directo";
+            this.dura.Name = "dura";
+            this.dura.ReadOnly = true;
+            // 
+            // bunifuThinButton23
+            // 
+            this.bunifuThinButton23.ActiveBorderThickness = 1;
+            this.bunifuThinButton23.ActiveCornerRadius = 20;
+            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.SandyBrown;
+            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.DarkRed;
+            this.bunifuThinButton23.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
+            this.bunifuThinButton23.ButtonText = "Buscar";
+            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton23.IdleBorderThickness = 1;
+            this.bunifuThinButton23.IdleCornerRadius = 20;
+            this.bunifuThinButton23.IdleFillColor = System.Drawing.SystemColors.Highlight;
+            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Black;
+            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton23.Location = new System.Drawing.Point(260, 208);
+            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton23.Name = "bunifuThinButton23";
+            this.bunifuThinButton23.Size = new System.Drawing.Size(259, 41);
+            this.bunifuThinButton23.TabIndex = 26;
+            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
+            // 
             // ffinal
             // 
             this.ffinal.BackColor = System.Drawing.Color.Silver;
@@ -273,7 +350,8 @@
             this.ffinal.Name = "ffinal";
             this.ffinal.Size = new System.Drawing.Size(186, 36);
             this.ffinal.TabIndex = 25;
-            this.ffinal.Value = new System.DateTime(2018, 2, 19, 23, 4, 10, 952);
+            this.ffinal.Value = new System.DateTime(2018, 2, 26, 0, 0, 0, 0);
+            this.ffinal.Validating += new System.ComponentModel.CancelEventHandler(this.ffinal_Validating);
             // 
             // finicial
             // 
@@ -286,7 +364,9 @@
             this.finicial.Name = "finicial";
             this.finicial.Size = new System.Drawing.Size(186, 36);
             this.finicial.TabIndex = 24;
-            this.finicial.Value = new System.DateTime(2018, 2, 19, 23, 4, 10, 952);
+            this.finicial.Value = new System.DateTime(2018, 2, 24, 0, 0, 0, 0);
+            this.finicial.onValueChanged += new System.EventHandler(this.finicial_onValueChanged);
+            this.finicial.Validating += new System.ComponentModel.CancelEventHandler(this.finicial_Validating);
             // 
             // label5
             // 
@@ -331,137 +411,6 @@
             this.label2.Size = new System.Drawing.Size(61, 22);
             this.label2.TabIndex = 18;
             this.label2.Text = "Origen";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(84, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 22);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Encuentra tu Vuelo";
-            // 
-            // nombreuser
-            // 
-            this.nombreuser.AutoSize = true;
-            this.nombreuser.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreuser.ForeColor = System.Drawing.Color.DimGray;
-            this.nombreuser.Location = new System.Drawing.Point(94, 12);
-            this.nombreuser.Margin = new System.Windows.Forms.Padding(0);
-            this.nombreuser.Name = "nombreuser";
-            this.nombreuser.Size = new System.Drawing.Size(0, 22);
-            this.nombreuser.TabIndex = 28;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Interfaces.Properties.Resources.Contacts_64px;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::Interfaces.Properties.Resources.Reserve_50px;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(725, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 48);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // bunifuGradientPanel2
-            // 
-            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
-            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.Cyan;
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Gray;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Coral;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Lime;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 48);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(112, 528);
-            this.bunifuGradientPanel2.TabIndex = 5;
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Cyan;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gray;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Coral;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Lime;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(866, 48);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(111, 528);
-            this.bunifuGradientPanel1.TabIndex = 4;
-            // 
-            // bunifuThinButton24
-            // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SandyBrown;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.DarkRed;
-            this.bunifuThinButton24.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "Continuar";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleBorderThickness = 1;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.PaleGreen;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.DarkOrange;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(471, 473);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(259, 41);
-            this.bunifuThinButton24.TabIndex = 38;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
-            // 
-            // bunifuThinButton23
-            // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.SandyBrown;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.DarkRed;
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Buscar";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.SystemColors.Highlight;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(260, 208);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(259, 41);
-            this.bunifuThinButton23.TabIndex = 26;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // bunifuThinButton22
             // 
@@ -515,6 +464,86 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label6.Location = new System.Drawing.Point(84, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 22);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Encuentra tu Vuelo";
+            // 
+            // nombreuser
+            // 
+            this.nombreuser.AutoSize = true;
+            this.nombreuser.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreuser.ForeColor = System.Drawing.Color.DimGray;
+            this.nombreuser.Location = new System.Drawing.Point(94, 12);
+            this.nombreuser.Margin = new System.Windows.Forms.Padding(0);
+            this.nombreuser.Name = "nombreuser";
+            this.nombreuser.Size = new System.Drawing.Size(0, 22);
+            this.nombreuser.TabIndex = 28;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Interfaces.Properties.Resources.Contacts_64px;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Interfaces.Properties.Resources.Reserve_50px;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(725, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(69, 48);
+            this.button3.TabIndex = 6;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.Cyan;
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Gray;
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.Coral;
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.Lime;
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 48);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(112, 528);
+            this.bunifuGradientPanel2.TabIndex = 5;
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Cyan;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Gray;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Coral;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Lime;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(866, 48);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(111, 528);
+            this.bunifuGradientPanel1.TabIndex = 4;
+            // 
             // button2
             // 
             this.button2.BackgroundImage = global::Interfaces.Properties.Resources.Shutdown_52px;
@@ -542,6 +571,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // nreservas
+            // 
+            this.nreservas.BackColor = System.Drawing.Color.Transparent;
+            this.nreservas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nreservas.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nreservas.ForeColor = System.Drawing.Color.White;
+            this.nreservas.Location = new System.Drawing.Point(768, 30);
+            this.nreservas.Name = "nreservas";
+            this.nreservas.Size = new System.Drawing.Size(26, 18);
+            this.nreservas.TabIndex = 29;
+            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,6 +589,7 @@
             this.BackColor = System.Drawing.Color.Salmon;
             this.ClientSize = new System.Drawing.Size(977, 576);
             this.ControlBox = false;
+            this.Controls.Add(this.nreservas);
             this.Controls.Add(this.nombreuser);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -582,8 +623,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
-        private Bunifu.Framework.UI.BunifuDatepicker ffinal;
-        private Bunifu.Framework.UI.BunifuDatepicker finicial;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -591,24 +630,30 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label label6;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid vuelos;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label nombreuser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orige;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dest;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Escalas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox destino;
-        private System.Windows.Forms.ComboBox origen;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.NumericUpDown niños;
         public System.Windows.Forms.NumericUpDown adultos;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orige;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Escalas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dura;
+        public Bunifu.Framework.UI.BunifuDatepicker ffinal;
+        public Bunifu.Framework.UI.BunifuDatepicker finicial;
+        public System.Windows.Forms.ComboBox destino;
+        public System.Windows.Forms.ComboBox origen;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid vuelos;
+        private System.Windows.Forms.Label nreservas;
     }
 }

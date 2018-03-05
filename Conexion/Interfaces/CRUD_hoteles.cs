@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
-
+using Conexion;
 
 namespace Interfaces
 {
     public partial class CRUD_hoteles : UserControl
     {
         Procedimientos_Hoteles ph = new Procedimientos_Hoteles();
-
+        ConexionBD bd = new ConexionBD();
         string dir;
         string dir2;
         public CRUD_hoteles()
@@ -88,6 +88,7 @@ namespace Interfaces
                     hh.Foto = dir;
                     hh.Habitaciones = Convert.ToInt32(habitaciones.Value.ToString());
                     ph.insertarHotel(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, pais.SelectedItem.ToString(), lugar.SelectedItem.ToString());
+                    bd.InsertarDatos("INSERT INTO calificacion VALUES('" + hh.Id + "', '" + 0 + "')");
                     errorProvider1.Clear();
                 }
             }

@@ -35,12 +35,22 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>D:\Datos Importantes\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Npgsql">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\PostgreSQL\Npgsql\bin\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +79,12 @@
     </Compile>
     <Compile Include="A_Hotel.Designer.cs">
       <DependentUpon>A_Hotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra.Designer.cs">
+      <DependentUpon>Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD_Aeropuertos.cs">
       <SubType>UserControl</SubType>
@@ -124,6 +140,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Reportes.Designer.cs">
+      <DependentUpon>Menu_Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.cs">
@@ -131,6 +153,48 @@
     </Compile>
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte1.Designer.cs">
+      <DependentUpon>Reporte1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte2.Designer.cs">
+      <DependentUpon>Reporte2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte3.Designer.cs">
+      <DependentUpon>Reporte3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte4.Designer.cs">
+      <DependentUpon>Reporte4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte5.Designer.cs">
+      <DependentUpon>Reporte5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte6.Designer.cs">
+      <DependentUpon>Reporte6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reserva.Designer.cs">
+      <DependentUpon>Reserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
@@ -152,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="A_Hotel.resx">
       <DependentUpon>A_Hotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra.resx">
+      <DependentUpon>Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Aeropuertos.resx">
       <DependentUpon>CRUD_Aeropuertos.cs</DependentUpon>
@@ -180,6 +247,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Reportes.resx">
+      <DependentUpon>Menu_Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -193,12 +263,34 @@
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte1.resx">
+      <DependentUpon>Reporte1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte2.resx">
+      <DependentUpon>Reporte2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte3.resx">
+      <DependentUpon>Reporte3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte4.resx">
+      <DependentUpon>Reporte4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte5.resx">
+      <DependentUpon>Reporte5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte6.resx">
+      <DependentUpon>Reporte6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reserva.resx">
+      <DependentUpon>Reserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista_Reservas.resx">
       <DependentUpon>Vista_Reservas.cs</DependentUpon>
     </EmbeddedResource>
+    <Fakes Include="Fakes\Microsoft.ReportViewer.Common.fakes" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -284,6 +376,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Car_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar Chart_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

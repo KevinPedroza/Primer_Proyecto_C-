@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_TVuelos));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.id = new System.Windows.Forms.ComboBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.rutas = new System.Windows.Forms.DataGridView();
             this.precio = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -57,7 +58,6 @@
             this.eliminarinfo = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.id = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rutas)).BeginInit();
@@ -101,6 +101,15 @@
             this.tabPage1.Size = new System.Drawing.Size(774, 451);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingresar Tarifa de Vuelos";
+            // 
+            // id
+            // 
+            this.id.FormattingEnabled = true;
+            this.id.Location = new System.Drawing.Point(25, 138);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(168, 21);
+            this.id.TabIndex = 8;
+            this.id.Click += new System.EventHandler(this.id_Click);
             // 
             // bunifuThinButton21
             // 
@@ -423,14 +432,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // id
-            // 
-            this.id.FormattingEnabled = true;
-            this.id.Location = new System.Drawing.Point(25, 138);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(168, 21);
-            this.id.TabIndex = 8;
             // 
             // CRUD_TVuelos
             // 

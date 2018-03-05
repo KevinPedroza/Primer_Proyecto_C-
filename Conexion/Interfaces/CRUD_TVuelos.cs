@@ -53,7 +53,7 @@ namespace Interfaces
             pv.mostrarInfo(mostrarinfo);
             pv.mostrarInfo(eliminarinfo);
             pv.mostrarInfo(modificarinfo);
-            pv.llenarRutas(newruta);
+            pv.llenarRutas2(newruta);
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
@@ -80,6 +80,7 @@ namespace Interfaces
             }
             id.Text = "";
             precio.Text = "";
+            pv.llenarRutas(rutas);
             rutas.ClearSelection();
         }
 
@@ -162,6 +163,14 @@ namespace Interfaces
             newprecio.Text = "";
             newruta.ClearSelection();
 
+        }
+
+        private void id_Click(object sender, EventArgs e)
+        {
+            if (id.Items.Count == 0)
+            {
+                MessageBox.Show("Todos las Rutas cuentan con Tarifas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
+using Conexion;
+
 namespace Interfaces
 {
     public partial class A_Hotel : Form
     {
         Procedimientos_Usuario pu = new Procedimientos_Usuario();
+        ConexionBD bd = new ConexionBD();
         public static int hotelid;
+        public static int totalh;
+        public static int habita;
         public A_Hotel()
         {
             InitializeComponent();
@@ -29,14 +34,26 @@ namespace Interfaces
             {
                 MessageBox.Show("Necesita " + Math.Ceiling(resultado) + " Habitaciones para el total de Personas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 habi.Value = Convert.ToInt32(Math.Ceiling(resultado));
-                continuar.Visible = true;
                 verificar.Visible = true;
-
+                continuar.Visible = true;
+            }
+            else if (fini.Value.ToString() == ffin.Value.ToString())
+            {
+                MessageBox.Show("Seleccione una Fecha!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (habi.Value == 1 & adultos.Value == 0 & niños.Value == 0)
+            {
+                MessageBox.Show("Ingrese Huéspedes!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (habi.Value == 0 & adultos.Value == 0 & niños.Value == 0)
+            {
+                MessageBox.Show("Ingrese Huéspedes y Habitaciones!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 continuar.Visible = true;
                 verificar.Visible = true;
+                habita = Convert.ToInt32(habi.Value);
             }
 
         }
@@ -64,6 +81,7 @@ namespace Interfaces
             }
             else
             {
+                totalh = Convert.ToInt32(adultos.Value + niños.Value);
                 hotelid = Convert.ToInt32(hoteles.CurrentRow.Cells[0].Value);
                 DialogResult = DialogResult.OK;
                 Close();
@@ -77,37 +95,39 @@ namespace Interfaces
 
         private void hoteles_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (hoteles.Columns[2].HeaderText == "Foto")
-            {
-                if (e.Value != null)
-                {
-                    try
-                    {
-                        e.Value = Image.FromFile(e.Value.ToString()).GetThumbnailImage(101, 120, delegate { return true; }, IntPtr.Zero);
-                    }
-                    catch (Exception error)
-                    { }
-                }
-            }
         }
 
         private void hoteles_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Convert.ToInt32(hoteles.CurrentRow.Cells[3].Value) < habi.Value)
+            try
             {
-                MessageBox.Show("Este Hotel no cuenta con las habitaciones necesarias!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                string foto = bd.MostrarDatos("SELECT foto FROM hotel WHERE id = '" + hoteles.CurrentRow.Cells[0].Value + "'");
+                Bitmap foto2 = new Bitmap(foto);
+                pictureBox2.Image = (Image)foto2;
+
+                if (Convert.ToInt32(hoteles.CurrentRow.Cells[2].Value) < habi.Value)
+                {
+                    MessageBox.Show("Este Hotel no cuenta con las habitaciones necesarias!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    return;
+                }
             }
-            else
+            catch (Exception error)
             {
-                return;
+                string err = error.Message;
             }
+
         }
 
         private void buscardestino_KeyPress(object sender, KeyPressEventArgs e)
         {
             hoteles.Rows.Clear();
-            pu.cargarHoteles(hoteles,buscardestino.Text);
+            pu.cargarHoteles(hoteles, buscardestino.Text);
             hoteles.ClearSelection();
         }
+
+
     }
 }

@@ -145,8 +145,12 @@ namespace Interfaces
             slide_panel.Height = button7.Height;
             slide_panel.Top = button7.Top;
             cruD_THoteles1.id.Items.Clear();
-            pth.llenarCombo(cruD_THoteles1.id,"SELECT id FROM hotel");
+            pth.llenarCombo(cruD_THoteles1.id, "SELECT h.id FROM hotel as h where h.id not in (select e.id from tarifa_hotel as e) ");
             cruD_THoteles1.Show();
+            if (cruD_THoteles1.id.Items.Count == 0)
+            {
+                MessageBox.Show("Todos los Hoteles cuentan con Tarifas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             cruD_Rutas1.Hide();
             cruD_paise1.Hide();
             cruD_lugares1.Hide();
@@ -163,8 +167,12 @@ namespace Interfaces
             slide_panel.Top = button8.Top;
             cruD_TVuelos1.Show();
             cruD_TVuelos1.id.Items.Clear();
-            tv.llenarCombo(cruD_TVuelos1.id,"SELECT id FROM ruta");
+            tv.llenarCombo(cruD_TVuelos1.id,"SELECT ru.id FROM ruta as ru where ru.id not in (select tv.ruta from tarifa_vuelo as tv)");
             tv.llenarRutas(cruD_TVuelos1.rutas);
+            if (cruD_TVuelos1.id.Items.Count == 0)
+            {
+                MessageBox.Show("Todos las Rutas cuentan con Tarifas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             cruD_THoteles1.Hide();
             cruD_Rutas1.Hide();
             cruD_paise1.Hide();
@@ -219,6 +227,13 @@ namespace Interfaces
             {
                 return;
             }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Reportes mr = new Menu_Reportes();
+            mr.Show();
         }
     }
 }

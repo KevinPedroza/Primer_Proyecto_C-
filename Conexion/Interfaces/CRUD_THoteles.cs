@@ -37,7 +37,7 @@ namespace Interfaces
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            if (id.Text == "" || precio.Text == "")
+            if (id.SelectedItem.ToString() == "" || precio.Text == "")
             {
                 MessageBox.Show("Llene todos los campos requeridos!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -48,7 +48,7 @@ namespace Interfaces
                 ht.Precio = Convert.ToInt32(precio.Text);
                 pr.insertarTarifa(ht.id, ht.Precio);
             }
-            id.Text = "";
+            id.SelectedIndex = -1;
             precio.Text = "";
         }
 
@@ -110,6 +110,14 @@ namespace Interfaces
             pr.modificarTrifa(ht.id,ht.Precio);
             pr.mostarInfo(mostrarinfodata);
             mostrarinfodata.ClearSelection();
+        }
+
+        private void id_Click(object sender, EventArgs e)
+        {
+            if (id.Items.Count == 0)
+            {
+                MessageBox.Show("Todos los Hoteles cuentan con Tarifas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -51,6 +51,7 @@
     <Compile Include="Herencia_THoteles.cs" />
     <Compile Include="Procedimientos_Aeropertos.cs" />
     <Compile Include="Procedimientos_Hoteles.cs" />
+    <Compile Include="Procedimientos_Reportes.cs" />
     <Compile Include="Procedimientos_THoteles.cs" />
     <Compile Include="Procedimientos_TVuelos.cs" />
     <Compile Include="Hoteles.cs" />

@@ -82,6 +82,7 @@ namespace Procedimientos
                 if (MessageBox.Show("Desea Eliminar el Hotel " + eliminartarifa.CurrentRow.Cells[1].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     bd.EliminarDatos("DELETE FROM hotel WHERE id = '" + eliminartarifa.CurrentRow.Cells[0].Value.ToString() + "'");
+                    bd.EliminarDatos("DELETE FROM calificacion WHERE idhotel = '" + eliminartarifa.CurrentRow.Cells[0].Value.ToString() + "'");
                     MessageBox.Show("Se ha eliminado Correctamente!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     eliminartarifa.Rows.Clear();
                     mostrarInfo(eliminartarifa);

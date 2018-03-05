@@ -98,6 +98,7 @@
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(171, 21);
             this.id.TabIndex = 7;
+            this.id.Click += new System.EventHandler(this.id_Click);
             // 
             // bunifuFlatButton1
             // 
