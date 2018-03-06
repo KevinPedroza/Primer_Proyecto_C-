@@ -12,7 +12,7 @@ using Npgsql;
 
 namespace Procedimientos
 {
-    public class Procedimientos_Reportes 
+    public class Procedimientos_Reportes
     {
 
         ConexionBD bd = new ConexionBD();
@@ -226,6 +226,131 @@ namespace Procedimientos
                 ConexionBD.conexion.Close();
             }
 
+
+            return nombres;
+        }
+
+        //this method will show the scales in the countries, seventh report
+        public ArrayList cantidadPaises()
+        {
+            ArrayList nombres = new ArrayList();
+
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(c.escala),trim(trailing 'ABCDEFGHIJKMLNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz' from c.escala) FROM compra AS c WHERE c.escala <> 'Vuelo Directo' GROUP By c.escala ;", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    nombres.Add(reader.GetString(0));
+                }
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+
+            return nombres;
+        }
+
+        //this method will show the scales in the countries, seventh report
+        public ArrayList nombrePaises()
+        {
+            ArrayList nombres = new ArrayList();
+
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(c.escala),trim(trailing 'ABCDEFGHIJKMLNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz' from c.escala) FROM compra AS c WHERE c.escala <> 'Vuelo Directo' GROUP By c.escala ;", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    nombres.Add(reader.GetString(1));
+                }
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+            for (int i = 0; i < nombres.Count; i++)
+            {
+                string user = (string)nombres[i];
+                user = user.Replace(",", "");
+                nombres[i] = user;
+            }
+
+            return nombres;
+        }
+
+        //this method will show the sales of cars, sixth report
+        public ArrayList ventasCarros()
+        {
+            ArrayList nombres = new ArrayList();
+
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(c.id_vehiculo),h.modelo FROM compra as c JOIN vehiculo as h on h.id = c.id_vehiculo GROUP BY h.modelo LIMIT 5;", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    nombres.Add(reader.GetString(0));
+                }
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+            for (int i = 0; i < nombres.Count; i++)
+            {
+                string user = (string)nombres[i];
+                user = user.Replace(",", "");
+                nombres[i] = user;
+            }
+
+            return nombres;
+        }
+        //this method will show the names of cars, sixth report
+        public ArrayList nombreCarros()
+        {
+            ArrayList nombres = new ArrayList();
+
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(c.id_vehiculo),h.modelo FROM compra as c JOIN vehiculo as h on h.id = c.id_vehiculo GROUP BY h.modelo LIMIT 5;", ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    nombres.Add(reader.GetString(1));
+                }
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
+            }
+
+            for (int i = 0; i < nombres.Count; i++)
+            {
+                string user = (string)nombres[i];
+                user = user.Replace(",", "");
+                nombres[i] = user;
+            }
 
             return nombres;
         }

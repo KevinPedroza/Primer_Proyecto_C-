@@ -154,6 +154,7 @@
             this.r7.TabIndex = 17;
             this.r7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.r7.Visible = false;
+            this.r7.Click += new System.EventHandler(this.r7_Click);
             // 
             // button1
             // 
@@ -193,6 +194,7 @@
             this.r6.TabIndex = 13;
             this.r6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.r6.Visible = false;
+            this.r6.Click += new System.EventHandler(this.r6_Click);
             // 
             // r5
             // 
@@ -219,6 +221,7 @@
             this.r5.TabIndex = 12;
             this.r5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.r5.Visible = false;
+            this.r5.Click += new System.EventHandler(this.r5_Click);
             // 
             // r4
             // 

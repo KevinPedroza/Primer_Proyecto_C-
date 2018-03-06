@@ -53,7 +53,7 @@ namespace Interfaces
         private void A_Carro_Load(object sender, EventArgs e)
         {
             carros.Rows.Clear();
-            pu.cargarCarros(carros, Convert.ToInt32(u.adultos.Value) + Convert.ToInt32(u.adultos.Value));
+            pu.cargarCarros(carros, Convert.ToInt32(Usuario.adulto) + Convert.ToInt32(Usuario.niño));
             carros.ClearSelection();
         }
     }

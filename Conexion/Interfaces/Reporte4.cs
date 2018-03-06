@@ -43,7 +43,6 @@ namespace Interfaces
         {
             try
             {
-                MessageBox.Show(finicio.Value.ToShortDateString()+""+ ffin.Value.ToShortDateString());
                 ArrayList canti = new ArrayList();
                 canti = pr.adultos(finicio.Value.ToShortDateString(), ffin.Value.ToShortDateString());
                 if (canti.Count == 0)

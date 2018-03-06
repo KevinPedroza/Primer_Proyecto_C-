@@ -190,6 +190,12 @@
     <Compile Include="Reporte6.Designer.cs">
       <DependentUpon>Reporte6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reporte7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte7.Designer.cs">
+      <DependentUpon>Reporte7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte6.resx">
       <DependentUpon>Reporte6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte7.resx">
+      <DependentUpon>Reporte7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reserva.resx">
       <DependentUpon>Reserva.cs</DependentUpon>

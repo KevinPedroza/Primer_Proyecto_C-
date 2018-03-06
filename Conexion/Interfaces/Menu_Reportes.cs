@@ -312,6 +312,27 @@ namespace Interfaces
             Reporte4 mr = new Reporte4();
             mr.Show();
         }
+
+        private void r7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reporte7 r = new Reporte7();
+            r.Show();
+        }
+
+        private void r5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reporte5 r = new Reporte5();
+            r.Show();
+        }
+
+        private void r6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reporte6 r = new Reporte6();
+            r.Show();
+        }
     }
 }
 

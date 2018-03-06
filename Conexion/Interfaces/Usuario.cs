@@ -115,6 +115,8 @@ namespace Interfaces
             }
             else
             {
+                adulto = Convert.ToInt32(adultos.Value);
+                niño = Convert.ToInt32(niños.Value);
                 A_Carro c = new A_Carro();
                 c.ShowDialog();
             }
