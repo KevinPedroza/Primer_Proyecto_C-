@@ -18,6 +18,9 @@ namespace Interfaces
         Procedimientos_Usuario pu = new Procedimientos_Usuario();
         ConexionBD bd = new ConexionBD();
         Vista_Reservas ee = new Vista_Reservas();
+        List<Color> colores = new List<Color>();
+        int currentcolor = 0;
+        int a = 0;
         public static int contador;
         public static string paiso;
         public static string paisd;
@@ -33,6 +36,15 @@ namespace Interfaces
             nombreuser.Text = pu.nom_user(Login.contra);
             int cedula = Convert.ToInt32(pu.cedula(Login.contra));
             nreservas.Text = pu.traerCantidadR(cedula);
+
+            colores.Add(Color.FromArgb(33, 150, 243));
+            colores.Add(Color.FromArgb(3, 169, 244));
+            colores.Add(Color.FromArgb(0, 150, 136));
+            colores.Add(Color.FromArgb(103, 58, 183));
+            colores.Add(Color.FromArgb(156, 39, 176));
+            colores.Add(Color.FromArgb(255, 87, 34));
+            colores.Add(Color.FromArgb(255, 193, 7));
+            colores.Add(Color.FromArgb(205, 220, 57));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -71,6 +83,9 @@ namespace Interfaces
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
+            DateTime hoy = DateTime.Now;
+
+            string miVariable = hoy.ToString("dd/MM/yyyy");
             try
             {
                 if (origen.SelectedItem.ToString() == destino.SelectedItem.ToString())
@@ -80,6 +95,10 @@ namespace Interfaces
                 else if (finicial.Value.ToString() == ffinal.Value.ToString())
                 {
                     MessageBox.Show("Seleccione una Fecha!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (Convert.ToDateTime(finicial.Value.ToShortDateString()) < Convert.ToDateTime(miVariable) || Convert.ToDateTime(ffinal.Value.ToShortDateString()) < Convert.ToDateTime(miVariable))
+                {
+                    MessageBox.Show("Ingrese una Fecha actual o posterior!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -103,8 +122,9 @@ namespace Interfaces
             }
             catch (Exception error)
             {
-                MessageBox.Show("Seleccione Paises de Origen! "+error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione Paises de Origen! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -153,7 +173,7 @@ namespace Interfaces
                 precio2 = vuelos.CurrentRow.Cells[6].Value.ToString();
                 fechaini = finicial.Value.ToShortDateString();
                 fechafin = ffinal.Value.ToShortDateString();
-                this.Hide();
+                tracontinuar.HideSync(this);
                 Vista_Reservas vr = new Vista_Reservas();
                 vr.Show();
             }
@@ -187,6 +207,25 @@ namespace Interfaces
         private void ffinal_Validating(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (currentcolor < colores.Count - 1)
+            {
+                this.BackColor = Bunifu.Framework.UI.BunifuColorTransition.getColorScale(a, colores[currentcolor], colores[currentcolor + 1]);
+
+                if (a < 100)
+                {
+                    a++;
+                }
+                else
+                {
+                    a = 0;
+                    currentcolor++;
+                }
+                timer1.Enabled = true;
+            }
         }
     }
 }

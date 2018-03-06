@@ -44,7 +44,7 @@ namespace Interfaces
             {
 
                 chart1.Palette = ChartColorPalette.Pastel;
-                chart1.Titles.Add("Cantidad de Visitas por País");
+                chart1.Titles.Add("Porcentaje de Visitas por País");
 
                 for (int i = 0; i < paises.Count; i++)
                 {

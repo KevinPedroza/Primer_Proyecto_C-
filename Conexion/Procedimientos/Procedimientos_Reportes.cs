@@ -129,13 +129,13 @@ namespace Procedimientos
 
             bd.Conexion();
             ConexionBD.conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(r.paisd), r.paisd FROM reserva as r GROUP BY r.paisd", ConexionBD.conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT p.nombre,(COUNT(c.id_cedula)*100 / (SELECT COUNT(*) FROM compra)) FROM compra AS c JOIN pais as p on p.id = c.id_pais GROUP BY p.nombre", ConexionBD.conexion);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             try
             {
                 while (reader.Read())
                 {
-                    canti.Add(reader.GetString(0));
+                    canti.Add(reader.GetString(1));
                 }
             }
             finally
@@ -148,20 +148,20 @@ namespace Procedimientos
 
             return canti;
         }
-        //this method will show the name of the hotels, second report
+        //this method will show the name of the hotels, third report
         public ArrayList paisVisitas()
         {
             ArrayList nombres = new ArrayList();
 
             bd.Conexion();
             ConexionBD.conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT COUNT(r.paisd), r.paisd FROM reserva as r GROUP BY r.paisd ", ConexionBD.conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT p.nombre,(COUNT(c.id_cedula)*100 / (SELECT COUNT(*) FROM compra)) FROM compra AS c JOIN pais as p on p.id = c.id_pais GROUP BY p.nombre", ConexionBD.conexion);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             try
             {
                 while (reader.Read())
                 {
-                    nombres.Add(reader.GetString(1));
+                    nombres.Add(reader.GetString(0) + " %");
                 }
             }
             finally

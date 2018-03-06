@@ -41,7 +41,7 @@ namespace Interfaces
             }
             else if (bduser.Equals(user) & bdtipo.Equals("F"))
             {
-                this.Hide();
+                transicionuser.HideSync(this);
                 Usuario us = new Usuario();
                 us.Show();
             }
@@ -78,7 +78,7 @@ namespace Interfaces
         {
             contra = password.Text;
             try
-            {
+            {              
                 login(Usuario.Text, password.Text);
 
             }
@@ -90,5 +90,6 @@ namespace Interfaces
             }
             Usuario.Text = "";
         }
+
     }
 }

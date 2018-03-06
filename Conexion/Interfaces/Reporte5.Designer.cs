@@ -154,6 +154,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reporte5";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte5";
             this.Load += new System.EventHandler(this.Reporte5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

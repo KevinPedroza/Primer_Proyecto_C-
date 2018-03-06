@@ -28,6 +28,10 @@ namespace Interfaces
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            DateTime hoy = DateTime.Now;
+
+            string miVariable = hoy.ToString("dd/MM/yyyy");
+
             double totalh = Convert.ToInt32(adultos.Value) + Convert.ToInt32(niños.Value);
             double resultado = totalh / 4;
             if (Math.Ceiling(resultado) > 1)
@@ -48,6 +52,9 @@ namespace Interfaces
             else if (habi.Value == 0 & adultos.Value == 0 & niños.Value == 0)
             {
                 MessageBox.Show("Ingrese Huéspedes y Habitaciones!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }else if (Convert.ToDateTime(fini.Value.ToShortDateString()) < Convert.ToDateTime(miVariable) || Convert.ToDateTime(ffin.Value.ToShortDateString()) < Convert.ToDateTime(miVariable))
+            {
+                MessageBox.Show("Ingrese una Fecha actual o posterior!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
             else
             {
