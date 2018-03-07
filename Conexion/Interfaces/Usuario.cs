@@ -117,7 +117,7 @@ namespace Interfaces
                     ArrayList duracion = new ArrayList();
                     duracion = pu.duracionEscala(paisd);
                     vuelos.Rows.Clear();
-                    pu.mostrarInfo(vuelos, paiso, paisd, direcoesca, pais, escalas, precios, duracion, adulto + niño);
+                    pu.mostrarInfo(vuelos, paiso, paisd, direcoesca, pais, escalas, precios, duracion, adulto + niño,A_Hotel.habita);
                 }
             }
             catch (Exception error)
@@ -161,7 +161,7 @@ namespace Interfaces
             {
                 MessageBox.Show("Ingrese Pasajeros! ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if ((finicial.Value > ah.fini.Value || finicial.Value < ah.fini.Value) & (ffinal.Value < ah.ffin.Value || ffinal.Value > ah.ffin.Value) & A_Hotel.hotelid != 0)
+            else if ((finicial.Value > Convert.ToDateTime(A_Hotel.fechaini) || finicial.Value < Convert.ToDateTime(A_Hotel.fechafin)) & (ffinal.Value < Convert.ToDateTime(A_Hotel.fechafin) || ffinal.Value > Convert.ToDateTime(A_Hotel.fechafin)) & A_Hotel.hotelid != 0)
             {
                 MessageBox.Show("Seleccione Fechas que Coincidan entre el Hotel y el Vuelo!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }

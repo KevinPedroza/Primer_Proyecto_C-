@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(A_Hotel));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.habinew = new System.Windows.Forms.TextBox();
             this.verificar = new System.Windows.Forms.PictureBox();
             this.buscardestino = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.niños = new System.Windows.Forms.NumericUpDown();
             this.adultos = new System.Windows.Forms.NumericUpDown();
-            this.habi = new System.Windows.Forms.NumericUpDown();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.niños)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.habi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoteles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -92,12 +91,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.habinew);
             this.panel1.Controls.Add(this.verificar);
             this.panel1.Controls.Add(this.buscardestino);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.niños);
             this.panel1.Controls.Add(this.adultos);
-            this.panel1.Controls.Add(this.habi);
             this.panel1.Controls.Add(this.bunifuThinButton21);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -111,6 +110,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(571, 204);
             this.panel1.TabIndex = 1;
+            // 
+            // habinew
+            // 
+            this.habinew.Enabled = false;
+            this.habinew.Location = new System.Drawing.Point(446, 95);
+            this.habinew.Name = "habinew";
+            this.habinew.Size = new System.Drawing.Size(97, 20);
+            this.habinew.TabIndex = 16;
             // 
             // verificar
             // 
@@ -160,6 +167,7 @@
             this.niños.Name = "niños";
             this.niños.Size = new System.Drawing.Size(96, 20);
             this.niños.TabIndex = 12;
+            this.niños.ValueChanged += new System.EventHandler(this.niños_ValueChanged);
             // 
             // adultos
             // 
@@ -167,13 +175,7 @@
             this.adultos.Name = "adultos";
             this.adultos.Size = new System.Drawing.Size(96, 20);
             this.adultos.TabIndex = 11;
-            // 
-            // habi
-            // 
-            this.habi.Location = new System.Drawing.Point(447, 92);
-            this.habi.Name = "habi";
-            this.habi.Size = new System.Drawing.Size(96, 20);
-            this.habi.TabIndex = 10;
+            this.adultos.ValueChanged += new System.EventHandler(this.adultos_ValueChanged);
             // 
             // bunifuThinButton21
             // 
@@ -299,21 +301,21 @@
             // 
             this.hoteles.AllowUserToAddRows = false;
             this.hoteles.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.hoteles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.hoteles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.hoteles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.hoteles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.hoteles.BackgroundColor = System.Drawing.Color.LightGray;
             this.hoteles.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hoteles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.hoteles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hoteles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.hoteles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hoteles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -336,7 +338,6 @@
             this.hoteles.Size = new System.Drawing.Size(654, 234);
             this.hoteles.TabIndex = 2;
             this.hoteles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hoteles_CellClick);
-            this.hoteles.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.hoteles_CellFormatting);
             // 
             // id
             // 
@@ -479,14 +480,12 @@
             this.Name = "A_Hotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A_Hotel";
-            this.Load += new System.EventHandler(this.A_Hotel_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verificar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.niños)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.habi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoteles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -507,7 +506,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown adultos;
-        private System.Windows.Forms.NumericUpDown habi;
         private System.Windows.Forms.NumericUpDown niños;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
@@ -527,5 +525,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         public Bunifu.Framework.UI.BunifuDatepicker ffin;
         public Bunifu.Framework.UI.BunifuDatepicker fini;
+        private System.Windows.Forms.TextBox habinew;
     }
 }

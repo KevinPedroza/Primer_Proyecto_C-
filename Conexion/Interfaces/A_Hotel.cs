@@ -19,6 +19,8 @@ namespace Interfaces
         public static int hotelid;
         public static int totalh;
         public static int habita;
+        public static string fechaini;
+        public static string fechafin;
         public A_Hotel()
         {
             InitializeComponent();
@@ -32,24 +34,11 @@ namespace Interfaces
 
             string miVariable = hoy.ToString("dd/MM/yyyy");
 
-            double totalh = Convert.ToInt32(adultos.Value) + Convert.ToInt32(niños.Value);
-            double resultado = totalh / 4;
-            if (Math.Ceiling(resultado) > 1)
-            {
-                MessageBox.Show("Necesita " + Math.Ceiling(resultado) + " Habitaciones para el total de Personas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                habi.Value = Convert.ToInt32(Math.Ceiling(resultado));
-                verificar.Visible = true;
-                continuar.Visible = true;
-            }
-            else if (fini.Value.ToString() == ffin.Value.ToString())
+            if (fini.Value.ToString() == ffin.Value.ToString())
             {
                 MessageBox.Show("Seleccione una Fecha!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (habi.Value == 1 & adultos.Value == 0 & niños.Value == 0)
-            {
-                MessageBox.Show("Ingrese Huéspedes!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else if (habi.Value == 0 & adultos.Value == 0 & niños.Value == 0)
+            else if (Convert.ToInt32(habinew.Text) == 0 & adultos.Value == 0 & niños.Value == 0)
             {
                 MessageBox.Show("Ingrese Huéspedes y Habitaciones!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }else if (Convert.ToDateTime(fini.Value.ToShortDateString()) < Convert.ToDateTime(miVariable) || Convert.ToDateTime(ffin.Value.ToShortDateString()) < Convert.ToDateTime(miVariable))
@@ -60,7 +49,7 @@ namespace Interfaces
             {
                 continuar.Visible = true;
                 verificar.Visible = true;
-                habita = Convert.ToInt32(habi.Value);
+                habita = Convert.ToInt32(habinew.Text);
             }
 
         }
@@ -90,18 +79,11 @@ namespace Interfaces
             {
                 totalh = Convert.ToInt32(adultos.Value + niños.Value);
                 hotelid = Convert.ToInt32(hoteles.CurrentRow.Cells[0].Value);
+                fechaini = fini.Value.ToShortDateString();
+                fechafin = ffin.Value.ToShortDateString();
                 DialogResult = DialogResult.OK;
                 Close();
             }
-        }
-
-        private void A_Hotel_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hoteles_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
         }
 
         private void hoteles_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -112,7 +94,7 @@ namespace Interfaces
                 Bitmap foto2 = new Bitmap(foto);
                 pictureBox2.Image = (Image)foto2;
 
-                if (Convert.ToInt32(hoteles.CurrentRow.Cells[2].Value) < habi.Value)
+                if (Convert.ToInt32(hoteles.CurrentRow.Cells[2].Value) < Convert.ToInt32(habinew.Text))
                 {
                     MessageBox.Show("Este Hotel no cuenta con las habitaciones necesarias!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
@@ -135,6 +117,32 @@ namespace Interfaces
             hoteles.ClearSelection();
         }
 
+        private void adultos_ValueChanged(object sender, EventArgs e)
+        {
+            double adul = Convert.ToDouble(adultos.Value);
+            double nin = Convert.ToDouble(niños.Value);
 
+            double total = adul + nin;
+
+            double resultado = total / 4;
+            if (Math.Ceiling(resultado) >= 0)
+            { 
+                habinew.Text = Math.Ceiling(resultado).ToString();
+            }
+        }
+
+        private void niños_ValueChanged(object sender, EventArgs e)
+        {
+            double adul = Convert.ToDouble(adultos.Value);
+            double nin = Convert.ToDouble(niños.Value);
+
+            double total = adul + nin;
+
+            double resultado = total / 4;
+            if (Math.Ceiling(resultado) >= 0)
+            {
+                habinew.Text = Math.Ceiling(resultado).ToString();
+            }
+        }
     }
 }

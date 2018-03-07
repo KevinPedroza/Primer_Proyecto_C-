@@ -67,7 +67,7 @@ namespace Procedimientos
         }
 
         //this method will charge the informacion on the datagridview
-        public void mostrarInfo(DataGridView data, string origen, string destino, string directo, ArrayList paises, ArrayList escalas, ArrayList preciosescalas, ArrayList dura,int pasajeros)
+        public void mostrarInfo(DataGridView data, string origen, string destino, string directo, ArrayList paises, ArrayList escalas, ArrayList preciosescalas, ArrayList dura,int pasajeros,int habi)
         {
             if (directo == "Vuelo Directo")
             {
@@ -80,7 +80,7 @@ namespace Procedimientos
                 {
                     while (reader.Read())
                     {
-                        data.Rows.Add(reader.GetString(0), reader.GetString(1), directo, reader.GetString(1), reader.GetString(0), directo, reader.GetInt32(2), 0, reader.GetString(3),pasajeros);
+                        data.Rows.Add(reader.GetString(0), reader.GetString(1), directo, reader.GetString(1), reader.GetString(0), directo, reader.GetInt32(2), 0, reader.GetString(3),pasajeros,habi);
                     }
 
                 }
@@ -95,7 +95,7 @@ namespace Procedimientos
             {
                 for (int i = 0; i < paises.Count; i++)
                 {
-                    data.Rows.Add(origen, destino, escalas[i], destino, origen, escalas[i], preciosescalas[i], dura[i], 0,pasajeros);
+                    data.Rows.Add(origen, destino, escalas[i], destino, origen, escalas[i], preciosescalas[i], dura[i], 0,pasajeros,habi);
                 }
             }
             data.Refresh();

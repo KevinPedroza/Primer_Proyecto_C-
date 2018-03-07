@@ -44,15 +44,6 @@
             this.origen = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.vuelos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.orige = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Escalas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ffinal = new Bunifu.Framework.UI.BunifuDatepicker();
             this.finicial = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -72,6 +63,17 @@
             this.nreservas = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tracontinuar = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.orige = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Escalas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.niños)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultos)).BeginInit();
@@ -117,10 +119,10 @@
             this.colorpanel.Controls.Add(this.label6);
             this.colorpanel.Controls.Add(this.label1);
             this.tracontinuar.SetDecoration(this.colorpanel, BunifuAnimatorNS.DecorationType.None);
-            this.colorpanel.Location = new System.Drawing.Point(64, 48);
+            this.colorpanel.Location = new System.Drawing.Point(9, 48);
             this.colorpanel.Margin = new System.Windows.Forms.Padding(0);
             this.colorpanel.Name = "colorpanel";
-            this.colorpanel.Size = new System.Drawing.Size(847, 528);
+            this.colorpanel.Size = new System.Drawing.Size(959, 528);
             this.colorpanel.TabIndex = 3;
             // 
             // bunifuThinButton24
@@ -142,7 +144,7 @@
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.PaleGreen;
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.DarkOrange;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(569, 473);
+            this.bunifuThinButton24.Location = new System.Drawing.Point(680, 473);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
             this.bunifuThinButton24.Size = new System.Drawing.Size(259, 41);
@@ -153,7 +155,7 @@
             // niños
             // 
             this.tracontinuar.SetDecoration(this.niños, BunifuAnimatorNS.DecorationType.None);
-            this.niños.Location = new System.Drawing.Point(671, 185);
+            this.niños.Location = new System.Drawing.Point(448, 185);
             this.niños.Name = "niños";
             this.niños.Size = new System.Drawing.Size(120, 20);
             this.niños.TabIndex = 37;
@@ -161,7 +163,7 @@
             // adultos
             // 
             this.tracontinuar.SetDecoration(this.adultos, BunifuAnimatorNS.DecorationType.None);
-            this.adultos.Location = new System.Drawing.Point(671, 158);
+            this.adultos.Location = new System.Drawing.Point(448, 158);
             this.adultos.Name = "adultos";
             this.adultos.Size = new System.Drawing.Size(120, 20);
             this.adultos.TabIndex = 36;
@@ -172,7 +174,7 @@
             this.tracontinuar.SetDecoration(this.label9, BunifuAnimatorNS.DecorationType.None);
             this.label9.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(627, 179);
+            this.label9.Location = new System.Drawing.Point(404, 185);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(37, 15);
             this.label9.TabIndex = 35;
@@ -184,7 +186,7 @@
             this.tracontinuar.SetDecoration(this.label8, BunifuAnimatorNS.DecorationType.None);
             this.label8.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(617, 158);
+            this.label8.Location = new System.Drawing.Point(394, 159);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 15);
             this.label8.TabIndex = 34;
@@ -198,7 +200,7 @@
             this.destino.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.destino.FormattingEnabled = true;
             this.destino.IntegralHeight = false;
-            this.destino.Location = new System.Drawing.Point(620, 97);
+            this.destino.Location = new System.Drawing.Point(703, 97);
             this.destino.Name = "destino";
             this.destino.Size = new System.Drawing.Size(182, 21);
             this.destino.TabIndex = 33;
@@ -211,7 +213,7 @@
             this.origen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.origen.FormattingEnabled = true;
             this.origen.IntegralHeight = false;
-            this.origen.Location = new System.Drawing.Point(53, 97);
+            this.origen.Location = new System.Drawing.Point(99, 97);
             this.origen.Name = "origen";
             this.origen.Size = new System.Drawing.Size(182, 21);
             this.origen.TabIndex = 32;
@@ -222,7 +224,7 @@
             this.tracontinuar.SetDecoration(this.label7, BunifuAnimatorNS.DecorationType.None);
             this.label7.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(675, 139);
+            this.label7.Location = new System.Drawing.Point(465, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 22);
             this.label7.TabIndex = 28;
@@ -256,7 +258,9 @@
             this.Column3,
             this.precio,
             this.duracion,
-            this.dura});
+            this.dura,
+            this.pasa,
+            this.ha});
             this.tracontinuar.SetDecoration(this.vuelos, BunifuAnimatorNS.DecorationType.None);
             this.vuelos.DoubleBuffered = true;
             this.vuelos.EnableHeadersVisualStyles = false;
@@ -268,62 +272,8 @@
             this.vuelos.ReadOnly = true;
             this.vuelos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.vuelos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.vuelos.Size = new System.Drawing.Size(841, 213);
+            this.vuelos.Size = new System.Drawing.Size(953, 213);
             this.vuelos.TabIndex = 27;
-            // 
-            // orige
-            // 
-            this.orige.HeaderText = "País Origen";
-            this.orige.Name = "orige";
-            this.orige.ReadOnly = true;
-            // 
-            // dest
-            // 
-            this.dest.HeaderText = "País Destino";
-            this.dest.Name = "dest";
-            this.dest.ReadOnly = true;
-            // 
-            // Escalas
-            // 
-            this.Escalas.HeaderText = "Escala o Directo";
-            this.Escalas.Name = "Escalas";
-            this.Escalas.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "País Salida";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "País Destino";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Escala o Directo";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // duracion
-            // 
-            this.duracion.HeaderText = "Duración Escala";
-            this.duracion.Name = "duracion";
-            this.duracion.ReadOnly = true;
-            // 
-            // dura
-            // 
-            this.dura.HeaderText = "Duración Directo";
-            this.dura.Name = "dura";
-            this.dura.ReadOnly = true;
             // 
             // bunifuThinButton23
             // 
@@ -337,17 +287,17 @@
             this.bunifuThinButton23.ButtonText = "Buscar";
             this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tracontinuar.SetDecoration(this.bunifuThinButton23, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton23.IdleBorderThickness = 1;
             this.bunifuThinButton23.IdleCornerRadius = 20;
             this.bunifuThinButton23.IdleFillColor = System.Drawing.SystemColors.Highlight;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(243, 203);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(292, 208);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(383, 41);
+            this.bunifuThinButton23.Size = new System.Drawing.Size(415, 47);
             this.bunifuThinButton23.TabIndex = 26;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
@@ -360,7 +310,7 @@
             this.ffinal.ForeColor = System.Drawing.Color.Black;
             this.ffinal.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.ffinal.FormatCustom = null;
-            this.ffinal.Location = new System.Drawing.Point(339, 164);
+            this.ffinal.Location = new System.Drawing.Point(700, 164);
             this.ffinal.Name = "ffinal";
             this.ffinal.Size = new System.Drawing.Size(186, 36);
             this.ffinal.TabIndex = 25;
@@ -375,7 +325,7 @@
             this.finicial.ForeColor = System.Drawing.Color.Black;
             this.finicial.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.finicial.FormatCustom = null;
-            this.finicial.Location = new System.Drawing.Point(40, 164);
+            this.finicial.Location = new System.Drawing.Point(99, 164);
             this.finicial.Name = "finicial";
             this.finicial.Size = new System.Drawing.Size(186, 36);
             this.finicial.TabIndex = 24;
@@ -389,7 +339,7 @@
             this.tracontinuar.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
             this.label5.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(384, 139);
+            this.label5.Location = new System.Drawing.Point(748, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 22);
             this.label5.TabIndex = 23;
@@ -401,7 +351,7 @@
             this.tracontinuar.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(82, 139);
+            this.label4.Location = new System.Drawing.Point(141, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 22);
             this.label4.TabIndex = 22;
@@ -413,7 +363,7 @@
             this.tracontinuar.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(675, 72);
+            this.label3.Location = new System.Drawing.Point(758, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 22);
             this.label3.TabIndex = 19;
@@ -425,7 +375,7 @@
             this.tracontinuar.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(112, 72);
+            this.label2.Location = new System.Drawing.Point(160, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 22);
             this.label2.TabIndex = 18;
@@ -450,7 +400,7 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Silver;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(495, 7);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(536, 5);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(120, 41);
@@ -477,7 +427,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Silver;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(365, 7);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(406, 5);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(120, 41);
@@ -491,7 +441,7 @@
             this.tracontinuar.SetDecoration(this.label6, BunifuAnimatorNS.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(202, 17);
+            this.label6.Location = new System.Drawing.Point(243, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 22);
             this.label6.TabIndex = 15;
@@ -607,6 +557,72 @@
             animation1.TransparencyCoeff = 0F;
             this.tracontinuar.DefaultAnimation = animation1;
             // 
+            // orige
+            // 
+            this.orige.HeaderText = "País Origen";
+            this.orige.Name = "orige";
+            this.orige.ReadOnly = true;
+            // 
+            // dest
+            // 
+            this.dest.HeaderText = "País Destino";
+            this.dest.Name = "dest";
+            this.dest.ReadOnly = true;
+            // 
+            // Escalas
+            // 
+            this.Escalas.HeaderText = "Escala o Directo";
+            this.Escalas.Name = "Escalas";
+            this.Escalas.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "País Salida";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "País Destino";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Escala o Directo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // duracion
+            // 
+            this.duracion.HeaderText = "Duración Escala";
+            this.duracion.Name = "duracion";
+            this.duracion.ReadOnly = true;
+            // 
+            // dura
+            // 
+            this.dura.HeaderText = "Duración Directo";
+            this.dura.Name = "dura";
+            this.dura.ReadOnly = true;
+            // 
+            // pasa
+            // 
+            this.pasa.HeaderText = "Pasajeros";
+            this.pasa.Name = "pasa";
+            this.pasa.ReadOnly = true;
+            // 
+            // ha
+            // 
+            this.ha.HeaderText = "Cantidad Habitacion";
+            this.ha.Name = "ha";
+            this.ha.ReadOnly = true;
+            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,6 +685,7 @@
         private System.Windows.Forms.Label nreservas;
         private System.Windows.Forms.Timer timer1;
         public Bunifu.Framework.UI.BunifuCustomDataGrid vuelos;
+        private BunifuAnimatorNS.BunifuTransition tracontinuar;
         private System.Windows.Forms.DataGridViewTextBoxColumn orige;
         private System.Windows.Forms.DataGridViewTextBoxColumn dest;
         private System.Windows.Forms.DataGridViewTextBoxColumn Escalas;
@@ -678,6 +695,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn duracion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dura;
-        private BunifuAnimatorNS.BunifuTransition tracontinuar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ha;
     }
 }
