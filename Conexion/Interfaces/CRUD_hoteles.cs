@@ -204,9 +204,9 @@ namespace Interfaces
             if (op.ShowDialog() == DialogResult.OK)
             {
                 dir2 = op.FileName;
-                Bitmap foto = new Bitmap(dir);
+                Bitmap foto = new Bitmap(dir2);
 
-                pictureBox1.Image = (Image)foto;
+                newimage.Image = (Image)foto;
             }
         }
 
