@@ -43,6 +43,7 @@ namespace Interfaces
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
+            A_Hotel.con = 0;
             Usuario.contador = 0;
             this.Hide();
             Usuario u = new Usuario();
@@ -125,7 +126,7 @@ namespace Interfaces
                 int diasvuelo2 = fechahotel2.Days;
 
                 int precioh2 = Convert.ToInt32(preciohotel + A_Hotel.totalh) * diasvuelo2;
-                int preciovu2 = Convert.ToInt32(Usuario.precio2);
+                int preciovu2 = Convert.ToInt32(Usuario.precio2) * (Convert.ToInt32(Usuario.adulto)+ Convert.ToInt32(Usuario.niño));
                 int preciove2 = Convert.ToInt32(preciovehi);
 
                 if (preciohotel == null)

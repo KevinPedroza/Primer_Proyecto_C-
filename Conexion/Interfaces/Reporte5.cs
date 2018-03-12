@@ -25,9 +25,10 @@ namespace Interfaces
         {
             finicio.Format = DateTimePickerFormat.Custom;
             finicio.CustomFormat = "dd/MM/yyyy";
-
+            finicio.MaxDate = DateTime.Now;
             ffin.Format = DateTimePickerFormat.Custom;
             ffin.CustomFormat = "dd/MM/yyyy";
+            ffin.MaxDate = DateTime.Now;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +42,6 @@ namespace Interfaces
         {
             try
             {
-                MessageBox.Show(finicio.Value.ToShortDateString() + "" + ffin.Value.ToShortDateString());
                 ArrayList canti = new ArrayList();
                 canti = pr.niños(finicio.Value.ToShortDateString(), ffin.Value.ToShortDateString());
                 if (canti.Count == 0)

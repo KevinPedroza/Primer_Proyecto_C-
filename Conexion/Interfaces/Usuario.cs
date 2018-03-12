@@ -21,7 +21,7 @@ namespace Interfaces
         List<Color> colores = new List<Color>();
         int currentcolor = 0;
         int a = 0;
-        public static int contador;
+        public static int contador = 0;
         public static string paiso;
         public static string paisd;
         public static string escala;
@@ -111,7 +111,7 @@ namespace Interfaces
             }
             catch (Exception error)
             {
-                MessageBox.Show("Seleccione Paises de Origen! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione Paises de Origen! ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             if (bunifuThinButton24.Visible == false)
             {
@@ -172,7 +172,8 @@ namespace Interfaces
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
-            A_Hotel ah = new A_Hotel();
+            contador = 0;
+            A_Hotel.con = 0;
 
             if (vuelos.SelectedRows.Count == 0)
             {

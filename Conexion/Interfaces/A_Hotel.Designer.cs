@@ -63,6 +63,10 @@
             this.continuar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.time2 = new System.Windows.Forms.Label();
+            this.time = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verificar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -463,12 +467,51 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Foto";
             // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(510, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 25);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Fecha:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // time2
+            // 
+            this.time2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time2.ForeColor = System.Drawing.Color.Gray;
+            this.time2.Location = new System.Drawing.Point(581, 12);
+            this.time2.Name = "time2";
+            this.time2.Size = new System.Drawing.Size(110, 25);
+            this.time2.TabIndex = 34;
+            this.time2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // time
+            // 
+            this.time.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time.ForeColor = System.Drawing.Color.Gray;
+            this.time.Location = new System.Drawing.Point(686, 12);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(92, 25);
+            this.time.TabIndex = 33;
+            this.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // A_Hotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(859, 562);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.time2);
+            this.Controls.Add(this.time);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label8);
@@ -528,5 +571,9 @@
         public Bunifu.Framework.UI.BunifuDatepicker ffin;
         public Bunifu.Framework.UI.BunifuDatepicker fini;
         private System.Windows.Forms.TextBox habinew;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label time2;
+        private System.Windows.Forms.Label time;
+        private System.Windows.Forms.Timer timer1;
     }
 }

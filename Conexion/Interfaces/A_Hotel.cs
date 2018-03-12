@@ -65,21 +65,20 @@ namespace Interfaces
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
-            if (hoteles.SelectedRows.Count == 0)
+
+            if (MessageBox.Show("No desea un Hotel ?", "Aviso!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (MessageBox.Show("No desea un Hotel ?", "Aviso!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                return;
+            }
+            else
+            {
+                Close();
+                if (con > 0)
                 {
-                    return;
-                }
-                else
-                {
-                    Close();
-                    if (con > 0)
-                    {
-                        MessageBox.Show("Presione el botón Buscar o Actualizar para actualizar la información!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    MessageBox.Show("Presione el botón Buscar o Actualizar para actualizar la información!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -168,6 +167,12 @@ namespace Interfaces
 
         private void A_Hotel_Load(object sender, EventArgs e)
         {
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time.Text = DateTime.Now.ToLongTimeString();
+            time2.Text = DateTime.Now.ToShortDateString();
         }
     }
 }
