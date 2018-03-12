@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
+using Npgsql;
+
 namespace Procedimientos
 {
     public class Procedimientos_Pais_Lugar
@@ -151,6 +153,29 @@ namespace Procedimientos
             catch (Exception error)
             {
                 MessageBox.Show(error.Message);
+            }
+        }
+
+        //this method will charge the ids combobox 
+        public void llenarCombo(ComboBox combo, string consulta)
+        {
+            bd.Conexion();
+            ConexionBD.conexion.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand(consulta, ConexionBD.conexion);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    combo.Items.Add(reader.GetString(0));
+                }
+
+            }
+            finally
+            {
+                reader.Close();
+                cmd.Dispose();
+                ConexionBD.conexion.Close();
             }
         }
     }

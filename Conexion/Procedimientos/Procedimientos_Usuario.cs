@@ -13,6 +13,7 @@ namespace Procedimientos
     public class Procedimientos_Usuario
     {
         ConexionBD bd = new ConexionBD();
+        double divi = 5;
         //this method will bring the name of the user
         public string nom_user(string id)
         {
@@ -67,7 +68,7 @@ namespace Procedimientos
         }
 
         //this method will charge the informacion on the datagridview
-        public void mostrarInfo(DataGridView data, string origen, string destino, string directo, ArrayList paises, ArrayList escalas, ArrayList preciosescalas, ArrayList dura,int pasajeros,int habi)
+        public void mostrarInfo(DataGridView data, string origen, string destino, string directo, ArrayList paises, ArrayList escalas, ArrayList preciosescalas, ArrayList dura, int pasajeros, int habi)
         {
             if (directo == "Vuelo Directo")
             {
@@ -80,7 +81,7 @@ namespace Procedimientos
                 {
                     while (reader.Read())
                     {
-                        data.Rows.Add(reader.GetString(0), reader.GetString(1), directo, reader.GetString(1), reader.GetString(0), directo, reader.GetInt32(2), 0, reader.GetString(3),pasajeros,habi);
+                        data.Rows.Add(reader.GetString(0), reader.GetString(1), directo, reader.GetString(1), reader.GetString(0), directo, reader.GetInt32(2), 0, reader.GetString(3), pasajeros, habi);
                     }
 
                 }
@@ -95,7 +96,7 @@ namespace Procedimientos
             {
                 for (int i = 0; i < paises.Count; i++)
                 {
-                    data.Rows.Add(origen, destino, escalas[i], destino, origen, escalas[i], preciosescalas[i], dura[i], 0,pasajeros,habi);
+                    data.Rows.Add(origen, destino, escalas[i], destino, origen, escalas[i], preciosescalas[i], dura[i], 0, pasajeros, habi);
                 }
             }
             data.Refresh();
@@ -375,15 +376,15 @@ namespace Procedimientos
         {
             bd.Conexion();
             ConexionBD.conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT ho.id,ho.nombre,ho.habitaciones,ho.pais,ho.lugar, ca.calificacion, ta.precio " +
-                "FROM hotel as ho JOIN calificacion as ca ON ca.idhotel = ho.id JOIN tarifa_hotel as ta on ta.id = ho.id WHERE lower(ho.nombre) like lower('%" + destino + "%') OR " +
-                "lower(ho.lugar) like lower('%" + destino + "%') or lower(ho.pais) like lower('%" + destino + "%') ORDER BY ca.calificacion DESC; ", ConexionBD.conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT ho.id,ho.nombre,ho.habitaciones,p.nombre,l.nombre, ca.calificacion, ta.precio " +
+                "FROM hotel as ho JOIN calificacion as ca ON ca.idhotel = ho.id JOIN tarifa_hotel as ta on ta.id = ho.id JOIN pais as p on p.id = ho.lugar JOIN lugar as l on l.id = ho.lugar WHERE lower(ho.nombre) like lower('%" + destino + "%') OR " +
+                "lower(l.nombre) like lower('%" + destino + "%') or lower(p.nombre) like lower('%" + destino + "%') ORDER BY ca.calificacion DESC; ", ConexionBD.conexion);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             try
             {
                 while (reader.Read())
                 {
-                    data.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), reader.GetInt32(6));
+                    data.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetDouble(5) / divi, reader.GetInt32(6));
                 }
 
             }
@@ -440,7 +441,7 @@ namespace Procedimientos
         {
             bd.Conexion();
             ConexionBD.conexion.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand("SELECT id,nombre,habitaciones,pais,lugar FROM hotel WHERE id = '" + id + "'", ConexionBD.conexion);
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT h.id,h.nombre,h.habitaciones,p.nombre,l.nombre FROM hotel as h JOIN pais as p on p.id = h.lugar JOIN lugar as l on l.id = h.lugar WHERE h.id = '" + id + "'", ConexionBD.conexion);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             try
             {
@@ -506,7 +507,7 @@ namespace Procedimientos
         }
 
         //this method will insert the reservation on the database
-        public void insertarReservacion(int cedula, string fechaini, string paiso, string paisd, string fechafini, string paiss, string paisll, string escadi, string hotel, string vehi, int re, int precio, int adulto, int nino,int totalh )
+        public void insertarReservacion(int cedula, string fechaini, string paiso, string paisd, string fechafini, string paiss, string paisll, string escadi, string hotel, string vehi, int re, int precio, int adulto, int nino, int totalh)
         {
             try
             {
@@ -564,7 +565,7 @@ namespace Procedimientos
         }
 
         //this method will insert the informatio about the sale that it did 
-        public void realizarCompra(int cedula, int vehi, int hotel, int pais, string escala, int adulto, int nino,int totalh,string fechaini,string fechafin)
+        public void realizarCompra(int cedula, int vehi, int hotel, int pais, string escala, int adulto, int nino, int totalh, string fechaini, string fechafin)
         {
             try
             {
@@ -636,17 +637,23 @@ namespace Procedimientos
         public void calificarHotelWithID(int id, string calificacion)
         {
             int hotel2 = Convert.ToInt32(bd.MostrarDatos("SElECT h.id FROM hotel as h WHERE h.id = '" + id + "'"));
+
             try
             {
                 int hotel = Convert.ToInt32(bd.MostrarDatos("SElECT h.id FROM hotel as h join calificacion as ca on ca.idhotel = h.id WHERE h.id = '" + id + "'"));
-
+                double cali = Convert.ToInt32(bd.MostrarDatos("SElECT calificacion FROM calificacion WHERE idhotel = '" + hotel + "'"));
                 if (hotel == 0)
                 {
-                    bd.InsertarDatos("INSERT INTO calificacion VALUES('" + hotel2 + "','" + calificacion + "')");
+                    bd.InsertarDatos("INSERT INTO calificacion VALUES('" + hotel2 + "','" + Convert.ToDouble(calificacion) + "')");
+                }
+                else if (cali > 25)
+                {
+                    divi += 5;
+                    bd.ModificarDatos("UPDATE calificacion SET calificacion = '" + Convert.ToDouble(calificacion) + cali + "' WHERE idhotel = '" + hotel + "'");
                 }
                 else
                 {
-                    bd.ModificarDatos("UPDATE calificacion SET calificacion = '" + calificacion + "' WHERE idhotel = '" + hotel + "'");
+                    bd.ModificarDatos("UPDATE calificacion SET calificacion = '" + Convert.ToDouble(calificacion) + cali + "' WHERE idhotel = '" + hotel + "'");
                 }
 
             }
@@ -660,17 +667,23 @@ namespace Procedimientos
         public void calificarHotelWithNAME(string nombre, string calificacion)
         {
             int hotel2 = Convert.ToInt32(bd.MostrarDatos("SElECT h.id FROM hotel as h WHERE nombre = '" + nombre + "'"));
+
             try
             {
                 int hotel = Convert.ToInt32(bd.MostrarDatos("SElECT h.id FROM hotel as h join calificacion as ca on ca.idhotel = h.id WHERE h.nombre = '" + nombre + "'"));
-
+                double cali = Convert.ToInt32(bd.MostrarDatos("SElECT calificacion FROM calificacion WHERE idhotel = '" + hotel + "'"));
                 if (hotel == 0)
                 {
-                    bd.InsertarDatos("INSERT INTO calificacion VALUES('" + hotel2 + "','" + calificacion + "')");
+                    bd.InsertarDatos("INSERT INTO calificacion VALUES('" + hotel2 + "','" + Convert.ToDouble(calificacion) + "')");
+                }
+                else if (cali > 25)
+                {
+                    divi += 5;
+                    bd.ModificarDatos("UPDATE calificacion SET calificacion = '" + Convert.ToDouble(calificacion) + cali + "' WHERE idhotel = '" + hotel + "'");
                 }
                 else
                 {
-                    bd.ModificarDatos("UPDATE calificacion SET calificacion = '" + calificacion + "' WHERE idhotel = '" + hotel + "'");
+                    bd.ModificarDatos("UPDATE calificacion SET calificacion = '" + Convert.ToDouble(calificacion) + cali + "' WHERE idhotel = '" + hotel + "'");
                 }
 
             }
@@ -679,5 +692,6 @@ namespace Procedimientos
                 MessageBox.Show(error.Message);
             }
         }
+
     }
 }

@@ -89,6 +89,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reporte2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte2";
             this.Load += new System.EventHandler(this.Reporte2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

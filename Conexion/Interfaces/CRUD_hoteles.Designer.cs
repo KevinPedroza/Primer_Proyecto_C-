@@ -36,9 +36,7 @@
             this.habitaciones = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.lugar = new System.Windows.Forms.ComboBox();
-            this.pais = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nombre = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.id = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -52,15 +50,12 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.newimage = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.newlugar = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.newpais = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.newhabitaciones = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.newnombre = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -123,9 +118,7 @@
             this.tabPage1.Controls.Add(this.habitaciones);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.lugar);
-            this.tabPage1.Controls.Add(this.pais);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.nombre);
             this.tabPage1.Controls.Add(this.id);
@@ -168,7 +161,7 @@
             // 
             // habitaciones
             // 
-            this.habitaciones.Location = new System.Drawing.Point(289, 301);
+            this.habitaciones.Location = new System.Drawing.Point(283, 207);
             this.habitaciones.Name = "habitaciones";
             this.habitaciones.Size = new System.Drawing.Size(155, 20);
             this.habitaciones.TabIndex = 12;
@@ -177,7 +170,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(304, 262);
+            this.label7.Location = new System.Drawing.Point(298, 168);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 26);
             this.label7.TabIndex = 11;
@@ -186,38 +179,20 @@
             // lugar
             // 
             this.lugar.FormattingEnabled = true;
-            this.lugar.Location = new System.Drawing.Point(289, 209);
+            this.lugar.Location = new System.Drawing.Point(287, 110);
             this.lugar.Name = "lugar";
             this.lugar.Size = new System.Drawing.Size(155, 21);
             this.lugar.TabIndex = 10;
-            // 
-            // pais
-            // 
-            this.pais.FormattingEnabled = true;
-            this.pais.Location = new System.Drawing.Point(289, 110);
-            this.pais.Name = "pais";
-            this.pais.Size = new System.Drawing.Size(155, 21);
-            this.pais.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(330, 168);
+            this.label6.Location = new System.Drawing.Point(328, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 26);
             this.label6.TabIndex = 8;
             this.label6.Text = "Lugar";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(335, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 26);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "País";
             // 
             // pictureBox1
             // 
@@ -299,8 +274,6 @@
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.newlugar);
             this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.newpais);
-            this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.newhabitaciones);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.newnombre);
@@ -328,7 +301,6 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewImageColumn2,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.modificarinfo.Location = new System.Drawing.Point(236, 62);
             this.modificarinfo.Name = "modificarinfo";
@@ -367,13 +339,6 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Habitaciones";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.FillWeight = 85.27917F;
-            this.dataGridViewTextBoxColumn9.HeaderText = "País";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -432,7 +397,7 @@
             // newlugar
             // 
             this.newlugar.FormattingEnabled = true;
-            this.newlugar.Location = new System.Drawing.Point(21, 355);
+            this.newlugar.Location = new System.Drawing.Point(23, 291);
             this.newlugar.Name = "newlugar";
             this.newlugar.Size = new System.Drawing.Size(166, 21);
             this.newlugar.TabIndex = 12;
@@ -441,29 +406,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(77, 326);
+            this.label16.Location = new System.Drawing.Point(79, 262);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 26);
             this.label16.TabIndex = 11;
             this.label16.Text = "Lugar";
-            // 
-            // newpais
-            // 
-            this.newpais.FormattingEnabled = true;
-            this.newpais.Location = new System.Drawing.Point(21, 291);
-            this.newpais.Name = "newpais";
-            this.newpais.Size = new System.Drawing.Size(166, 21);
-            this.newpais.TabIndex = 10;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(77, 262);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 26);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "País";
             // 
             // newhabitaciones
             // 
@@ -485,7 +432,6 @@
             // newnombre
             // 
             this.newnombre.BorderColor = System.Drawing.Color.SeaGreen;
-            this.newnombre.Enabled = false;
             this.newnombre.Location = new System.Drawing.Point(21, 143);
             this.newnombre.Multiline = true;
             this.newnombre.Name = "newnombre";
@@ -761,7 +707,6 @@
         private System.Windows.Forms.NumericUpDown habitaciones;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox nombre;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox id;
@@ -771,7 +716,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         public System.Windows.Forms.ComboBox lugar;
-        public System.Windows.Forms.ComboBox pais;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView mostrarinfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn identificador;
@@ -793,8 +737,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox newlugar;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox newpais;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.NumericUpDown newhabitaciones;
         private System.Windows.Forms.Label label14;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox newnombre;
@@ -808,7 +750,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

@@ -81,6 +81,13 @@ namespace Interfaces
             else if (nombre_pais.Text == "")
             {
                 MessageBox.Show("Ingrese una Identificador!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else if (bd.MostrarDatos("SELECT nombre FROM pais WHERE id = '" + id_pais.Text + "'") == nombre_pais.Text)
+            {
+                MessageBox.Show("Ese nombre de País ya Existe!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+            else if (bd.MostrarDatos("SELECT id FROM pais WHERE id = '" + id_pais.Text + "'") == id_pais.Text)
+            {
+                MessageBox.Show("Ese identificador de País ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {

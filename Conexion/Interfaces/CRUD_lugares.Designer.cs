@@ -33,7 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.nombre_lugar = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.id_lugar = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.pais = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -50,6 +50,8 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
+            this.id_lugar = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,9 +78,11 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.id_lugar);
             this.tabPage1.Controls.Add(this.bunifuFlatButton1);
             this.tabPage1.Controls.Add(this.nombre_lugar);
-            this.tabPage1.Controls.Add(this.id_lugar);
+            this.tabPage1.Controls.Add(this.pais);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -135,17 +139,18 @@
             this.nombre_lugar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nombre_lugar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombre_lugar_KeyPress);
             // 
-            // id_lugar
+            // pais
             // 
-            this.id_lugar.BorderColor = System.Drawing.Color.SeaGreen;
-            this.id_lugar.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_lugar.Location = new System.Drawing.Point(235, 60);
-            this.id_lugar.Multiline = true;
-            this.id_lugar.Name = "id_lugar";
-            this.id_lugar.Size = new System.Drawing.Size(270, 40);
-            this.id_lugar.TabIndex = 2;
-            this.id_lugar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.id_lugar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_lugar_KeyPress);
+            this.pais.BorderColor = System.Drawing.Color.SeaGreen;
+            this.pais.Enabled = false;
+            this.pais.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pais.Location = new System.Drawing.Point(303, 98);
+            this.pais.Multiline = true;
+            this.pais.Name = "pais";
+            this.pais.Size = new System.Drawing.Size(170, 26);
+            this.pais.TabIndex = 2;
+            this.pais.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.id_lugar_KeyPress);
             // 
             // label2
             // 
@@ -360,6 +365,25 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Lista de Lugares";
             // 
+            // id_lugar
+            // 
+            this.id_lugar.FormattingEnabled = true;
+            this.id_lugar.Location = new System.Drawing.Point(235, 71);
+            this.id_lugar.Name = "id_lugar";
+            this.id_lugar.Size = new System.Drawing.Size(270, 21);
+            this.id_lugar.TabIndex = 5;
+            this.id_lugar.SelectionChangeCommitted += new System.EventHandler(this.id_lugar_SelectionChangeCommitted);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(265, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 18);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "País";
+            // 
             // CRUD_lugares
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +413,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox nombre_lugar;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox id_lugar;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox pais;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -406,5 +430,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.ComboBox id_lugar;
     }
 }

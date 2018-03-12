@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
+using Conexion;
+
 namespace Interfaces
 {
     public partial class CRUD_THoteles : UserControl
     {
         Procedimientos_THoteles pr = new Procedimientos_THoteles();
+        ConexionBD bd = new ConexionBD();
         public CRUD_THoteles()
         {
             InitializeComponent();
@@ -48,6 +51,10 @@ namespace Interfaces
                 ht.Precio = Convert.ToInt32(precio.Text);
                 pr.insertarTarifa(ht.id, ht.Precio);
             }
+            id.Items.Clear();
+            id.Text = "";
+            hotel.Text = "";
+            pr.llenarCombo(id, "SELECT h.id FROM hotel as h where h.id not in (select e.id from tarifa_hotel as e) ");
             id.SelectedIndex = -1;
             precio.Text = "";
         }
@@ -118,6 +125,11 @@ namespace Interfaces
             {
                 MessageBox.Show("Todos los Hoteles cuentan con Tarifas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void id_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            hotel.Text = bd.MostrarDatos("SELECT nombre FROM hotel WHERE id = '" + id.SelectedItem.ToString() + "'");
         }
     }
 }

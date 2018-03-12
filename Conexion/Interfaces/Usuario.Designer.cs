@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation8 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.label1 = new System.Windows.Forms.Label();
             this.colorpanel = new System.Windows.Forms.Panel();
@@ -44,6 +44,17 @@
             this.origen = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.vuelos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.orige = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Escalas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ffinal = new Bunifu.Framework.UI.BunifuDatepicker();
             this.finicial = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -63,17 +74,10 @@
             this.nreservas = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tracontinuar = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.orige = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Escalas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.time2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.colorpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.niños)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adultos)).BeginInit();
@@ -234,20 +238,20 @@
             // 
             this.vuelos.AllowUserToAddRows = false;
             this.vuelos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.vuelos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.vuelos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.vuelos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.vuelos.BackgroundColor = System.Drawing.Color.Silver;
             this.vuelos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vuelos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.vuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.vuelos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.vuelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vuelos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orige,
@@ -275,6 +279,72 @@
             this.vuelos.Size = new System.Drawing.Size(953, 213);
             this.vuelos.TabIndex = 27;
             // 
+            // orige
+            // 
+            this.orige.HeaderText = "País Origen";
+            this.orige.Name = "orige";
+            this.orige.ReadOnly = true;
+            // 
+            // dest
+            // 
+            this.dest.HeaderText = "País Destino";
+            this.dest.Name = "dest";
+            this.dest.ReadOnly = true;
+            // 
+            // Escalas
+            // 
+            this.Escalas.HeaderText = "Escala o Directo";
+            this.Escalas.Name = "Escalas";
+            this.Escalas.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "País Salida";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "País Destino";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Escala o Directo";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // duracion
+            // 
+            this.duracion.HeaderText = "Duración Escala";
+            this.duracion.Name = "duracion";
+            this.duracion.ReadOnly = true;
+            // 
+            // dura
+            // 
+            this.dura.HeaderText = "Duración Directo";
+            this.dura.Name = "dura";
+            this.dura.ReadOnly = true;
+            // 
+            // pasa
+            // 
+            this.pasa.HeaderText = "Pasajeros";
+            this.pasa.Name = "pasa";
+            this.pasa.ReadOnly = true;
+            // 
+            // ha
+            // 
+            this.ha.HeaderText = "Cantidad Habitacion";
+            this.ha.Name = "ha";
+            this.ha.ReadOnly = true;
+            // 
             // bunifuThinButton23
             // 
             this.bunifuThinButton23.ActiveBorderThickness = 1;
@@ -284,7 +354,7 @@
             this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.DarkRed;
             this.bunifuThinButton23.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Buscar";
+            this.bunifuThinButton23.ButtonText = "Buscar o Actualizar";
             this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tracontinuar.SetDecoration(this.bunifuThinButton23, BunifuAnimatorNS.DecorationType.None);
             this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -540,88 +610,62 @@
             // 
             this.tracontinuar.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.tracontinuar.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.tracontinuar.DefaultAnimation = animation1;
+            animation8.AnimateOnlyDifferences = true;
+            animation8.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.BlindCoeff")));
+            animation8.LeafCoeff = 0F;
+            animation8.MaxTime = 1F;
+            animation8.MinTime = 0F;
+            animation8.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicCoeff")));
+            animation8.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation8.MosaicShift")));
+            animation8.MosaicSize = 1;
+            animation8.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation8.RotateCoeff = 0F;
+            animation8.RotateLimit = 0F;
+            animation8.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.ScaleCoeff")));
+            animation8.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation8.SlideCoeff")));
+            animation8.TimeCoeff = 2F;
+            animation8.TransparencyCoeff = 0F;
+            this.tracontinuar.DefaultAnimation = animation8;
             // 
-            // orige
+            // time
             // 
-            this.orige.HeaderText = "País Origen";
-            this.orige.Name = "orige";
-            this.orige.ReadOnly = true;
+            this.tracontinuar.SetDecoration(this.time, BunifuAnimatorNS.DecorationType.None);
+            this.time.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time.ForeColor = System.Drawing.Color.Gray;
+            this.time.Location = new System.Drawing.Point(650, 12);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(92, 25);
+            this.time.TabIndex = 30;
+            this.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dest
+            // timer2
             // 
-            this.dest.HeaderText = "País Destino";
-            this.dest.Name = "dest";
-            this.dest.ReadOnly = true;
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // Escalas
+            // time2
             // 
-            this.Escalas.HeaderText = "Escala o Directo";
-            this.Escalas.Name = "Escalas";
-            this.Escalas.ReadOnly = true;
+            this.tracontinuar.SetDecoration(this.time2, BunifuAnimatorNS.DecorationType.None);
+            this.time2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time2.ForeColor = System.Drawing.Color.Gray;
+            this.time2.Location = new System.Drawing.Point(545, 12);
+            this.time2.Name = "time2";
+            this.time2.Size = new System.Drawing.Size(110, 25);
+            this.time2.TabIndex = 31;
+            this.time2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column1
+            // label10
             // 
-            this.Column1.HeaderText = "País Salida";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "País Destino";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Escala o Directo";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // duracion
-            // 
-            this.duracion.HeaderText = "Duración Escala";
-            this.duracion.Name = "duracion";
-            this.duracion.ReadOnly = true;
-            // 
-            // dura
-            // 
-            this.dura.HeaderText = "Duración Directo";
-            this.dura.Name = "dura";
-            this.dura.ReadOnly = true;
-            // 
-            // pasa
-            // 
-            this.pasa.HeaderText = "Pasajeros";
-            this.pasa.Name = "pasa";
-            this.pasa.ReadOnly = true;
-            // 
-            // ha
-            // 
-            this.ha.HeaderText = "Cantidad Habitacion";
-            this.ha.Name = "ha";
-            this.ha.ReadOnly = true;
+            this.tracontinuar.SetDecoration(this.label10, BunifuAnimatorNS.DecorationType.None);
+            this.label10.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(474, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 25);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Fecha:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Usuario
             // 
@@ -630,6 +674,9 @@
             this.BackColor = System.Drawing.Color.Salmon;
             this.ClientSize = new System.Drawing.Size(977, 576);
             this.ControlBox = false;
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.time2);
+            this.Controls.Add(this.time);
             this.Controls.Add(this.nreservas);
             this.Controls.Add(this.nombreuser);
             this.Controls.Add(this.pictureBox1);
@@ -660,7 +707,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel colorpanel;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -697,5 +743,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dura;
         private System.Windows.Forms.DataGridViewTextBoxColumn pasa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ha;
+        public Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private System.Windows.Forms.Label time;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label time2;
+        private System.Windows.Forms.Label label10;
     }
 }

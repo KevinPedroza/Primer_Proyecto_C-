@@ -52,6 +52,8 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.eliminartarifa = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.hotel = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,6 +80,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Silver;
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.hotel);
             this.tabPage1.Controls.Add(this.id);
             this.tabPage1.Controls.Add(this.bunifuFlatButton1);
             this.tabPage1.Controls.Add(this.precio);
@@ -94,10 +98,11 @@
             // id
             // 
             this.id.FormattingEnabled = true;
-            this.id.Location = new System.Drawing.Point(65, 180);
+            this.id.Location = new System.Drawing.Point(50, 180);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(171, 21);
+            this.id.Size = new System.Drawing.Size(197, 21);
             this.id.TabIndex = 7;
+            this.id.SelectionChangeCommitted += new System.EventHandler(this.id_SelectionChangeCommitted);
             this.id.Click += new System.EventHandler(this.id_Click);
             // 
             // bunifuFlatButton1
@@ -385,6 +390,28 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Seleccione una Tarifa para Eliminar";
             // 
+            // hotel
+            // 
+            this.hotel.BorderColor = System.Drawing.Color.SeaGreen;
+            this.hotel.Enabled = false;
+            this.hotel.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hotel.Location = new System.Drawing.Point(94, 207);
+            this.hotel.Multiline = true;
+            this.hotel.Name = "hotel";
+            this.hotel.Size = new System.Drawing.Size(153, 20);
+            this.hotel.TabIndex = 8;
+            this.hotel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(47, 207);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 18);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Hotel";
+            // 
             // CRUD_THoteles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,5 +460,7 @@
         private System.Windows.Forms.DataGridView mostrarinfodata;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.ComboBox id;
+        private System.Windows.Forms.Label label10;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox hotel;
     }
 }

@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
-
+using Conexion;
 namespace Interfaces
 {
     public partial class CRUD_TVuelos : UserControl
     {
         Procedimientos_TVuelos pv = new Procedimientos_TVuelos();
+        ConexionBD bd = new ConexionBD();
         public CRUD_TVuelos()
         {
             InitializeComponent();
@@ -60,7 +61,7 @@ namespace Interfaces
         {
             try
             {
-                if (id.Text == "" || precio.Text == "")
+                if (id.SelectedItem.ToString() == "" || precio.Text == "")
                 {
                     MessageBox.Show("Llene todos los campos Requeridos!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
@@ -78,7 +79,10 @@ namespace Interfaces
             {
                 MessageBox.Show("Seleccione una ruta! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            id.Items.Clear();
             id.Text = "";
+            pv.llenarCombo(id, "SELECT ru.id FROM ruta as ru where ru.id not in (select tv.ruta from tarifa_vuelo as tv)");
+            id.SelectedIndex = -1;
             precio.Text = "";
             pv.llenarRutas(rutas);
             rutas.ClearSelection();

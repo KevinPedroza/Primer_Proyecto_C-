@@ -36,11 +36,11 @@ namespace Procedimientos
         }
 
         //this method wil insert the information on the dabatase
-        public void insertarHotel(int id, string nombre, string foto, int habi, string pais, string lugar)
+        public void insertarHotel(int id, string nombre, string foto, int habi, int lugar)
         {
             try
             {
-                bd.InsertarDatos("INSERT INTO hotel VALUES ('" + id + "', '" + nombre + "', '" + foto + "', '" + habi + "','" + pais + "', '" + lugar + "')");
+                bd.InsertarDatos("INSERT INTO hotel VALUES ('" + id + "', '" + nombre + "', '" + foto + "', '" + habi + "', '" + lugar + "')");
                 MessageBox.Show("Se ha registrado Correctamente!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             catch (Exception error)
@@ -60,7 +60,7 @@ namespace Procedimientos
             {
                 while (reader.Read())
                 {
-                    data.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3),reader.GetString(4),reader.GetString(5));
+                    data.Rows.Add(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3),reader.GetString(4));
                 }
 
             }
@@ -81,6 +81,7 @@ namespace Procedimientos
             {
                 if (MessageBox.Show("Desea Eliminar el Hotel " + eliminartarifa.CurrentRow.Cells[1].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
+                    bd.EliminarDatos("DELETE FROM tarifa_hotel WHERE id = '" + eliminartarifa.CurrentRow.Cells[0].Value.ToString() + "'");
                     bd.EliminarDatos("DELETE FROM hotel WHERE id = '" + eliminartarifa.CurrentRow.Cells[0].Value.ToString() + "'");
                     bd.EliminarDatos("DELETE FROM calificacion WHERE idhotel = '" + eliminartarifa.CurrentRow.Cells[0].Value.ToString() + "'");
                     MessageBox.Show("Se ha eliminado Correctamente!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,11 +102,11 @@ namespace Procedimientos
 
 
         //this method will modify the information on the database
-        public void modificarHotelConImage(int id, string nombre, string foto,int habi,string pais,string lugar)
+        public void modificarHotelConImage(int id, string nombre, string foto,int habi,int lugar)
         {
             try
             {
-                bd.ModificarDatos("UPDATE hotel SET nombre = '" + nombre + "', foto = '" + foto + "', habitaciones = '" + habi + "', pais = '" + pais + "', lugar = '" + lugar + "' WHERE id = '" + id + "'");
+                bd.ModificarDatos("UPDATE hotel SET nombre = '" + nombre + "', foto = '" + foto + "', habitaciones = '" + habi + "', lugar = '" + lugar + "' WHERE id = '" + id + "'");
                 MessageBox.Show("Se ha modificado Correctamente! ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)
@@ -115,11 +116,11 @@ namespace Procedimientos
         }
 
         //this method will modify the information on the database without image
-        public void modificarHotelSinImage(int id, string nombre, string foto, int habi, string pais, string lugar)
+        public void modificarHotelSinImage(int id, string nombre, string foto, int habi, int lugar)
         {
             try
             {
-                bd.ModificarDatos("UPDATE hotel SET nombre = '" + nombre + "', habitaciones = '" + habi + "', pais = '" + pais + "', lugar = '" + lugar + "' WHERE id = '" + id + "'");
+                bd.ModificarDatos("UPDATE hotel SET nombre = '" + nombre + "', habitaciones = '" + habi + "', lugar = '" + lugar + "' WHERE id = '" + id + "'");
                 MessageBox.Show("Se ha modificado Correctamente! ", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception error)

@@ -56,7 +56,16 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button2.Height;
             slide_panel.Top = button2.Top;
-            cruD_lugares1.Show();
+            cruD_lugares1.id_lugar.Items.Clear();
+            pth.llenarCombo(cruD_lugares1.id_lugar, "SELECT h.id FROM pais as h where h.id not in (select e.id from lugar as e)");
+            if (cruD_lugares1.id_lugar.Items.Count == 0)
+            {
+                MessageBox.Show("Todos los lugares cuentan con Paises!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                cruD_lugares1.Show();
+            }
             cruD_paise1.Hide();
             cruD_Aeropuertos1.Hide();
             cruD_Rutas1.Hide();
@@ -124,11 +133,8 @@ namespace Interfaces
             slide_panel.Height = button6.Height;
             slide_panel.Top = button6.Top;
             cruD_hoteles1.Show();
-            cruD_hoteles1.pais.Items.Clear();
             cruD_hoteles1.lugar.Items.Clear();
-            ph.llenarCombo(cruD_hoteles1.pais, "SELECT nombre FROM pais");
             ph.llenarCombo(cruD_hoteles1.lugar, "SELECT nombre FROM lugar");
-            cruD_hoteles1.pais.SelectedIndex = 0;
             cruD_hoteles1.lugar.SelectedIndex = 0;
             cruD_Rutas1.Hide();
             cruD_paise1.Hide();
@@ -146,10 +152,14 @@ namespace Interfaces
             slide_panel.Top = button7.Top;
             cruD_THoteles1.id.Items.Clear();
             pth.llenarCombo(cruD_THoteles1.id, "SELECT h.id FROM hotel as h where h.id not in (select e.id from tarifa_hotel as e) ");
-            cruD_THoteles1.Show();
+
             if (cruD_THoteles1.id.Items.Count == 0)
             {
                 MessageBox.Show("Todos los Hoteles cuentan con Tarifas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                cruD_THoteles1.Show();
             }
             cruD_Rutas1.Hide();
             cruD_paise1.Hide();
@@ -165,13 +175,16 @@ namespace Interfaces
             slide_panel.Visible = true;
             slide_panel.Height = button8.Height;
             slide_panel.Top = button8.Top;
-            cruD_TVuelos1.Show();
             cruD_TVuelos1.id.Items.Clear();
             tv.llenarCombo(cruD_TVuelos1.id,"SELECT ru.id FROM ruta as ru where ru.id not in (select tv.ruta from tarifa_vuelo as tv)");
             tv.llenarRutas(cruD_TVuelos1.rutas);
             if (cruD_TVuelos1.id.Items.Count == 0)
             {
                 MessageBox.Show("Todos las Rutas cuentan con Tarifas!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                cruD_TVuelos1.Show();
             }
             cruD_THoteles1.Hide();
             cruD_Rutas1.Hide();

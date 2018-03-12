@@ -78,10 +78,10 @@ namespace Interfaces
             origen.Items.Clear();
             pu.llenarCombo(origen, "SELECT r.pais_origen FROM ruta as r join tarifa_vuelo as tv on tv.ruta = r.id GROUP by pais_origen;");
             destino.Items.Clear();
-            pu.llenarCombo(destino, "SELECT pais_destino FROM ruta as r join tarifa_vuelo as tv on tv.ruta = r.id GROUP by pais_destino;");
+            pu.llenarCombo(destino, "SELECT r.pais_destino FROM ruta as r join tarifa_vuelo as tv on tv.ruta = r.id GROUP by pais_destino;");
         }
 
-        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        public void bunifuThinButton23_Click(object sender, EventArgs e)
         {
             DateTime hoy = DateTime.Now;
 
@@ -100,31 +100,49 @@ namespace Interfaces
                 {
                     MessageBox.Show("Ingrese una Fecha actual o posterior!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+                else if (A_Hotel.lugarpais != destino.SelectedItem.ToString() & A_Hotel.hotelid != 0)
+                {
+                    MessageBox.Show("Ingrese un Hotel con el mismo país de Destino!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
                 else
                 {
-
-                    string paiso = pu.paiso(origen.SelectedItem.ToString());
-                    string paisd = pu.paisd(destino.SelectedItem.ToString());
-                    string direcoesca = pu.escala_Directo(paiso, paisd);
-                    adulto = Convert.ToInt32(adultos.Value);
-                    niño = Convert.ToInt32(niños.Value);
-                    ArrayList pais = new ArrayList();
-                    pais = pu.paisesEscala(paiso, paisd);
-                    ArrayList escalas = new ArrayList();
-                    escalas = pu.escala(paisd);
-                    ArrayList precios = new ArrayList();
-                    precios = pu.precioEscala(paisd);
-                    ArrayList duracion = new ArrayList();
-                    duracion = pu.duracionEscala(paisd);
-                    vuelos.Rows.Clear();
-                    pu.mostrarInfo(vuelos, paiso, paisd, direcoesca, pais, escalas, precios, duracion, adulto + niño,A_Hotel.habita);
+                    actualizarData();
                 }
             }
             catch (Exception error)
             {
                 MessageBox.Show("Seleccione Paises de Origen! " + error.Message, "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            if (bunifuThinButton24.Visible == false)
+            {
+                bunifuThinButton24.Visible = true;
+            }
+        }
 
+        public void actualizarData()
+        {
+            try
+            {
+                string paiso = pu.paiso(origen.SelectedItem.ToString());
+                string paisd = pu.paisd(destino.SelectedItem.ToString());
+                string direcoesca = pu.escala_Directo(paiso, paisd);
+                adulto = Convert.ToInt32(adultos.Value);
+                niño = Convert.ToInt32(niños.Value);
+                ArrayList pais = new ArrayList();
+                pais = pu.paisesEscala(paiso, paisd);
+                ArrayList escalas = new ArrayList();
+                escalas = pu.escala(paisd);
+                ArrayList precios = new ArrayList();
+                precios = pu.precioEscala(paisd);
+                ArrayList duracion = new ArrayList();
+                duracion = pu.duracionEscala(paisd);
+                vuelos.Rows.Clear();
+                pu.mostrarInfo(vuelos, paiso, paisd, direcoesca, pais, escalas, precios, duracion, adulto + niño, A_Hotel.habita);
+            }
+            catch (Exception error)
+            {
+
+            }
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -144,6 +162,10 @@ namespace Interfaces
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            if (A_Hotel.con > 0)
+            {
+                bunifuThinButton24.Visible = false;
+            }
             A_Hotel ah = new A_Hotel();
             ah.ShowDialog();
         }
@@ -226,6 +248,12 @@ namespace Interfaces
                 }
                 timer1.Enabled = true;
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            time.Text = DateTime.Now.ToLongTimeString();
+            time2.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

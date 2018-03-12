@@ -82,12 +82,13 @@ namespace Interfaces
                 }
                 else
                 {
+                    int idlugar = Convert.ToInt32(bd.MostrarDatos("SELECT id FROM lugar WHERE nombre = '" + lugar.SelectedItem.ToString() + "'"));
                     Herencia_Hoteles hh = new Herencia_Hoteles();
                     hh.Id = Convert.ToInt32(id.Text);
                     hh.Nombre = nombre.Text;
                     hh.Foto = dir;
                     hh.Habitaciones = Convert.ToInt32(habitaciones.Value.ToString());
-                    ph.insertarHotel(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, pais.SelectedItem.ToString(), lugar.SelectedItem.ToString());
+                    ph.insertarHotel(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, idlugar);
                     bd.InsertarDatos("INSERT INTO calificacion VALUES('" + hh.Id + "', '" + 0 + "')");
                     errorProvider1.Clear();
                 }
@@ -99,7 +100,6 @@ namespace Interfaces
             id.Text = "";
             nombre.Text = "";
             pictureBox1.Image = null;
-            pais.SelectedIndex = 0;
             lugar.SelectedIndex = 0;
             habitaciones.Value = 0;
         }
@@ -112,9 +112,7 @@ namespace Interfaces
             ph.mostrarInfo(eliminarinfo);
             modificarinfo.Rows.Clear();
             ph.mostrarInfo(modificarinfo);
-            newpais.Items.Clear();
             newlugar.Items.Clear();
-            ph.llenarCombo(newpais, "SELECT nombre FROM pais");
             ph.llenarCombo(newlugar, "SELECT nombre FROM lugar");
         }
 
@@ -181,8 +179,8 @@ namespace Interfaces
                     newid.Text = modificarinfo.CurrentRow.Cells[0].Value.ToString();
                     newnombre.Text = modificarinfo.CurrentRow.Cells[1].Value.ToString();
                     newhabitaciones.Value =Convert.ToDecimal(modificarinfo.CurrentRow.Cells[3].Value.ToString());
-                    newpais.Text = modificarinfo.CurrentRow.Cells[4].Value.ToString();
-                    newlugar.Text = modificarinfo.CurrentRow.Cells[5].Value.ToString();
+                    string nombre = bd.MostrarDatos("SELECT nombre FROM lugar WHERE id = '" + modificarinfo.CurrentRow.Cells[4].Value.ToString() + "'");
+                    newlugar.Text = nombre;
                 }
                 else
                 {
@@ -216,21 +214,23 @@ namespace Interfaces
             {
                 if (newimage.Image == null)
                 {
+                    int idlugar = Convert.ToInt32(bd.MostrarDatos("SELECT id FROM lugar WHERE nombre = '" + newlugar.SelectedItem.ToString() + "'"));
                     Herencia_Hoteles hh = new Herencia_Hoteles();
                     hh.Id = Convert.ToInt32(newid.Text);
                     hh.Nombre = newnombre.Text;
                     hh.Foto = dir2;
                     hh.Habitaciones = Convert.ToInt32(newhabitaciones.Value.ToString());
-                    ph.modificarHotelSinImage(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, newpais.SelectedItem.ToString(), newlugar.SelectedItem.ToString());
+                    ph.modificarHotelSinImage(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, idlugar);
                 }
                 else
                 {
+                    int idlugar = Convert.ToInt32(bd.MostrarDatos("SELECT id FROM lugar WHERE nombre = '" + newlugar.SelectedItem.ToString() + "'"));
                     Herencia_Hoteles hh = new Herencia_Hoteles();
                     hh.Id = Convert.ToInt32(newid.Text);
                     hh.Nombre = newnombre.Text;
                     hh.Foto = dir2;
                     hh.Habitaciones = Convert.ToInt32(newhabitaciones.Value.ToString());
-                    ph.modificarHotelConImage(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, newpais.SelectedItem.ToString(), newlugar.SelectedItem.ToString());
+                    ph.modificarHotelConImage(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, idlugar);
                 }
                 modificarinfo.Rows.Clear();
                 ph.mostrarInfo(modificarinfo);
@@ -242,7 +242,6 @@ namespace Interfaces
             newid.Text = "";
             newnombre.Text = "";
             newhabitaciones.Value = 0;
-            newpais.SelectedIndex = -1;
             newlugar.SelectedIndex = -1;
             newimage.Image = null;
         }

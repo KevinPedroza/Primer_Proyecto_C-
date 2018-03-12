@@ -21,11 +21,14 @@ namespace Interfaces
         public static int habita;
         public static string fechaini;
         public static string fechafin;
+        public static string lugarpais;
+        public static int con = 0;
         public A_Hotel()
         {
             InitializeComponent();
             continuar.Visible = false;
             verificar.Visible = false;
+            con++;
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
@@ -33,25 +36,31 @@ namespace Interfaces
             DateTime hoy = DateTime.Now;
 
             string miVariable = hoy.ToString("dd/MM/yyyy");
+            try
+            {
+                if (fini.Value.ToString() == ffin.Value.ToString())
+                {
+                    MessageBox.Show("Seleccione una Fecha!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (habinew.Text == "" & adultos.Value == 0 & niños.Value == 0)
+                {
+                    MessageBox.Show("Ingrese Huéspedes y Habitaciones!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (Convert.ToDateTime(fini.Value.ToShortDateString()) < Convert.ToDateTime(miVariable) || Convert.ToDateTime(ffin.Value.ToShortDateString()) < Convert.ToDateTime(miVariable))
+                {
+                    MessageBox.Show("Ingrese una Fecha actual o posterior!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    continuar.Visible = true;
+                    verificar.Visible = true;
+                    habita = Convert.ToInt32(habinew.Text);
+                }
+            }
+            catch (Exception error)
+            {
 
-            if (fini.Value.ToString() == ffin.Value.ToString())
-            {
-                MessageBox.Show("Seleccione una Fecha!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (Convert.ToInt32(habinew.Text) == 0 & adultos.Value == 0 & niños.Value == 0)
-            {
-                MessageBox.Show("Ingrese Huéspedes y Habitaciones!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }else if (Convert.ToDateTime(fini.Value.ToShortDateString()) < Convert.ToDateTime(miVariable) || Convert.ToDateTime(ffin.Value.ToShortDateString()) < Convert.ToDateTime(miVariable))
-            {
-                MessageBox.Show("Ingrese una Fecha actual o posterior!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                continuar.Visible = true;
-                verificar.Visible = true;
-                habita = Convert.ToInt32(habinew.Text);
-            }
-
         }
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
@@ -65,12 +74,17 @@ namespace Interfaces
                 else
                 {
                     Close();
+                    if (con > 0)
+                    {
+                        MessageBox.Show("Presione el botón Buscar o Actualizar para actualizar la información!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
+            Usuario u = new Usuario();
             if (hoteles.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Seleccione un Hotel!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -81,8 +95,15 @@ namespace Interfaces
                 hotelid = Convert.ToInt32(hoteles.CurrentRow.Cells[0].Value);
                 fechaini = fini.Value.ToShortDateString();
                 fechafin = ffin.Value.ToShortDateString();
+                lugarpais = hoteles.CurrentRow.Cells[3].Value.ToString();
+                u.actualizarData();
                 DialogResult = DialogResult.OK;
                 Close();
+                if (con > 0)
+                {
+                    MessageBox.Show("Presione el botón Buscar o Actualizar para actualizar la información!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
         }
 
@@ -126,7 +147,7 @@ namespace Interfaces
 
             double resultado = total / 4;
             if (Math.Ceiling(resultado) >= 0)
-            { 
+            {
                 habinew.Text = Math.Ceiling(resultado).ToString();
             }
         }
@@ -143,6 +164,10 @@ namespace Interfaces
             {
                 habinew.Text = Math.Ceiling(resultado).ToString();
             }
+        }
+
+        private void A_Hotel_Load(object sender, EventArgs e)
+        {
         }
     }
 }

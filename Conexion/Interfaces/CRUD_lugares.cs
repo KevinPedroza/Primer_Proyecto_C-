@@ -26,9 +26,24 @@ namespace Interfaces
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            p.insertarLugar(Convert.ToInt32(id_lugar.Text), nombre_lugar.Text);
-            id_lugar.Text = "";
-            nombre_lugar.Text = "";
+            if (id_lugar.SelectedItem.ToString() == "" || nombre_lugar.Text == "")
+            {
+                MessageBox.Show("Llene todos los campos requeridos!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (bd.MostrarDatos("SELECT nombre FROM lugar WHERE nombre = '" + nombre_lugar.Text + "'") == nombre_lugar.Text)
+            {
+                MessageBox.Show("Ese lugar ya Existe!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                p.insertarLugar(Convert.ToInt32(id_lugar.SelectedItem.ToString()), nombre_lugar.Text);
+                id_lugar.Items.Clear();
+                id_lugar.Text = "";
+                p.llenarCombo(id_lugar, "SELECT h.id FROM pais as h where h.id not in (select e.id from lugar as e)");
+                id_lugar.SelectedIndex = -1;
+                nombre_lugar.Text = "";
+                pais.Clear();
+            }
         }
 
         private void tabControl1_Click(object sender, EventArgs e)
@@ -112,7 +127,7 @@ namespace Interfaces
             if (char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Ingrese solo Números!","Aviso!", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese solo Números!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -131,6 +146,11 @@ namespace Interfaces
             {
                 return;
             }
+        }
+
+        private void id_lugar_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            pais.Text = bd.MostrarDatos("SELECT nombre FROM pais WHERE id = '" + id_lugar.SelectedItem.ToString() + "'");
         }
     }
 }
