@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
 using Npgsql;
-
+//this method will have all methods that the country and place parts need for it to work
 namespace Procedimientos
 {
     public class Procedimientos_Pais_Lugar

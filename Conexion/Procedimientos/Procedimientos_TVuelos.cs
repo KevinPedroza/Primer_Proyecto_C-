@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
 using Npgsql;
-
+//this method will have all methods that the price of flies part needs for it to work
 namespace Procedimientos
 {
     public class Procedimientos_TVuelos

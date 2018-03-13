@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//this class will create the herency from cars
 namespace Procedimientos
 {
     public class Vehiculos

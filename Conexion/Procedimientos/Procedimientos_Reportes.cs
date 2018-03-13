@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
 using Npgsql;
-
+//this method will have all methods that the reports part needs for it to work
 namespace Procedimientos
 {
     public class Procedimientos_Reportes

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
+//this method will have all methods that the cars part needs for it to work
 namespace Procedimientos
 {
     public class Procedimientos_Vehiculos

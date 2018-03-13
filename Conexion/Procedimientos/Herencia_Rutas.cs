@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//this method will have herency from de roads
 namespace Procedimientos
 {
     public class Herencia_Rutas : Rutas

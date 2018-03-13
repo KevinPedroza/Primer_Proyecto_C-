@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
-
+//this method will have all the methods that the project needs on the airport part
 namespace Procedimientos
 {
     public class Procedimientos_Aeropertos

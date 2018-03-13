@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//this method will create the herency from the hotels
 namespace Procedimientos
 {
     public class Hoteles
