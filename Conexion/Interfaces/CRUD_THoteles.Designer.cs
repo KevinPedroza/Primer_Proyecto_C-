@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_THoteles));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.hotel = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.id = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.precio = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -52,8 +54,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.eliminartarifa = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.hotel = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -95,8 +95,31 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Insertar Tarifa de Hoteles";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(47, 207);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 18);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Hotel";
+            // 
+            // hotel
+            // 
+            this.hotel.BorderColor = System.Drawing.Color.SeaGreen;
+            this.hotel.Enabled = false;
+            this.hotel.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hotel.Location = new System.Drawing.Point(94, 207);
+            this.hotel.Multiline = true;
+            this.hotel.Name = "hotel";
+            this.hotel.Size = new System.Drawing.Size(153, 20);
+            this.hotel.TabIndex = 8;
+            this.hotel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // id
             // 
+            this.id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.id.FormattingEnabled = true;
             this.id.Location = new System.Drawing.Point(50, 180);
             this.id.Name = "id";
@@ -334,6 +357,7 @@
             this.mostrarinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mostrarinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mostrarinfo.Location = new System.Drawing.Point(66, 73);
+            this.mostrarinfo.MultiSelect = false;
             this.mostrarinfo.Name = "mostrarinfo";
             this.mostrarinfo.ReadOnly = true;
             this.mostrarinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -389,28 +413,6 @@
             this.label5.Size = new System.Drawing.Size(358, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "Seleccione una Tarifa para Eliminar";
-            // 
-            // hotel
-            // 
-            this.hotel.BorderColor = System.Drawing.Color.SeaGreen;
-            this.hotel.Enabled = false;
-            this.hotel.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotel.Location = new System.Drawing.Point(94, 207);
-            this.hotel.Multiline = true;
-            this.hotel.Name = "hotel";
-            this.hotel.Size = new System.Drawing.Size(153, 20);
-            this.hotel.TabIndex = 8;
-            this.hotel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(47, 207);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 18);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Hotel";
             // 
             // CRUD_THoteles
             // 

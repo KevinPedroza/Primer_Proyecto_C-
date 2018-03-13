@@ -30,9 +30,13 @@ namespace Interfaces
             {
                 MessageBox.Show("Llene todos los campos requeridos!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            else if (bd.MostrarDatos("SELECT id FROM lugar WHERE id = '" + id_lugar.Text + "'") == id_lugar.Text)
+            {
+                MessageBox.Show("Ese Identificador ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else if (bd.MostrarDatos("SELECT nombre FROM lugar WHERE nombre = '" + nombre_lugar.Text + "'") == nombre_lugar.Text)
             {
-                MessageBox.Show("Ese lugar ya Existe!","Aviso!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Ese lugar ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

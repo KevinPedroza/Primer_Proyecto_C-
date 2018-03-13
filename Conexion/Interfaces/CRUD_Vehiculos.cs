@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
+using Conexion;
 //this form will let the user to administrate de CRUD of cars
 namespace Interfaces
 {
     public partial class CRUD_Vehiculos : UserControl
     {
         Procedimientos_Vehiculos pv = new Procedimientos_Vehiculos();
+        ConexionBD bd = new ConexionBD();
         int contador = 0;
         public CRUD_Vehiculos()
         {
@@ -65,6 +67,18 @@ namespace Interfaces
             else if (precio.Text == "")
             {
                 errorProvider1.SetError(precio, "Llene el campo de Precio! ");
+            }
+            else if (bd.MostrarDatos("SELECT marca FROM vehiculo WHERE id = '" + marca.SelectedItem.ToString() + "'") == marca.SelectedItem.ToString())
+            {
+                MessageBox.Show("Esa marca de Vehiculo ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (bd.MostrarDatos("SELECT id FROM vehiculo WHERE id = '" + id.Text + "'") == id.Text)
+            {
+                MessageBox.Show("Ese identificador de Vehiculo ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (bd.MostrarDatos("SELECT modelo FROM vehiculo WHERE id = '" + modelo.Text + "'") == modelo.Text)
+            {
+                MessageBox.Show("Ese modelo de Vehiculo ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {

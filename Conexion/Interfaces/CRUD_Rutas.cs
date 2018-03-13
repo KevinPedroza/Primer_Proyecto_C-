@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
+using Conexion;
 //this form will let the user to administrate de CRUD of roads
 namespace Interfaces
 {
     public partial class CRUD_Rutas : UserControl
     {
         Procedimientos_rutas pr = new Procedimientos_rutas();
+        ConexionBD bd = new ConexionBD();
         public CRUD_Rutas()
         {
             InitializeComponent();
@@ -39,6 +41,10 @@ namespace Interfaces
                 if (id_inruta.Text == "")
                 {
                     MessageBox.Show("Ingrese un Identificador!", "Aviso!");
+                }
+                else if (bd.MostrarDatos("SELECT id FROM ruta WHERE id = '" + id_inruta.Text + "'") == id_inruta.Text)
+                {
+                    MessageBox.Show("Ese Identificador de Ruta ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {

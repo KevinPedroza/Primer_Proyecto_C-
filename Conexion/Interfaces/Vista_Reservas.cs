@@ -33,9 +33,6 @@ namespace Interfaces
         public Vista_Reservas()
         {
             InitializeComponent();
-            panelcar.Visible = false;
-            panelhotel.Visible = false;
-            eliminar.Visible = false;
             nombreuser.Text = pu.nom_user(Login.contra);
             hidden = true;
             hidden2 = true;
@@ -59,6 +56,7 @@ namespace Interfaces
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            eliminar.Visible = false;
             timer2.Start();
             panelhotel.Visible = true;
         }
@@ -109,12 +107,18 @@ namespace Interfaces
                     timer2.Stop();
                     hidden2 = true;
                     this.Refresh();
+                    if (Usuario.contador >= 1)
+                    {
+                        eliminar.Visible = true;
+                    }
                 }
             }
         }
 
         private void Vista_Reservas_Load(object sender, EventArgs e)
         {
+            panelcar.Visible = false;
+            panelhotel.Visible = false;
             try
             {
                 string nomhotel = bd.MostrarDatos("SELECT nombre FROM hotel WHERE id = '" + A_Hotel.hotelid + "'");
@@ -158,12 +162,12 @@ namespace Interfaces
 
                 if (Usuario.contador >= 1)
                 {
+                    eliminar.Visible = true;
                     int cedula = Convert.ToInt32(pu.cedula(Login.contra));
                     info.Rows.Clear();
                     info.Columns.Clear();
                     pu.cargaGridReserva(info, "SELECT id_cedula,fechaini,paiso,paisd,fechafini,paiss,paislle,escadi,hotel,vehi,reserva,precio FROM reserva");
                     info.ClearSelection();
-                    eliminar.Visible = true;
                 }
                 else if (nomhotel == null)
                 {
@@ -326,6 +330,12 @@ namespace Interfaces
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
+           
+
+        }
+
+        private void eliminar_Click(object sender, EventArgs e)
+        {
             if (info.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Seleccione una Reserva Para Eliminar!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -358,7 +368,6 @@ namespace Interfaces
                     return;
                 }
             }
-
         }
     }
 }

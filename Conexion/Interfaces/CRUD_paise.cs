@@ -132,7 +132,6 @@ namespace Interfaces
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dir3);
             if (dir3 == null)
             {
                 p.modificarPais(Convert.ToInt32(newide.Text),newnombre.Text,dir2);
@@ -177,6 +176,9 @@ namespace Interfaces
                 string consulta = "DELETE FROM pais WHERE id = '" + dataGridView3.CurrentRow.Cells[0].Value.ToString()+ "' ";
                 if (MessageBox.Show("Desea Eliminar la Información de " + dataGridView3.CurrentRow.Cells[1].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
+                    int idruta = Convert.ToInt32(bd.MostrarDatos("SELECT id from ruta WHERE pais_origen = '" + dataGridView3.CurrentRow.Cells[1].Value.ToString() + "' OR pais_destino = '" + dataGridView3.CurrentRow.Cells[1].Value.ToString() + "'"));
+                    bd.EliminarDatos("DELETE FROM tarifa_vuelo WHERE ruta = '" + idruta + "'");
+                    bd.EliminarDatos("DELETE FROM ruta WHERE pais_origen = '" + dataGridView3.CurrentRow.Cells[1].Value.ToString() + "' OR pais_destino = '" + dataGridView3.CurrentRow.Cells[1].Value.ToString() + "' ");
                     bd.EliminarDatos(consulta);
                     p.cargaGridI(dataGridView3);
                 }

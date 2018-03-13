@@ -29,26 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vista_Reservas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Vista_Reservas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.info = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.nombreuser = new System.Windows.Forms.Label();
@@ -60,7 +49,21 @@
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label5 = new System.Windows.Forms.Label();
             this.precio = new System.Windows.Forms.Label();
+            this.panelcar = new System.Windows.Forms.Panel();
+            this.carinfo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.label2 = new System.Windows.Forms.Label();
             this.eliminar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.info = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panelhotel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -71,16 +74,13 @@
             this.pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelcar = new System.Windows.Forms.Panel();
-            this.carinfo = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelcar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carinfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).BeginInit();
             this.panelhotel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelinfo)).BeginInit();
-            this.panelcar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carinfo)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -98,112 +98,6 @@
             this.label1.Size = new System.Drawing.Size(243, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Información General";
-            // 
-            // info
-            // 
-            this.info.AllowUserToAddRows = false;
-            this.info.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.info.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.info.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.info.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.info.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.info.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.info.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11});
-            this.info.DoubleBuffered = true;
-            this.info.EnableHeadersVisualStyles = false;
-            this.info.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.info.HeaderForeColor = System.Drawing.Color.Black;
-            this.info.Location = new System.Drawing.Point(38, 70);
-            this.info.Margin = new System.Windows.Forms.Padding(0);
-            this.info.MultiSelect = false;
-            this.info.Name = "info";
-            this.info.ReadOnly = true;
-            this.info.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.info.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.info.Size = new System.Drawing.Size(882, 382);
-            this.info.TabIndex = 4;
-            this.info.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.info_CellClick);
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Column6";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Column7";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Column8";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Column9";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Column10";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Column11";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
             // 
             // timer1
             // 
@@ -364,6 +258,59 @@
             this.precio.TabIndex = 33;
             this.precio.Text = "Precio Total:";
             // 
+            // panelcar
+            // 
+            this.panelcar.BackColor = System.Drawing.Color.DarkGray;
+            this.panelcar.Controls.Add(this.carinfo);
+            this.panelcar.Controls.Add(this.label2);
+            this.panelcar.Location = new System.Drawing.Point(1, 9);
+            this.panelcar.Margin = new System.Windows.Forms.Padding(0);
+            this.panelcar.Name = "panelcar";
+            this.panelcar.Size = new System.Drawing.Size(37, 257);
+            this.panelcar.TabIndex = 37;
+            // 
+            // carinfo
+            // 
+            this.carinfo.AllowUserToAddRows = false;
+            this.carinfo.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.carinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.carinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.carinfo.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.carinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.carinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.carinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.carinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.carinfo.DoubleBuffered = true;
+            this.carinfo.EnableHeadersVisualStyles = false;
+            this.carinfo.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.carinfo.HeaderForeColor = System.Drawing.Color.Black;
+            this.carinfo.Location = new System.Drawing.Point(90, 36);
+            this.carinfo.MultiSelect = false;
+            this.carinfo.Name = "carinfo";
+            this.carinfo.ReadOnly = true;
+            this.carinfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.carinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.carinfo.Size = new System.Drawing.Size(739, 204);
+            this.carinfo.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(335, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(256, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Información del Vehiculo";
+            // 
             // eliminar
             // 
             this.eliminar.ActiveBorderThickness = 1;
@@ -386,9 +333,116 @@
             this.eliminar.Margin = new System.Windows.Forms.Padding(5);
             this.eliminar.Name = "eliminar";
             this.eliminar.Size = new System.Drawing.Size(256, 44);
-            this.eliminar.TabIndex = 35;
+            this.eliminar.TabIndex = 40;
             this.eliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.eliminar.Click += new System.EventHandler(this.bunifuThinButton24_Click);
+            this.eliminar.Visible = false;
+            this.eliminar.Click += new System.EventHandler(this.eliminar_Click);
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Column11";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Column10";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Column9";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Column8";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Column7";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // info
+            // 
+            this.info.AllowUserToAddRows = false;
+            this.info.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.info.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.info.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.info.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.info.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.info.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.info.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            this.info.DoubleBuffered = true;
+            this.info.EnableHeadersVisualStyles = false;
+            this.info.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.info.HeaderForeColor = System.Drawing.Color.Black;
+            this.info.Location = new System.Drawing.Point(38, 70);
+            this.info.Margin = new System.Windows.Forms.Padding(0);
+            this.info.MultiSelect = false;
+            this.info.Name = "info";
+            this.info.ReadOnly = true;
+            this.info.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.info.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.info.Size = new System.Drawing.Size(882, 382);
+            this.info.TabIndex = 4;
+            this.info.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.info_CellClick);
             // 
             // panelhotel
             // 
@@ -401,7 +455,8 @@
             this.panelhotel.Margin = new System.Windows.Forms.Padding(0);
             this.panelhotel.Name = "panelhotel";
             this.panelhotel.Size = new System.Drawing.Size(37, 257);
-            this.panelhotel.TabIndex = 36;
+            this.panelhotel.TabIndex = 41;
+            this.panelhotel.Visible = false;
             // 
             // label4
             // 
@@ -426,21 +481,21 @@
             // 
             this.hotelinfo.AllowUserToAddRows = false;
             this.hotelinfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.hotelinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.hotelinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.hotelinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.hotelinfo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.hotelinfo.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.hotelinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.hotelinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.hotelinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hotelinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.hotelinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hotelinfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
@@ -501,68 +556,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Información del Hotel";
             // 
-            // panelcar
-            // 
-            this.panelcar.BackColor = System.Drawing.Color.DarkGray;
-            this.panelcar.Controls.Add(this.carinfo);
-            this.panelcar.Controls.Add(this.label2);
-            this.panelcar.Location = new System.Drawing.Point(1, 9);
-            this.panelcar.Margin = new System.Windows.Forms.Padding(0);
-            this.panelcar.Name = "panelcar";
-            this.panelcar.Size = new System.Drawing.Size(37, 257);
-            this.panelcar.TabIndex = 37;
-            // 
-            // carinfo
-            // 
-            this.carinfo.AllowUserToAddRows = false;
-            this.carinfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.carinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.carinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.carinfo.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.carinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.carinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.carinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.carinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.carinfo.DoubleBuffered = true;
-            this.carinfo.EnableHeadersVisualStyles = false;
-            this.carinfo.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.carinfo.HeaderForeColor = System.Drawing.Color.Black;
-            this.carinfo.Location = new System.Drawing.Point(90, 36);
-            this.carinfo.MultiSelect = false;
-            this.carinfo.Name = "carinfo";
-            this.carinfo.ReadOnly = true;
-            this.carinfo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.carinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.carinfo.Size = new System.Drawing.Size(739, 204);
-            this.carinfo.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(335, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 28);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Información del Vehiculo";
-            // 
             // Vista_Reservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
             this.ClientSize = new System.Drawing.Size(964, 549);
-            this.Controls.Add(this.panelcar);
             this.Controls.Add(this.panelhotel);
             this.Controls.Add(this.eliminar);
+            this.Controls.Add(this.panelcar);
             this.Controls.Add(this.precio);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.nombreuser);
@@ -579,15 +581,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vista_Reservas";
             this.Load += new System.EventHandler(this.Vista_Reservas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelcar.ResumeLayout(false);
+            this.panelcar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carinfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.info)).EndInit();
             this.panelhotel.ResumeLayout(false);
             this.panelhotel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelinfo)).EndInit();
-            this.panelcar.ResumeLayout(false);
-            this.panelcar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carinfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,6 +608,13 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label nombreuser;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label precio;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelcar;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid carinfo;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuThinButton2 eliminar;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid info;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -615,9 +624,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        public Bunifu.Framework.UI.BunifuCustomDataGrid info;
-        private System.Windows.Forms.Label precio;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Panel panelhotel;
         private System.Windows.Forms.Label label4;
@@ -629,9 +635,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pais;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuThinButton2 eliminar;
-        private System.Windows.Forms.Panel panelcar;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid carinfo;
-        private System.Windows.Forms.Label label2;
     }
 }

@@ -79,6 +79,13 @@ namespace Interfaces
                 else if (pictureBox1.Image == null)
                 {
                     MessageBox.Show("Ingrese una imagen!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }else if (bd.MostrarDatos("SELECT id FROM hotel WHERE id = '" + id.Text + "'") == id.Text)
+                {
+                    MessageBox.Show("Ese Identificador de Hotel ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (bd.MostrarDatos("SELECT nombre FROM hotel WHERE id = '" + nombre.Text + "'") == nombre.Text)
+                {
+                    MessageBox.Show("Ese Nombre de Hotel ya Existe!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -220,7 +227,9 @@ namespace Interfaces
                     hh.Nombre = newnombre.Text;
                     hh.Foto = dir2;
                     hh.Habitaciones = Convert.ToInt32(newhabitaciones.Value.ToString());
+
                     ph.modificarHotelSinImage(hh.Id, hh.Nombre, hh.Foto, hh.Habitaciones, idlugar);
+
                 }
                 else
                 {

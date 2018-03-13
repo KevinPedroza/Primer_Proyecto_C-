@@ -178,6 +178,7 @@
             // 
             // lugar
             // 
+            this.lugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lugar.FormattingEnabled = true;
             this.lugar.Location = new System.Drawing.Point(287, 110);
             this.lugar.Name = "lugar";
@@ -396,6 +397,7 @@
             // 
             // newlugar
             // 
+            this.newlugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newlugar.FormattingEnabled = true;
             this.newlugar.Location = new System.Drawing.Point(23, 291);
             this.newlugar.Name = "newlugar";

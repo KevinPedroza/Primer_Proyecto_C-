@@ -64,6 +64,7 @@ namespace Procedimientos
 
                 if (MessageBox.Show("Desea Eliminar la ruta de Origen " + eliminar_ruta.CurrentRow.Cells[1].Value.ToString() + " Con destino a " + eliminar_ruta.CurrentRow.Cells[2].Value.ToString(), "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
+                    bd.EliminarDatos("DELETE FROM tarifa_vuelo WHERE ruta = '" + eliminar_ruta.CurrentRow.Cells[0].Value.ToString() + "'");
                     bd.EliminarDatos("DELETE FROM ruta WHERE id = '" + eliminar_ruta.CurrentRow.Cells[0].Value.ToString() + "'");
                     MessageBox.Show("Se ha eliminado Correctamente!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     mostrarInfoDataGrid(eliminar_ruta);

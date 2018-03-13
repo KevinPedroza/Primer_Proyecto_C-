@@ -104,6 +104,7 @@
             // 
             // id
             // 
+            this.id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.id.FormattingEnabled = true;
             this.id.Location = new System.Drawing.Point(25, 138);
             this.id.Name = "id";
@@ -259,6 +260,7 @@
             this.modificarinfo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.modificarinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.modificarinfo.Location = new System.Drawing.Point(338, 123);
+            this.modificarinfo.MultiSelect = false;
             this.modificarinfo.Name = "modificarinfo";
             this.modificarinfo.ReadOnly = true;
             this.modificarinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -285,6 +287,7 @@
             this.newruta.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.newruta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.newruta.Location = new System.Drawing.Point(15, 299);
+            this.newruta.MultiSelect = false;
             this.newruta.Name = "newruta";
             this.newruta.ReadOnly = true;
             this.newruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -374,6 +377,7 @@
             this.mostrarinfo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.mostrarinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mostrarinfo.Location = new System.Drawing.Point(59, 56);
+            this.mostrarinfo.MultiSelect = false;
             this.mostrarinfo.Name = "mostrarinfo";
             this.mostrarinfo.ReadOnly = true;
             this.mostrarinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

@@ -173,6 +173,7 @@
             // 
             // marca
             // 
+            this.marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.marca.FormattingEnabled = true;
             this.marca.Location = new System.Drawing.Point(97, 221);
             this.marca.Name = "marca";
@@ -341,6 +342,7 @@
             // 
             // newtipo
             // 
+            this.newtipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newtipo.FormattingEnabled = true;
             this.newtipo.Location = new System.Drawing.Point(27, 354);
             this.newtipo.Name = "newtipo";
@@ -349,6 +351,7 @@
             // 
             // newmarca
             // 
+            this.newmarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newmarca.FormattingEnabled = true;
             this.newmarca.Location = new System.Drawing.Point(27, 192);
             this.newmarca.Name = "newmarca";

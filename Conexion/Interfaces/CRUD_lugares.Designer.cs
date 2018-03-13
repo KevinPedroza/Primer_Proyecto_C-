@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_lugares));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.id_lugar = new System.Windows.Forms.ComboBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.nombre_lugar = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.pais = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -50,8 +52,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.id_lugar = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -91,6 +91,26 @@
             this.tabPage1.Size = new System.Drawing.Size(774, 454);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Insertar Lugar";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(265, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(32, 18);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "País";
+            // 
+            // id_lugar
+            // 
+            this.id_lugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.id_lugar.FormattingEnabled = true;
+            this.id_lugar.Location = new System.Drawing.Point(235, 71);
+            this.id_lugar.Name = "id_lugar";
+            this.id_lugar.Size = new System.Drawing.Size(270, 21);
+            this.id_lugar.TabIndex = 5;
+            this.id_lugar.SelectionChangeCommitted += new System.EventHandler(this.id_lugar_SelectionChangeCommitted);
             // 
             // bunifuFlatButton1
             // 
@@ -283,6 +303,7 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(327, 81);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -311,6 +332,7 @@
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(87, 65);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -349,6 +371,7 @@
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(96, 77);
+            this.dataGridView3.MultiSelect = false;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -364,25 +387,6 @@
             this.label7.Size = new System.Drawing.Size(192, 33);
             this.label7.TabIndex = 0;
             this.label7.Text = "Lista de Lugares";
-            // 
-            // id_lugar
-            // 
-            this.id_lugar.FormattingEnabled = true;
-            this.id_lugar.Location = new System.Drawing.Point(235, 71);
-            this.id_lugar.Name = "id_lugar";
-            this.id_lugar.Size = new System.Drawing.Size(270, 21);
-            this.id_lugar.TabIndex = 5;
-            this.id_lugar.SelectionChangeCommitted += new System.EventHandler(this.id_lugar_SelectionChangeCommitted);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(265, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 18);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "País";
             // 
             // CRUD_lugares
             // 

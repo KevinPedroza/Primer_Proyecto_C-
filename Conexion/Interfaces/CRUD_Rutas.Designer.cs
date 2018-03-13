@@ -211,6 +211,7 @@
             // 
             // pais_destinoin
             // 
+            this.pais_destinoin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.pais_destinoin.FormattingEnabled = true;
             this.pais_destinoin.Location = new System.Drawing.Point(31, 334);
             this.pais_destinoin.Name = "pais_destinoin";
@@ -229,6 +230,7 @@
             // 
             // pais_origenin
             // 
+            this.pais_origenin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.pais_origenin.FormattingEnabled = true;
             this.pais_origenin.Location = new System.Drawing.Point(31, 214);
             this.pais_origenin.Name = "pais_origenin";
@@ -353,6 +355,7 @@
             // 
             // newdestiny
             // 
+            this.newdestiny.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.newdestiny.FormattingEnabled = true;
             this.newdestiny.Location = new System.Drawing.Point(39, 284);
             this.newdestiny.Name = "newdestiny";
@@ -361,6 +364,7 @@
             // 
             // neworigen
             // 
+            this.neworigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.neworigen.FormattingEnabled = true;
             this.neworigen.Location = new System.Drawing.Point(39, 190);
             this.neworigen.Name = "neworigen";
@@ -470,7 +474,9 @@
             this.modify_info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.modify_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.modify_info.Location = new System.Drawing.Point(330, 91);
+            this.modify_info.MultiSelect = false;
             this.modify_info.Name = "modify_info";
+            this.modify_info.ReadOnly = true;
             this.modify_info.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.modify_info.Size = new System.Drawing.Size(419, 170);
             this.modify_info.TabIndex = 0;
@@ -497,6 +503,7 @@
             this.mostrar_rutas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mostrar_rutas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mostrar_rutas.Location = new System.Drawing.Point(48, 74);
+            this.mostrar_rutas.MultiSelect = false;
             this.mostrar_rutas.Name = "mostrar_rutas";
             this.mostrar_rutas.ReadOnly = true;
             this.mostrar_rutas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -544,6 +551,7 @@
             this.eliminar_ruta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.eliminar_ruta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.eliminar_ruta.Location = new System.Drawing.Point(38, 76);
+            this.eliminar_ruta.MultiSelect = false;
             this.eliminar_ruta.Name = "eliminar_ruta";
             this.eliminar_ruta.ReadOnly = true;
             this.eliminar_ruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
