@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
 using Conexion;
-
+//this form will let the user to rent a hotel
 namespace Interfaces
 {
     public partial class A_Hotel : Form

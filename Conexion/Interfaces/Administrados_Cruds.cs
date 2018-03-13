@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
+//this form will let the user to select the different kind of cruds 
 namespace Interfaces
 {
     public partial class Administrados_Cruds : Form

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
+//this method will let add a new user to the program
 namespace Interfaces
 {
     public partial class Registro : Form

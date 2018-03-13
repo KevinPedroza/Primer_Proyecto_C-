@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Procedimientos;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Collections;
-
+//this method will let you see the third report
 namespace Interfaces
 {
     public partial class Reporte3 : Form

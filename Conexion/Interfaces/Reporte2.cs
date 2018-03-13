@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Procedimientos;
-
+//this method will let you see the second report
 namespace Interfaces
 {
     public partial class Reporte2 : Form

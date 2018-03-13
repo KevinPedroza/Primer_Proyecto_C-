@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
 using Conexion;
+//this method will let you see the view of the reservation
 namespace Interfaces
 {
     public partial class Vista_Reservas : Form

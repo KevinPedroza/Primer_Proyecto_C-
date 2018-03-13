@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//this class will have all the methods to connect to the database 
 namespace Conexion
 {
     public class ConexionBD

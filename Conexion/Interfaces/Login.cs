@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
+//this class will let you log in the program
 namespace Interfaces
 {
     public partial class Login : Form

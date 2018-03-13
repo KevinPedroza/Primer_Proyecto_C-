@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
 using Conexion;
-
+//this method will let add a new reservation
 namespace Interfaces
 {
     public partial class Reserva : Form

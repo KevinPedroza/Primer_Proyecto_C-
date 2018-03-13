@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
 using Conexion;
-
+//this form will let the user to administrate de CRUD of prices of hotels
 namespace Interfaces
 {
     public partial class CRUD_THoteles : UserControl

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Conexion;
-
+//this form will let the user to administrate de CRUD of places
 namespace Interfaces
 {
     public partial class CRUD_lugares : UserControl

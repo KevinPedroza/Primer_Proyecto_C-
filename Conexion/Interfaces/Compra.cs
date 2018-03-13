@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
-
+//this form will let the user to know that already bought a fly or a car o a hotel
 namespace Interfaces
 {
     public partial class Compra : Form

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Procedimientos;
 using Conexion;
-
+//this class will let you add a new fly or car or hotel
 namespace Interfaces
 {
     public partial class Usuario : Form

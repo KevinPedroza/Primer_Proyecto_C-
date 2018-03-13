@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//this method will let you choose the reports
 namespace Interfaces
 {
     public partial class Menu_Reportes : Form
